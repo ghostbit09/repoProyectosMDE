@@ -1,0 +1,83 @@
+@namespace(uri="concreta", prefix="concreta")
+@gmf
+package concreta;
+
+ class ModelFactory{
+ 	
+ 	attr String nombre;
+	attr String ruta;
+	val MBSDiagramaClases [*] listaDiagramas;
+ 	
+ }
+
+@gmf.diagram
+class MBSDiagramaClases {
+
+	attr String nombre;
+	attr String descripcion;
+    val MBSClase[*] listaClases;
+    val MBSRelacion[*] listaRelaciones;
+    val MBSPaquete[*] listaPaquetes;
+}
+
+@gmf.node(label = "nombre")
+class MBSPaquete  {
+
+	attr String nombre;
+	attr String ruta;
+}
+
+@gmf.node(label = "nombre", label.layout= "center", size ="150,150", color ="240,255,255")
+class MBSClase  {
+
+	attr String nombre;
+	attr String estereotipo;
+	attr String modificadorAcceso;
+	attr boolean abstracta;
+	attr String descripcion;
+	attr String ruta;
+	
+	@gmf.compartment(layout="list", collapsible="false")
+	val MBSAtributo[*] atributos;
+	@gmf.compartment(layout="list", collapsible="false")
+	val MBSMetodo[*] metodos;
+
+}
+
+@gmf.node(label = "nombre", color ="240,255,255", size ="100,15", margin = "0", border.color = "255,255,255")
+class MBSMetodo {
+	
+	attr String nombre;	
+	attr String modificadorAcceso;
+	attr String tipoRetorno;
+	attr String ruta;
+	attr String parametros;
+}
+
+@gmf.node(label = "nombre", color ="240,255,255", size ="100,15", margin = "0", border.color = "255,255,255")
+class MBSAtributo {
+	
+	attr String nombre;
+	attr String tipo;
+	attr String modificadorAcesso;
+	attr String valorDefecto;
+	attr boolean constante;
+	attr String ruta;
+	
+}
+
+@gmf.link(source="source", target="target", style="solid", width="2")
+class MBSRelacion {
+   
+   	attr String nombre;
+    attr String tipo;
+    attr String multiplicidadA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr Boolean navegabilidadA;
+    attr Boolean navegabilidadB;
+    ref MBSClase source;
+    ref MBSClase target;
+
+}

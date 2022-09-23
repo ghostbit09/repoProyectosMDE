@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
+  <listaDiagramas nombre="Inventario" descripcion="Diagrama de clases de un inventario de una tienda">
+    <listaClases nombre="Usuario" modificadorAcceso="public" descripcion="Clase Usuario" ruta="main/kotlin/clases">
+      <atributos nombre="id" tipo="String" modificadorAcesso="private" ruta="Usuario"/>
+      <atributos nombre="email" tipo="String" modificadorAcesso="private" ruta="Usuario"/>
+      <atributos nombre="contraseña" tipo="String" modificadorAcesso="private" ruta="Usuario"/>
+      <atributos nombre="lastLogin" tipo="String" modificadorAcesso="private" ruta="Usuario"/>
+      <metodos nombre="obtenerSesion" modificadorAcceso="private" tipoRetorno="String" ruta="Usuario" parametros="email: String, id: String"/>
+    </listaClases>
+    <listaClases nombre="Cliente" modificadorAcceso="public" descripcion="Clase Cliente" ruta="main/kotlin/clases">
+      <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Cliente"/>
+      <atributos nombre="direccionFacturacion" tipo="String" modificadorAcesso="private" ruta="Cliente"/>
+      <atributos nombre="direccionDefault" tipo="String" modificadorAcesso="private" ruta="Cliente"/>
+      <metodos nombre="registrar" modificadorAcceso="public" tipoRetorno="void" ruta="Cliente" parametros="email: String, contraseña: String, id: String"/>
+      <metodos nombre="login" modificadorAcceso="public" tipoRetorno="void" ruta="Cliente" parametros="email: String, contraseña: String"/>
+    </listaClases>
+    <listaClases nombre="Pedido" modificadorAcceso="public" descripcion="Clase Pedido" ruta="main/kotlin/clases">
+      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Pedido"/>
+      <atributos nombre="fechaPedido" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido"/>
+      <atributos nombre="estado" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido"/>
+      <atributos nombre="precio" tipo="Float" modificadorAcesso="private" valorDefecto="0.0" ruta="Pedido"/>
+      <metodos nombre="actualizarEstado" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="estado: String"/>
+      <metodos nombre="realizarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="pedido: Pedido"/>
+      <metodos nombre="cancelarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="id: Int"/>
+    </listaClases>
+    <listaClases nombre="CarritoCompras" modificadorAcceso="public" descripcion="Clase Carrito Compras" ruta="main/kotlin/clases">
+      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras"/>
+      <atributos nombre="idProducto" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras"/>
+      <metodos nombre="añadirProducto" modificadorAcceso="public" tipoRetorno="Producto" ruta="CarritoCompras" parametros="producto: Producto"/>
+      <metodos nombre="removerProducto" modificadorAcceso="public" tipoRetorno="String" ruta="CarritoCompras" parametros="producto: Producto"/>
+      <metodos nombre="mostrarProductos" modificadorAcceso="public" tipoRetorno="void" ruta="CarritoCompras" parametros=""/>
+    </listaClases>
+    <listaClases nombre="DetallePedido" modificadorAcceso="public" descripcion="Clase Pedido" ruta="main/kotlin/clases">
+      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="DetallePedido"/>
+      <atributos nombre="direccionEnvio" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="DetallePedido"/>
+      <atributos nombre="tipoEnvio" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="DetallePedido"/>
+      <atributos nombre="costoEnvio" tipo="Float" modificadorAcesso="private" valorDefecto="0.0" ruta="DetallePedido"/>
+      <atributos nombre="direccionFacturacion" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="DetallePedido"/>
+      <atributos nombre="fechaCreacion" tipo="String" modificadorAcesso="private" ruta="DetallePedido"/>
+      <metodos nombre="cancelarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="DetallePedido" parametros="pedido: Pedido"/>
+    </listaClases>
+    <listaRelaciones nombre="clienteUsuario" tipo="herencia" navegabilidadA="true" navegabilidadB="false" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.0"/>
+    <listaRelaciones nombre="carritoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="carrito" rolB="cliente" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaRelaciones nombre="pedidoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="pedido" rolB="cliente" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaRelaciones nombre="detallePedido" tipo="composicion" multiplicidadA="1" multiplicidadB="1" rolA="detallePedido" rolB="pedido" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.2"/>
+    <listaPaquetes nombre="main"/>
+    <listaPaquetes nombre="kotlin" ruta="main/"/>
+    <listaPaquetes nombre="clases" ruta="main/kotlin/"/>
+  </listaDiagramas>
+</concreta:ModelFactory>

@@ -1,0 +1,69 @@
+@namespace(uri="abstracta", prefix="abstracta")
+@gmf
+package abstracta;
+
+class ModelFactory  {
+	
+	attr String nombre;
+	attr String ruta;
+	val MBSPaquete[*] listaPaquetes;
+	ref MBSClase[*] listaTodasLasClases;
+	ref MBSPaquete[*] listaTodosLosPaquetes;
+}
+
+class MBSPaquete  {
+	
+	attr String nombre;
+	attr String ruta;
+	val MBSClase[*] listaClases;
+	val MBSPaquete[*] listaPaquetes;
+}
+
+class MBSClase  {
+	
+	attr String nombre;
+	attr String estereotipo;
+	attr String modificadorAcceso;
+	attr boolean abstracta;
+	attr String descripcion;
+	attr String ruta;
+	
+	val MBSAtributo[*] atributos;
+	val MBSMetodo[*] metodos;
+	val MBSRelacion [*]listaRelaciones;
+}
+
+class MBSMetodo {
+	
+	attr String nombre;	
+	attr String modificadorAcceso;
+	attr String tipoRetorno;
+	attr String ruta;
+	attr String parametros;
+}
+
+class MBSAtributo {
+	
+	attr String nombre;
+	attr String tipo;
+	attr String modificadorAcesso;
+	attr String ValorDefecto;
+	attr boolean constante;
+	attr String ruta;
+	
+}
+
+class MBSRelacion {
+  
+    ref MBSClase source;
+    ref MBSClase target;
+    attr String nombre;
+    attr String tipo;
+    attr String multiplicidadA;
+    attr String multiplicidadB;
+    attr String rolA;
+    attr String rolB;
+    attr Boolean navegabilidadA;
+    attr Boolean navegabilidadB;
+       
+}
