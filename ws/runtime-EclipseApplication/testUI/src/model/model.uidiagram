@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uidiagram:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uidiagram="http://uidiagram">
+  <listDiagrams>
+    <listUserInterface name="Registro Cliente" title="RegistroClienteUI">
+      <listWidgets xsi:type="uidiagram:Group" name="Ingreso de datos personales">
+        <lstChildModelElements xsi:type="uidiagram:Label" name="Nombre:"/>
+        <lstChildModelElements xsi:type="uidiagram:TextInput" name="nombre"/>
+        <lstChildModelElements xsi:type="uidiagram:Label" name="Apellidos:"/>
+        <lstChildModelElements xsi:type="uidiagram:TextInput" name="apellidos"/>
+        <lstChildModelElements xsi:type="uidiagram:Label" name="Cedula:"/>
+        <lstChildModelElements xsi:type="uidiagram:TextInput" name="cedula"/>
+        <lstChildModelElements xsi:type="uidiagram:Button" name="Registrar cliente"/>
+      </listWidgets>
+    </listUserInterface>
+  </listDiagrams>
+</uidiagram:ModelFactory>
