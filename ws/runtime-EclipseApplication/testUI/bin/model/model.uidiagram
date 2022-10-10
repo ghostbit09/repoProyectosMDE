@@ -3,7 +3,7 @@
   <listDiagrams>
     <listUserInterface name="Registro Cliente" title="RegistroClienteUI">
       <listWidgets xsi:type="uidiagram:Group" name="Ingreso de datos personales">
-        <lstChildModelElements xsi:type="uidiagram:Label" name="Nombre:"/>
+        <lstChildModelElements xsi:type="uidiagram:Label" name="Nombre:" positionX="15" positionY="13" width="79" heigth="24"/>
         <lstChildModelElements xsi:type="uidiagram:TextInput" name="nombre"/>
         <lstChildModelElements xsi:type="uidiagram:Label" name="Apellidos:"/>
         <lstChildModelElements xsi:type="uidiagram:TextInput" name="apellidos"/>

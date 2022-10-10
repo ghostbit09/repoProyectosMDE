@@ -14,18 +14,76 @@
 [file (anUserInterface.title.replace(' ', '').trim()+'.xml', false, 'UTF-8')]
 
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:paddingHorizontal="16dp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+		<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Cliente"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#FF3700B3"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+</ScrollView>
 
 [/file]
+[/template]
+
+[template public generateVarWidgets(anUserInterface : UserInterface)]
+[for(widget : ModelElement | listWidgets)]
+[if (widget.oclIsKindOf(GraphicalIndividual))]
+[generateIndividualElement(widget)/]
+[/if]
+[if (widget.oclIsKindOf(GraphicalContainer))]
+[generateGraphicalContainer(widget)/]
+[/if]
+[/for]
+[/template]
+
+[template public generateIndividualElement(anIndividualElement : ModelElement) post(trim()) ]
+[if (anIndividualElement.oclIsKindOf(Label))]
+private Label lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+[/if]
+[if (anIndividualElement.oclIsKindOf(Button))]
+private Button lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+[/if]
+[if (anIndividualElement.oclIsKindOf(TextInput))]
+private TextComponent lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+[/if]
+[/template]
+
+
+
+[template public generateGraphicalContainer(anGraphicalContainer : ModelElement)]
+[if (anGraphicalContainer.oclIsKindOf(Group))]
+Group group [anGraphicalContainer.name.toUpperFirst().replace(' ','')/]
+[for(widget : ModelElement | anGraphicalContainer.oclAsType(GraphicalContainer).lstChildModelElements)]
+[if (widget.oclIsKindOf(GraphicalIndividual))]
+[generateIndividualElement(widget)/]
+[/if]
+[if (widget.oclIsKindOf(GraphicalContainer))]
+[generateGraphicalContainer(widget)/]
+[/if]
+[/for]
+[/if]
 [/template]

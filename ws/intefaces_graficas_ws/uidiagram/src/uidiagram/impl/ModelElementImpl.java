@@ -61,7 +61,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String POSITION_X_EDEFAULT = null;
+	protected static final int POSITION_X_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getPositionX() <em>Position X</em>}' attribute.
@@ -71,7 +71,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected String positionX = POSITION_X_EDEFAULT;
+	protected int positionX = POSITION_X_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPositionY() <em>Position Y</em>}' attribute.
@@ -81,7 +81,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String POSITION_Y_EDEFAULT = null;
+	protected static final int POSITION_Y_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getPositionY() <em>Position Y</em>}' attribute.
@@ -91,7 +91,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected String positionY = POSITION_Y_EDEFAULT;
+	protected int positionY = POSITION_Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -101,7 +101,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String WIDTH_EDEFAULT = null;
+	protected static final int WIDTH_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -111,7 +111,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected String width = WIDTH_EDEFAULT;
+	protected int width = WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHeigth() <em>Heigth</em>}' attribute.
@@ -121,7 +121,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String HEIGTH_EDEFAULT = null;
+	protected static final int HEIGTH_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getHeigth() <em>Heigth</em>}' attribute.
@@ -131,7 +131,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * @generated
 	 * @ordered
 	 */
-	protected String heigth = HEIGTH_EDEFAULT;
+	protected int heigth = HEIGTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
@@ -238,7 +238,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPositionX() {
+	public int getPositionX() {
 		return positionX;
 	}
 
@@ -247,8 +247,8 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPositionX(String newPositionX) {
-		String oldPositionX = positionX;
+	public void setPositionX(int newPositionX) {
+		int oldPositionX = positionX;
 		positionX = newPositionX;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UidiagramPackage.MODEL_ELEMENT__POSITION_X, oldPositionX, positionX));
@@ -259,7 +259,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPositionY() {
+	public int getPositionY() {
 		return positionY;
 	}
 
@@ -268,8 +268,8 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPositionY(String newPositionY) {
-		String oldPositionY = positionY;
+	public void setPositionY(int newPositionY) {
+		int oldPositionY = positionY;
 		positionY = newPositionY;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UidiagramPackage.MODEL_ELEMENT__POSITION_Y, oldPositionY, positionY));
@@ -280,7 +280,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -289,8 +289,8 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setWidth(String newWidth) {
-		String oldWidth = width;
+	public void setWidth(int newWidth) {
+		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UidiagramPackage.MODEL_ELEMENT__WIDTH, oldWidth, width));
@@ -301,7 +301,7 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getHeigth() {
+	public int getHeigth() {
 		return heigth;
 	}
 
@@ -310,8 +310,8 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHeigth(String newHeigth) {
-		String oldHeigth = heigth;
+	public void setHeigth(int newHeigth) {
+		int oldHeigth = heigth;
 		heigth = newHeigth;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UidiagramPackage.MODEL_ELEMENT__HEIGTH, oldHeigth, heigth));
@@ -420,16 +420,16 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 				setName((String)newValue);
 				return;
 			case UidiagramPackage.MODEL_ELEMENT__POSITION_X:
-				setPositionX((String)newValue);
+				setPositionX((Integer)newValue);
 				return;
 			case UidiagramPackage.MODEL_ELEMENT__POSITION_Y:
-				setPositionY((String)newValue);
+				setPositionY((Integer)newValue);
 				return;
 			case UidiagramPackage.MODEL_ELEMENT__WIDTH:
-				setWidth((String)newValue);
+				setWidth((Integer)newValue);
 				return;
 			case UidiagramPackage.MODEL_ELEMENT__HEIGTH:
-				setHeigth((String)newValue);
+				setHeigth((Integer)newValue);
 				return;
 			case UidiagramPackage.MODEL_ELEMENT__BACKGROUND_COLOR:
 				setBackgroundColor((String)newValue);
@@ -491,13 +491,13 @@ public class ModelElementImpl extends EObjectImpl implements ModelElement {
 			case UidiagramPackage.MODEL_ELEMENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case UidiagramPackage.MODEL_ELEMENT__POSITION_X:
-				return POSITION_X_EDEFAULT == null ? positionX != null : !POSITION_X_EDEFAULT.equals(positionX);
+				return positionX != POSITION_X_EDEFAULT;
 			case UidiagramPackage.MODEL_ELEMENT__POSITION_Y:
-				return POSITION_Y_EDEFAULT == null ? positionY != null : !POSITION_Y_EDEFAULT.equals(positionY);
+				return positionY != POSITION_Y_EDEFAULT;
 			case UidiagramPackage.MODEL_ELEMENT__WIDTH:
-				return WIDTH_EDEFAULT == null ? width != null : !WIDTH_EDEFAULT.equals(width);
+				return width != WIDTH_EDEFAULT;
 			case UidiagramPackage.MODEL_ELEMENT__HEIGTH:
-				return HEIGTH_EDEFAULT == null ? heigth != null : !HEIGTH_EDEFAULT.equals(heigth);
+				return heigth != HEIGTH_EDEFAULT;
 			case UidiagramPackage.MODEL_ELEMENT__BACKGROUND_COLOR:
 				return BACKGROUND_COLOR_EDEFAULT == null ? backgroundColor != null : !BACKGROUND_COLOR_EDEFAULT.equals(backgroundColor);
 			case UidiagramPackage.MODEL_ELEMENT__TITLE_FONT:

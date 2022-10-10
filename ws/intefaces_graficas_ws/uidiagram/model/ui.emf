@@ -23,10 +23,10 @@ class UserInterface extends ModelElement{
 
 class ModelElement  {
     attr String name;
-    attr String positionX;
-    attr String positionY;
-    attr String width;
-    attr String heigth;
+    attr int positionX;
+    attr int positionY;
+    attr int width;
+    attr int heigth;
     attr String backgroundColor;
     attr String titleFont;
     attr String titleFontSize;

@@ -63,12 +63,12 @@ public interface ModelElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position X</em>' attribute.
-	 * @see #setPositionX(String)
+	 * @see #setPositionX(int)
 	 * @see uidiagram.UidiagramPackage#getModelElement_PositionX()
 	 * @model
 	 * @generated
 	 */
-	String getPositionX();
+	int getPositionX();
 
 	/**
 	 * Sets the value of the '{@link uidiagram.ModelElement#getPositionX <em>Position X</em>}' attribute.
@@ -78,7 +78,7 @@ public interface ModelElement extends EObject {
 	 * @see #getPositionX()
 	 * @generated
 	 */
-	void setPositionX(String value);
+	void setPositionX(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Position Y</b></em>' attribute.
@@ -89,12 +89,12 @@ public interface ModelElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position Y</em>' attribute.
-	 * @see #setPositionY(String)
+	 * @see #setPositionY(int)
 	 * @see uidiagram.UidiagramPackage#getModelElement_PositionY()
 	 * @model
 	 * @generated
 	 */
-	String getPositionY();
+	int getPositionY();
 
 	/**
 	 * Sets the value of the '{@link uidiagram.ModelElement#getPositionY <em>Position Y</em>}' attribute.
@@ -104,7 +104,7 @@ public interface ModelElement extends EObject {
 	 * @see #getPositionY()
 	 * @generated
 	 */
-	void setPositionY(String value);
+	void setPositionY(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -115,12 +115,12 @@ public interface ModelElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(String)
+	 * @see #setWidth(int)
 	 * @see uidiagram.UidiagramPackage#getModelElement_Width()
 	 * @model
 	 * @generated
 	 */
-	String getWidth();
+	int getWidth();
 
 	/**
 	 * Sets the value of the '{@link uidiagram.ModelElement#getWidth <em>Width</em>}' attribute.
@@ -130,7 +130,7 @@ public interface ModelElement extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(String value);
+	void setWidth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Heigth</b></em>' attribute.
@@ -141,12 +141,12 @@ public interface ModelElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Heigth</em>' attribute.
-	 * @see #setHeigth(String)
+	 * @see #setHeigth(int)
 	 * @see uidiagram.UidiagramPackage#getModelElement_Heigth()
 	 * @model
 	 * @generated
 	 */
-	String getHeigth();
+	int getHeigth();
 
 	/**
 	 * Sets the value of the '{@link uidiagram.ModelElement#getHeigth <em>Heigth</em>}' attribute.
@@ -156,7 +156,7 @@ public interface ModelElement extends EObject {
 	 * @see #getHeigth()
 	 * @generated
 	 */
-	void setHeigth(String value);
+	void setHeigth(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.

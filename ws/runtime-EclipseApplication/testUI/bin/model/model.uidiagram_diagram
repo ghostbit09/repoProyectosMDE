@@ -9,7 +9,7 @@
           <children xmi:type="notation:Shape" xmi:id="_mORqMEdSEe230fcmhglHYg" type="3004" fontName="Segoe UI">
             <children xmi:type="notation:DecorationNode" xmi:id="_mORqMkdSEe230fcmhglHYg" type="5002"/>
             <element xmi:type="uidiagram:Label" href="model.uidiagram#//@listDiagrams.0/@listUserInterface.0/@listWidgets.0/@lstChildModelElements.0"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mORqMUdSEe230fcmhglHYg" x="17" y="15" width="79" height="24"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mORqMUdSEe230fcmhglHYg" x="15" y="13" width="79" height="24"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_oMbY8EdSEe230fcmhglHYg" type="3006" fontName="Segoe UI">
             <children xmi:type="notation:DecorationNode" xmi:id="_oMbY8kdSEe230fcmhglHYg" type="5004"/>
