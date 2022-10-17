@@ -10,7 +10,7 @@ package uidiagram;
  *
  *
  * @see uidiagram.UidiagramPackage#getButton()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' label.layout='center'"
  * @generated
  */
 public interface Button extends GraphicalIndividual {

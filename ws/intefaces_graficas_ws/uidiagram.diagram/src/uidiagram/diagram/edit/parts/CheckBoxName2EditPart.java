@@ -60,7 +60,7 @@ public class CheckBoxName2EditPart extends CompartmentEditPart implements ITextA
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5014;
+	public static final int VISUAL_ID = 5003;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class CheckBoxName2EditPart extends CompartmentEditPart implements ITextA
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.CheckBox_3018, getParserElement(),
+			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.CheckBox_3005, getParserElement(),
 					UidiagramVisualIDRegistry.getType(uidiagram.diagram.edit.parts.CheckBoxName2EditPart.VISUAL_ID));
 		}
 		return parser;

@@ -187,11 +187,6 @@ public class UserInterfaceItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
-				 UidiagramFactory.eINSTANCE.createGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
 				 UidiagramFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add
@@ -212,22 +207,7 @@ public class UserInterfaceItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
-				 UidiagramFactory.eINSTANCE.createDropDown()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
-				 UidiagramFactory.eINSTANCE.createMenu()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
 				 UidiagramFactory.eINSTANCE.createImg()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
-				 UidiagramFactory.eINSTANCE.createIcon()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -237,7 +217,7 @@ public class UserInterfaceItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
-				 UidiagramFactory.eINSTANCE.createColumn()));
+				 UidiagramFactory.eINSTANCE.createTableRow()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -248,6 +228,11 @@ public class UserInterfaceItemProvider extends ModelElementItemProvider {
 			(createChildParameter
 				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
 				 UidiagramFactory.eINSTANCE.createRadioButton()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UidiagramPackage.Literals.USER_INTERFACE__LIST_WIDGETS,
+				 UidiagramFactory.eINSTANCE.createFloatingButton()));
 	}
 
 }

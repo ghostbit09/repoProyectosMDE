@@ -159,11 +159,6 @@ public class GraphicalContainerItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
-				 UidiagramFactory.eINSTANCE.createGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
 				 UidiagramFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add
@@ -184,22 +179,7 @@ public class GraphicalContainerItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
-				 UidiagramFactory.eINSTANCE.createDropDown()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
-				 UidiagramFactory.eINSTANCE.createMenu()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
 				 UidiagramFactory.eINSTANCE.createImg()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
-				 UidiagramFactory.eINSTANCE.createIcon()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -209,7 +189,7 @@ public class GraphicalContainerItemProvider extends ModelElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
-				 UidiagramFactory.eINSTANCE.createColumn()));
+				 UidiagramFactory.eINSTANCE.createTableRow()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -220,6 +200,11 @@ public class GraphicalContainerItemProvider extends ModelElementItemProvider {
 			(createChildParameter
 				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
 				 UidiagramFactory.eINSTANCE.createRadioButton()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(UidiagramPackage.Literals.GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS,
+				 UidiagramFactory.eINSTANCE.createFloatingButton()));
 	}
 
 }

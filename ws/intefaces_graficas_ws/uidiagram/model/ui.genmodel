@@ -17,32 +17,35 @@
     </genClasses>
     <genClasses ecoreClass="ui.ecore#//ModelElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/positionX"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/positionY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/modelElementId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/layout_marginTop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/layout_marginBottom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/layout_marginStart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/width"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/heigth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/height"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/backgroundColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/textColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/titleFont"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/titleFontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/textStyle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/textAppearance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/inputType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/srcCompat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ui.ecore#//ModelElement/maxLength"/>
     </genClasses>
     <genClasses ecoreClass="ui.ecore#//GraphicalContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ui.ecore#//GraphicalContainer/lstChildModelElements"/>
     </genClasses>
     <genClasses ecoreClass="ui.ecore#//GraphicalIndividual"/>
-    <genClasses ecoreClass="ui.ecore#//Group"/>
     <genClasses ecoreClass="ui.ecore#//Button"/>
     <genClasses ecoreClass="ui.ecore#//Label"/>
     <genClasses ecoreClass="ui.ecore#//CheckBox"/>
     <genClasses ecoreClass="ui.ecore#//TextInput"/>
-    <genClasses ecoreClass="ui.ecore#//DropDown"/>
-    <genClasses ecoreClass="ui.ecore#//Menu"/>
     <genClasses ecoreClass="ui.ecore#//Img"/>
-    <genClasses ecoreClass="ui.ecore#//Icon"/>
-    <genClasses ecoreClass="ui.ecore#//Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ui.ecore#//Table/lstColumn"/>
-    </genClasses>
-    <genClasses ecoreClass="ui.ecore#//Column"/>
+    <genClasses ecoreClass="ui.ecore#//Table"/>
+    <genClasses ecoreClass="ui.ecore#//TableRow"/>
     <genClasses ecoreClass="ui.ecore#//ComboBox"/>
     <genClasses ecoreClass="ui.ecore#//RadioButton"/>
+    <genClasses ecoreClass="ui.ecore#//FloatingButton"/>
   </genPackages>
 </genmodel:GenModel>

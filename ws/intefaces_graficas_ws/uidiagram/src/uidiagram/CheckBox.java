@@ -10,7 +10,7 @@ package uidiagram;
  *
  *
  * @see uidiagram.UidiagramPackage#getCheckBox()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' figure='rectangle'"
  * @generated
  */
 public interface CheckBox extends GraphicalIndividual {

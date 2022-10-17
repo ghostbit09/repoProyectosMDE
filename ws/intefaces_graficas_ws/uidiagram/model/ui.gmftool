@@ -30,15 +30,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Column"
-          description="Create new Column">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="ComboBox"
           description="Create new ComboBox">
         <smallIcon
@@ -48,26 +39,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="DropDown"
-          description="Create new DropDown">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Group"
-          description="Create new Group">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Icon"
-          description="Create new Icon">
+          title="FloatingButton"
+          description="Create new FloatingButton">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -93,15 +66,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Menu"
-          description="Create new Menu">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="RadioButton"
           description="Create new RadioButton">
         <smallIcon
@@ -113,6 +77,15 @@
           xsi:type="gmftool:CreationTool"
           title="Table"
           description="Create new Table">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="TableRow"
+          description="Create new TableRow">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

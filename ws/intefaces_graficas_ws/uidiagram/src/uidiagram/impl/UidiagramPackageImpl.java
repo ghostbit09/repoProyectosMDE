@@ -11,20 +11,17 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import uidiagram.Button;
 import uidiagram.CheckBox;
-import uidiagram.Column;
 import uidiagram.ComboBox;
-import uidiagram.DropDown;
+import uidiagram.FloatingButton;
 import uidiagram.GraphicalContainer;
 import uidiagram.GraphicalIndividual;
-import uidiagram.Group;
-import uidiagram.Icon;
 import uidiagram.Img;
 import uidiagram.Label;
-import uidiagram.Menu;
 import uidiagram.ModelElement;
 import uidiagram.ModelFactory;
 import uidiagram.RadioButton;
 import uidiagram.Table;
+import uidiagram.TableRow;
 import uidiagram.TextInput;
 import uidiagram.Ui_Diagram;
 import uidiagram.UidiagramFactory;
@@ -85,13 +82,6 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass groupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass buttonEClass = null;
 
 	/**
@@ -120,28 +110,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dropDownEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass menuEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass imgEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iconEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,7 +124,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass columnEClass = null;
+	private EClass tableRowEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,6 +139,13 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * @generated
 	 */
 	private EClass radioButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass floatingButtonEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -318,7 +294,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_PositionX() {
+	public EAttribute getModelElement_ModelElementId() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -327,7 +303,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_PositionY() {
+	public EAttribute getModelElement_Layout_marginTop() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -336,7 +312,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_Width() {
+	public EAttribute getModelElement_Layout_marginBottom() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -345,7 +321,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_Heigth() {
+	public EAttribute getModelElement_Layout_marginStart() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -354,7 +330,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_BackgroundColor() {
+	public EAttribute getModelElement_Width() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -363,7 +339,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_TitleFont() {
+	public EAttribute getModelElement_Height() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -372,8 +348,80 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModelElement_TitleFontSize() {
+	public EAttribute getModelElement_BackgroundColor() {
 		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_TextColor() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_TitleFont() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_TitleFontSize() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_TextStyle() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_TextAppearance() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_InputType() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_SrcCompat() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModelElement_MaxLength() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -401,15 +449,6 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 */
 	public EClass getGraphicalIndividual() {
 		return graphicalIndividualEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGroup() {
-		return groupEClass;
 	}
 
 	/**
@@ -453,35 +492,8 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDropDown() {
-		return dropDownEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMenu() {
-		return menuEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getImg() {
 		return imgEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIcon() {
-		return iconEClass;
 	}
 
 	/**
@@ -498,17 +510,8 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTable_LstColumn() {
-		return (EReference)tableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getColumn() {
-		return columnEClass;
+	public EClass getTableRow() {
+		return tableRowEClass;
 	}
 
 	/**
@@ -527,6 +530,15 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 	 */
 	public EClass getRadioButton() {
 		return radioButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFloatingButton() {
+		return floatingButtonEClass;
 	}
 
 	/**
@@ -569,20 +581,26 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 
 		modelElementEClass = createEClass(MODEL_ELEMENT);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__NAME);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__POSITION_X);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__POSITION_Y);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__MODEL_ELEMENT_ID);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__LAYOUT_MARGIN_TOP);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__LAYOUT_MARGIN_BOTTOM);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__LAYOUT_MARGIN_START);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__WIDTH);
-		createEAttribute(modelElementEClass, MODEL_ELEMENT__HEIGTH);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__HEIGHT);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__BACKGROUND_COLOR);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__TEXT_COLOR);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__TITLE_FONT);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__TITLE_FONT_SIZE);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__TEXT_STYLE);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__TEXT_APPEARANCE);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__INPUT_TYPE);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__SRC_COMPAT);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__MAX_LENGTH);
 
 		graphicalContainerEClass = createEClass(GRAPHICAL_CONTAINER);
 		createEReference(graphicalContainerEClass, GRAPHICAL_CONTAINER__LST_CHILD_MODEL_ELEMENTS);
 
 		graphicalIndividualEClass = createEClass(GRAPHICAL_INDIVIDUAL);
-
-		groupEClass = createEClass(GROUP);
 
 		buttonEClass = createEClass(BUTTON);
 
@@ -592,22 +610,17 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 
 		textInputEClass = createEClass(TEXT_INPUT);
 
-		dropDownEClass = createEClass(DROP_DOWN);
-
-		menuEClass = createEClass(MENU);
-
 		imgEClass = createEClass(IMG);
 
-		iconEClass = createEClass(ICON);
-
 		tableEClass = createEClass(TABLE);
-		createEReference(tableEClass, TABLE__LST_COLUMN);
 
-		columnEClass = createEClass(COLUMN);
+		tableRowEClass = createEClass(TABLE_ROW);
 
 		comboBoxEClass = createEClass(COMBO_BOX);
 
 		radioButtonEClass = createEClass(RADIO_BUTTON);
+
+		floatingButtonEClass = createEClass(FLOATING_BUTTON);
 	}
 
 	/**
@@ -641,19 +654,16 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 		userInterfaceEClass.getESuperTypes().add(this.getModelElement());
 		graphicalContainerEClass.getESuperTypes().add(this.getModelElement());
 		graphicalIndividualEClass.getESuperTypes().add(this.getModelElement());
-		groupEClass.getESuperTypes().add(this.getGraphicalContainer());
 		buttonEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		labelEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		checkBoxEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		textInputEClass.getESuperTypes().add(this.getGraphicalIndividual());
-		dropDownEClass.getESuperTypes().add(this.getGraphicalIndividual());
-		menuEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		imgEClass.getESuperTypes().add(this.getGraphicalIndividual());
-		iconEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		tableEClass.getESuperTypes().add(this.getGraphicalContainer());
-		columnEClass.getESuperTypes().add(this.getGraphicalIndividual());
+		tableRowEClass.getESuperTypes().add(this.getGraphicalContainer());
 		comboBoxEClass.getESuperTypes().add(this.getGraphicalIndividual());
 		radioButtonEClass.getESuperTypes().add(this.getGraphicalIndividual());
+		floatingButtonEClass.getESuperTypes().add(this.getGraphicalIndividual());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelFactoryEClass, ModelFactory.class, "ModelFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -668,20 +678,26 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModelElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_PositionX(), ecorePackage.getEInt(), "positionX", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_PositionY(), ecorePackage.getEInt(), "positionY", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Width(), ecorePackage.getEInt(), "width", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getModelElement_Heigth(), ecorePackage.getEInt(), "heigth", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_ModelElementId(), ecorePackage.getEString(), "modelElementId", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_Layout_marginTop(), ecorePackage.getEString(), "layout_marginTop", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_Layout_marginBottom(), ecorePackage.getEString(), "layout_marginBottom", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_Layout_marginStart(), ecorePackage.getEString(), "layout_marginStart", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_Width(), ecorePackage.getEString(), "width", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_Height(), ecorePackage.getEString(), "height", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelElement_BackgroundColor(), ecorePackage.getEString(), "backgroundColor", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_TextColor(), ecorePackage.getEString(), "textColor", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelElement_TitleFont(), ecorePackage.getEString(), "titleFont", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModelElement_TitleFontSize(), ecorePackage.getEString(), "titleFontSize", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_TextStyle(), ecorePackage.getEString(), "textStyle", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_TextAppearance(), ecorePackage.getEString(), "textAppearance", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_InputType(), ecorePackage.getEString(), "inputType", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_SrcCompat(), ecorePackage.getEString(), "srcCompat", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_MaxLength(), ecorePackage.getEString(), "maxLength", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(graphicalContainerEClass, GraphicalContainer.class, "GraphicalContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGraphicalContainer_LstChildModelElements(), this.getModelElement(), null, "lstChildModelElements", null, 0, -1, GraphicalContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(graphicalIndividualEClass, GraphicalIndividual.class, "GraphicalIndividual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -691,22 +707,17 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 
 		initEClass(textInputEClass, TextInput.class, "TextInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(dropDownEClass, DropDown.class, "DropDown", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(menuEClass, Menu.class, "Menu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(imgEClass, Img.class, "Img", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iconEClass, Icon.class, "Icon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTable_LstColumn(), this.getColumn(), null, "lstColumn", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(columnEClass, Column.class, "Column", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(tableRowEClass, TableRow.class, "TableRow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(comboBoxEClass, ComboBox.class, "ComboBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(floatingButtonEClass, FloatingButton.class, "FloatingButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -764,19 +775,15 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 		  (userInterfaceEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (groupEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "label.layout", "center"
 		   });	
 		addAnnotation
 		  (buttonEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "label.layout", "center"
 		   });	
 		addAnnotation
 		  (labelEClass, 
@@ -789,37 +796,22 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 		  (checkBoxEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "figure", "rectangle"
 		   });	
 		addAnnotation
 		  (textInputEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (dropDownEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (menuEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "figure", "rectangle"
 		   });	
 		addAnnotation
 		  (imgEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
-		   });	
-		addAnnotation
-		  (iconEClass, 
-		   source, 
-		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "figure", "rectangle"
 		   });	
 		addAnnotation
 		  (tableEClass, 
@@ -829,7 +821,7 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 			 "figure", "rectangle"
 		   });	
 		addAnnotation
-		  (columnEClass, 
+		  (tableRowEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name",
@@ -839,10 +831,17 @@ public class UidiagramPackageImpl extends EPackageImpl implements UidiagramPacka
 		  (comboBoxEClass, 
 		   source, 
 		   new String[] {
-			 "label", "name"
+			 "label", "name",
+			 "figure", "rectangle"
 		   });	
 		addAnnotation
 		  (radioButtonEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name"
+		   });	
+		addAnnotation
+		  (floatingButtonEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"

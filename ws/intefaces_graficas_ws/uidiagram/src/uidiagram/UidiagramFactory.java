@@ -76,15 +76,6 @@ public interface UidiagramFactory extends EFactory {
 	GraphicalIndividual createGraphicalIndividual();
 
 	/**
-	 * Returns a new object of class '<em>Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Group</em>'.
-	 * @generated
-	 */
-	Group createGroup();
-
-	/**
 	 * Returns a new object of class '<em>Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,24 +112,6 @@ public interface UidiagramFactory extends EFactory {
 	TextInput createTextInput();
 
 	/**
-	 * Returns a new object of class '<em>Drop Down</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Drop Down</em>'.
-	 * @generated
-	 */
-	DropDown createDropDown();
-
-	/**
-	 * Returns a new object of class '<em>Menu</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Menu</em>'.
-	 * @generated
-	 */
-	Menu createMenu();
-
-	/**
 	 * Returns a new object of class '<em>Img</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,15 +119,6 @@ public interface UidiagramFactory extends EFactory {
 	 * @generated
 	 */
 	Img createImg();
-
-	/**
-	 * Returns a new object of class '<em>Icon</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Icon</em>'.
-	 * @generated
-	 */
-	Icon createIcon();
 
 	/**
 	 * Returns a new object of class '<em>Table</em>'.
@@ -166,13 +130,13 @@ public interface UidiagramFactory extends EFactory {
 	Table createTable();
 
 	/**
-	 * Returns a new object of class '<em>Column</em>'.
+	 * Returns a new object of class '<em>Table Row</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Column</em>'.
+	 * @return a new object of class '<em>Table Row</em>'.
 	 * @generated
 	 */
-	Column createColumn();
+	TableRow createTableRow();
 
 	/**
 	 * Returns a new object of class '<em>Combo Box</em>'.
@@ -191,6 +155,15 @@ public interface UidiagramFactory extends EFactory {
 	 * @generated
 	 */
 	RadioButton createRadioButton();
+
+	/**
+	 * Returns a new object of class '<em>Floating Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Floating Button</em>'.
+	 * @generated
+	 */
+	FloatingButton createFloatingButton();
 
 	/**
 	 * Returns the package supported by this factory.

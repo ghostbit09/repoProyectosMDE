@@ -21,120 +21,9 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="ui.gmftool#//@palette/@tools.0/@tools.13"/>
+          href="ui.gmftool#//@palette/@tools.0/@tools.10"/>
       <diagramNode
           href="ui.gmfgraph#UserInterface"/>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="ui.ecore#//UserInterface/listWidgets"/>
-        <ownedChild
-            relatedDiagrams="//@diagram">
-          <domainMetaElement
-              href="ui.ecore#//Group"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
-            <diagramLabel
-                href="ui.gmfgraph#GroupLabel"/>
-            <features
-                href="ui.ecore#//ModelElement/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.5"/>
-          <diagramNode
-              href="ui.gmfgraph#Group"/>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.0/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <compartments
-              children="//@nodes.0/@ownedChild/@children.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.0/@ownedChild/@children.13">
-            <compartment
-                href="ui.gmfgraph#GroupLstChildModelElementsCompartment"/>
-          </compartments>
-        </ownedChild>
-      </children>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
@@ -172,7 +61,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.8"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.5"/>
           <diagramNode
               href="ui.gmfgraph#Label"/>
         </ownedChild>
@@ -214,51 +103,9 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.12"/>
-          <diagramNode
-              href="ui.gmfgraph#TextInput"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="ui.ecore#//UserInterface/listWidgets"/>
-        <ownedChild>
-          <domainMetaElement
-              href="ui.ecore#//DropDown"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
-            <diagramLabel
-                href="ui.gmfgraph#DropDownLabel"/>
-            <features
-                href="ui.ecore#//ModelElement/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.4"/>
-          <diagramNode
-              href="ui.gmfgraph#DropDown"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="ui.ecore#//UserInterface/listWidgets"/>
-        <ownedChild>
-          <domainMetaElement
-              href="ui.ecore#//Menu"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
-            <diagramLabel
-                href="ui.gmfgraph#MenuLabel"/>
-            <features
-                href="ui.ecore#//ModelElement/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
               href="ui.gmftool#//@palette/@tools.0/@tools.9"/>
           <diagramNode
-              href="ui.gmfgraph#Menu"/>
+              href="ui.gmfgraph#TextInput"/>
         </ownedChild>
       </children>
       <children
@@ -277,30 +124,9 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.7"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="ui.gmfgraph#Img"/>
-        </ownedChild>
-      </children>
-      <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
-        <containmentFeature
-            href="ui.ecore#//UserInterface/listWidgets"/>
-        <ownedChild>
-          <domainMetaElement
-              href="ui.ecore#//Icon"/>
-          <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
-            <diagramLabel
-                href="ui.gmfgraph#IconLabel"/>
-            <features
-                href="ui.ecore#//ModelElement/name"/>
-          </labelMappings>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.6"/>
-          <diagramNode
-              href="ui.gmfgraph#Icon"/>
         </ownedChild>
       </children>
       <children
@@ -320,95 +146,77 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.11"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.7"/>
           <diagramNode
               href="ui.gmfgraph#Table"/>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.10/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.11/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
-              referencedChild="//@nodes.0/@ownedChild/@children.12/@ownedChild">
-            <containmentFeature
-                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
-          </children>
-          <children
-              compartment="//@nodes.0/@ownedChild/@children.9/@ownedChild/@compartments.0"
+              compartment="//@nodes.0/@ownedChild/@children.5/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild">
             <containmentFeature
                 href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
           </children>
           <compartments
-              children="//@nodes.0/@ownedChild/@children.9/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.9/@ownedChild/@children.13">
+              children="//@nodes.0/@ownedChild/@children.5/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.5/@ownedChild/@children.10">
             <compartment
                 href="ui.gmfgraph#TableLstChildModelElementsCompartment"/>
           </compartments>
@@ -418,21 +226,93 @@
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
             href="ui.ecore#//UserInterface/listWidgets"/>
-        <ownedChild>
+        <ownedChild
+            relatedDiagrams="//@diagram">
           <domainMetaElement
-              href="ui.ecore#//Column"/>
+              href="ui.ecore#//TableRow"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="ui.gmfgraph#ColumnLabel"/>
+                href="ui.gmfgraph#TableRowLabel"/>
             <features
                 href="ui.ecore#//ModelElement/name"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.2"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.8"/>
           <diagramNode
-              href="ui.gmfgraph#Column"/>
+              href="ui.gmfgraph#TableRow"/>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.1/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.2/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.3/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.4/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.5/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.6/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.7/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.8/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild/@children.9/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <children
+              compartment="//@nodes.0/@ownedChild/@children.6/@ownedChild/@compartments.0"
+              referencedChild="//@nodes.0/@ownedChild">
+            <containmentFeature
+                href="ui.ecore#//GraphicalContainer/lstChildModelElements"/>
+          </children>
+          <compartments
+              children="//@nodes.0/@ownedChild/@children.6/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.6/@ownedChild/@children.10">
+            <compartment
+                href="ui.gmfgraph#TableRowLstChildModelElementsCompartment"/>
+          </compartments>
         </ownedChild>
       </children>
       <children
@@ -451,7 +331,7 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.3"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
               href="ui.gmfgraph#ComboBox"/>
         </ownedChild>
@@ -472,9 +352,30 @@
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
-              href="ui.gmftool#//@palette/@tools.0/@tools.10"/>
+              href="ui.gmftool#//@palette/@tools.0/@tools.6"/>
           <diagramNode
               href="ui.gmfgraph#RadioButton"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.0/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="ui.ecore#//UserInterface/listWidgets"/>
+        <ownedChild>
+          <domainMetaElement
+              href="ui.ecore#//FloatingButton"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="ui.gmfgraph#FloatingButtonLabel"/>
+            <features
+                href="ui.ecore#//ModelElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="ui.gmftool#//@palette/@tools.0/@tools.3"/>
+          <diagramNode
+              href="ui.gmfgraph#FloatingButton"/>
         </ownedChild>
       </children>
       <children
@@ -484,7 +385,7 @@
             href="ui.ecore#//UserInterface/listWidgets"/>
       </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10 //@nodes.0/@ownedChild/@children.11 //@nodes.0/@ownedChild/@children.12 //@nodes.0/@ownedChild/@children.13">
+          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1 //@nodes.0/@ownedChild/@children.2 //@nodes.0/@ownedChild/@children.3 //@nodes.0/@ownedChild/@children.4 //@nodes.0/@ownedChild/@children.5 //@nodes.0/@ownedChild/@children.6 //@nodes.0/@ownedChild/@children.7 //@nodes.0/@ownedChild/@children.8 //@nodes.0/@ownedChild/@children.9 //@nodes.0/@ownedChild/@children.10">
         <compartment
             href="ui.gmfgraph#UserInterfaceListWidgetsCompartment"/>
       </compartments>

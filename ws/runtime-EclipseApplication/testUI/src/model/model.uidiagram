@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uidiagram:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uidiagram="http://uidiagram">
   <listDiagrams>
-    <listUserInterface name="Registro Cliente" title="RegistroClienteUI">
-      <listWidgets xsi:type="uidiagram:Group" name="Ingreso de datos personales">
-        <lstChildModelElements xsi:type="uidiagram:Label" name="Nombre:" positionX="15" positionY="13" width="79" heigth="24"/>
-        <lstChildModelElements xsi:type="uidiagram:TextInput" name="nombre"/>
-        <lstChildModelElements xsi:type="uidiagram:Label" name="Apellidos:"/>
-        <lstChildModelElements xsi:type="uidiagram:TextInput" name="apellidos"/>
-        <lstChildModelElements xsi:type="uidiagram:Label" name="Cedula:"/>
-        <lstChildModelElements xsi:type="uidiagram:TextInput" name="cedula"/>
-        <lstChildModelElements xsi:type="uidiagram:Button" name="Registrar cliente"/>
+    <listUserInterface name="Registro Cliente" backgroundColor="#FFFFFF" title="activity_main">
+      <listWidgets xsi:type="uidiagram:Label" name="Cliente" modelElementId="textView" layout_marginTop="10dp" layout_marginBottom="" width="match_parent" height="wrap_content" textColor="#FF3700B3" titleFont="sans-serif-smallcaps" titleFontSize="25sp" textStyle="bold" textAppearance="TextAppearance.AppCompat.Body2"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Nombre:" modelElementId="textView2" layout_marginTop="10dp" layout_marginBottom="" width="75dp" height="wrap_content" textColor="#311B92" titleFont="" titleFontSize="15sp" textAppearance=""/>
+      <listWidgets xsi:type="uidiagram:TextInput" name="Ingrese su nombre" modelElementId="etName" layout_marginTop="2dp" layout_marginBottom="" width="match_parent" height="wrap_content" textColor="" inputType="textPersonName|textCapWords" maxLength="30"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Apellidos:" modelElementId="textView3" layout_marginTop="14dp" layout_marginBottom="" width="76dp" height="wrap_content" textColor="#311B92" titleFontSize="15sp"/>
+      <listWidgets xsi:type="uidiagram:TextInput" name="Ingrese sus apellidos" modelElementId="etLastName" layout_marginTop="2dp" layout_marginBottom="" width="match_parent" height="wrap_content" inputType="textPersonName|textCapWords" maxLength="50"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Cédula:" modelElementId="textView4" layout_marginTop="14dp" layout_marginBottom="" width="78dp" height="wrap_content" backgroundColor="" textColor="#311B92" titleFont="" titleFontSize="15sp"/>
+      <listWidgets xsi:type="uidiagram:TextInput" name="Ingrese su cédula" modelElementId="etIdentifier" layout_marginTop="2dp" layout_marginBottom="" width="match_parent" height="wrap_content" inputType="number" maxLength="10"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Ciudad:" modelElementId="textView5" layout_marginTop="14dp" layout_marginBottom="" width="78dp" height="wrap_content" textColor="#311B92" titleFontSize="15sp"/>
+      <listWidgets xsi:type="uidiagram:ComboBox" name="ComboBox Ciudad" modelElementId="spinner" layout_marginTop="2dp" layout_marginBottom="" width="match_parent" height="wrap_content"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Genero:" modelElementId="textView6" layout_marginTop="14dp" layout_marginBottom="" width="78dp" height="wrap_content" textColor="#311B92" titleFontSize="15sp"/>
+      <listWidgets xsi:type="uidiagram:RadioButton" name="Masculino" modelElementId="radioButtonMasculino" layout_marginTop="5dp" layout_marginBottom="" width="160dp" height="27dp" textColor="#5E5A5A"/>
+      <listWidgets xsi:type="uidiagram:RadioButton" name="Femenino" modelElementId="radioButtonFemenino" layout_marginTop="5dp" layout_marginBottom="" width="161dp" height="26dp" textColor="#5E5A5A" titleFontSize=""/>
+      <listWidgets xsi:type="uidiagram:CheckBox" name="Aceptar terminos y condiciones" modelElementId="checkBox" layout_marginTop="14dp" layout_marginBottom="" width="match_parent" height="wrap_content" textColor="#5E5A5A"/>
+      <listWidgets xsi:type="uidiagram:Button" name="Registrar" modelElementId="buttonR" layout_marginTop="15dp" layout_marginBottom="" width="match_parent" height="50dp" titleFont="sans-serif-smallcaps" titleFontSize="17sp" textStyle="bold" inputType="text"/>
+      <listWidgets xsi:type="uidiagram:Img" name="Img UICliente" modelElementId="imageView" width="match_parent" height="141dp" srcCompat="@mipmap/cliente"/>
+      <listWidgets xsi:type="uidiagram:Label" name="Listado de clientes" modelElementId="textView7" layout_marginTop="10dp" layout_marginBottom="18dp" width="match_parent" height="wrap_content" textColor="#FF3700B3" titleFont="sans-serif-smallcaps" titleFontSize="25sp" textStyle="bold" textAppearance="TextAppearance.AppCompat.Body2"/>
+      <listWidgets xsi:type="uidiagram:Table" name="Tabla de clientes" modelElementId="" layout_marginTop="" layout_marginBottom="20dp" width="match_parent" height="wrap_content">
+        <lstChildModelElements xsi:type="uidiagram:TableRow" name="tableRow1" modelElementId="talRow1" layout_marginBottom="" width="match_parent" height="wrap_content" backgroundColor="#FF3700B3">
+          <lstChildModelElements xsi:type="uidiagram:Label" name="Nombre" modelElementId="colName" layout_marginTop="" layout_marginBottom="" layout_marginStart="15dp" width="91dp" height="0dp" textColor="#FFFFFF" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" name="Apellido" modelElementId="colLastName" layout_marginTop="" layout_marginBottom="" layout_marginStart="15dp" width="50dp" height="match_parent" textColor="#FFFFFF" titleFont="sans-serif" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" name="Cédula" modelElementId="colIdentifier" layout_marginTop="" layout_marginBottom="" layout_marginStart="15dp" width="60dp" textColor="#FFFFFF" titleFontSize="20sp" textStyle="bold"/>
+        </lstChildModelElements>
+        <lstChildModelElements xsi:type="uidiagram:TableRow" name="tableRow2" modelElementId="talRow2" width="match_parent" height="wrap_content" backgroundColor="#34656363">
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="91dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="117dp" height="match_parent" textColor="#FF3700B3" titleFont="sans-serif" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="102dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+        </lstChildModelElements>
+        <lstChildModelElements xsi:type="uidiagram:TableRow" name="tableRow3" modelElementId="talRow3" width="match_parent" height="wrap_content" backgroundColor="#34656363">
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="91dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="117dp" height="match_parent" textColor="#FF3700B3" titleFont="sans-serif" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="102dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+        </lstChildModelElements>
+        <lstChildModelElements xsi:type="uidiagram:TableRow" name="tableRow4" modelElementId="talRow4" width="match_parent" height="wrap_content" backgroundColor="#34656363">
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="91dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="117dp" height="match_parent" textColor="#FF3700B3" titleFont="sans-serif" titleFontSize="20sp" textStyle="bold"/>
+          <lstChildModelElements xsi:type="uidiagram:Label" layout_marginStart="15dp" width="102dp" textColor="#FF3700B3" titleFontSize="20sp" textStyle="bold"/>
+        </lstChildModelElements>
       </listWidgets>
+      <listWidgets xsi:type="uidiagram:FloatingButton" name="floatingButton" modelElementId="idF" layout_marginBottom="20dp" layout_marginStart="300dp" width="wrap_content" height="wrap_content"/>
     </listUserInterface>
   </listDiagrams>
 </uidiagram:ModelFactory>

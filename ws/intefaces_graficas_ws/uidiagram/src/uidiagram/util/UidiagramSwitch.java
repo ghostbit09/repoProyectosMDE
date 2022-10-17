@@ -105,14 +105,6 @@ public class UidiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UidiagramPackage.GROUP: {
-				Group group = (Group)theEObject;
-				T result = caseGroup(group);
-				if (result == null) result = caseGraphicalContainer(group);
-				if (result == null) result = caseModelElement(group);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UidiagramPackage.BUTTON: {
 				Button button = (Button)theEObject;
 				T result = caseButton(button);
@@ -145,35 +137,11 @@ public class UidiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UidiagramPackage.DROP_DOWN: {
-				DropDown dropDown = (DropDown)theEObject;
-				T result = caseDropDown(dropDown);
-				if (result == null) result = caseGraphicalIndividual(dropDown);
-				if (result == null) result = caseModelElement(dropDown);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UidiagramPackage.MENU: {
-				Menu menu = (Menu)theEObject;
-				T result = caseMenu(menu);
-				if (result == null) result = caseGraphicalIndividual(menu);
-				if (result == null) result = caseModelElement(menu);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case UidiagramPackage.IMG: {
 				Img img = (Img)theEObject;
 				T result = caseImg(img);
 				if (result == null) result = caseGraphicalIndividual(img);
 				if (result == null) result = caseModelElement(img);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case UidiagramPackage.ICON: {
-				Icon icon = (Icon)theEObject;
-				T result = caseIcon(icon);
-				if (result == null) result = caseGraphicalIndividual(icon);
-				if (result == null) result = caseModelElement(icon);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -185,11 +153,11 @@ public class UidiagramSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case UidiagramPackage.COLUMN: {
-				Column column = (Column)theEObject;
-				T result = caseColumn(column);
-				if (result == null) result = caseGraphicalIndividual(column);
-				if (result == null) result = caseModelElement(column);
+			case UidiagramPackage.TABLE_ROW: {
+				TableRow tableRow = (TableRow)theEObject;
+				T result = caseTableRow(tableRow);
+				if (result == null) result = caseGraphicalContainer(tableRow);
+				if (result == null) result = caseModelElement(tableRow);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +174,14 @@ public class UidiagramSwitch<T> extends Switch<T> {
 				T result = caseRadioButton(radioButton);
 				if (result == null) result = caseGraphicalIndividual(radioButton);
 				if (result == null) result = caseModelElement(radioButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case UidiagramPackage.FLOATING_BUTTON: {
+				FloatingButton floatingButton = (FloatingButton)theEObject;
+				T result = caseFloatingButton(floatingButton);
+				if (result == null) result = caseGraphicalIndividual(floatingButton);
+				if (result == null) result = caseModelElement(floatingButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -304,21 +280,6 @@ public class UidiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGroup(Group object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -379,36 +340,6 @@ public class UidiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Drop Down</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Drop Down</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDropDown(DropDown object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Menu</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Menu</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMenu(Menu object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Img</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -420,21 +351,6 @@ public class UidiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImg(Img object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Icon</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Icon</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIcon(Icon object) {
 		return null;
 	}
 
@@ -454,17 +370,17 @@ public class UidiagramSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Column</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Table Row</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Column</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Table Row</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseColumn(Column object) {
+	public T caseTableRow(TableRow object) {
 		return null;
 	}
 
@@ -495,6 +411,21 @@ public class UidiagramSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRadioButton(RadioButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Floating Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Floating Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFloatingButton(FloatingButton object) {
 		return null;
 	}
 

@@ -210,29 +210,6 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uidiagram.Group} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GroupItemProvider groupItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uidiagram.Group}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGroupAdapter() {
-		if (groupItemProvider == null) {
-			groupItemProvider = new GroupItemProvider(this);
-		}
-
-		return groupItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uidiagram.Button} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -325,52 +302,6 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uidiagram.DropDown} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DropDownItemProvider dropDownItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uidiagram.DropDown}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDropDownAdapter() {
-		if (dropDownItemProvider == null) {
-			dropDownItemProvider = new DropDownItemProvider(this);
-		}
-
-		return dropDownItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uidiagram.Menu} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MenuItemProvider menuItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uidiagram.Menu}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMenuAdapter() {
-		if (menuItemProvider == null) {
-			menuItemProvider = new MenuItemProvider(this);
-		}
-
-		return menuItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link uidiagram.Img} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,29 +322,6 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 		}
 
 		return imgItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link uidiagram.Icon} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IconItemProvider iconItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uidiagram.Icon}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIconAdapter() {
-		if (iconItemProvider == null) {
-			iconItemProvider = new IconItemProvider(this);
-		}
-
-		return iconItemProvider;
 	}
 
 	/**
@@ -440,26 +348,26 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uidiagram.Column} instances.
+	 * This keeps track of the one adapter used for all {@link uidiagram.TableRow} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ColumnItemProvider columnItemProvider;
+	protected TableRowItemProvider tableRowItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link uidiagram.Column}.
+	 * This creates an adapter for a {@link uidiagram.TableRow}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createColumnAdapter() {
-		if (columnItemProvider == null) {
-			columnItemProvider = new ColumnItemProvider(this);
+	public Adapter createTableRowAdapter() {
+		if (tableRowItemProvider == null) {
+			tableRowItemProvider = new TableRowItemProvider(this);
 		}
 
-		return columnItemProvider;
+		return tableRowItemProvider;
 	}
 
 	/**
@@ -506,6 +414,29 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 		}
 
 		return radioButtonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link uidiagram.FloatingButton} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FloatingButtonItemProvider floatingButtonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link uidiagram.FloatingButton}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFloatingButtonAdapter() {
+		if (floatingButtonItemProvider == null) {
+			floatingButtonItemProvider = new FloatingButtonItemProvider(this);
+		}
+
+		return floatingButtonItemProvider;
 	}
 
 	/**
@@ -613,19 +544,16 @@ public class UidiagramItemProviderAdapterFactory extends UidiagramAdapterFactory
 		if (modelElementItemProvider != null) modelElementItemProvider.dispose();
 		if (graphicalContainerItemProvider != null) graphicalContainerItemProvider.dispose();
 		if (graphicalIndividualItemProvider != null) graphicalIndividualItemProvider.dispose();
-		if (groupItemProvider != null) groupItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (labelItemProvider != null) labelItemProvider.dispose();
 		if (checkBoxItemProvider != null) checkBoxItemProvider.dispose();
 		if (textInputItemProvider != null) textInputItemProvider.dispose();
-		if (dropDownItemProvider != null) dropDownItemProvider.dispose();
-		if (menuItemProvider != null) menuItemProvider.dispose();
 		if (imgItemProvider != null) imgItemProvider.dispose();
-		if (iconItemProvider != null) iconItemProvider.dispose();
 		if (tableItemProvider != null) tableItemProvider.dispose();
-		if (columnItemProvider != null) columnItemProvider.dispose();
+		if (tableRowItemProvider != null) tableRowItemProvider.dispose();
 		if (comboBoxItemProvider != null) comboBoxItemProvider.dispose();
 		if (radioButtonItemProvider != null) radioButtonItemProvider.dispose();
+		if (floatingButtonItemProvider != null) floatingButtonItemProvider.dispose();
 	}
 
 }

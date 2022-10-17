@@ -34,7 +34,7 @@ public class TableTableLstChildModelElementsCompartmentEditPart extends ShapeCom
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 7004;
+	public static final int VISUAL_ID = 7006;
 
 	/**
 	* @generated
@@ -91,9 +91,6 @@ public class TableTableLstChildModelElementsCompartmentEditPart extends ShapeCom
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == UidiagramElementTypes.Group_3002) {
-				return this;
-			}
 			if (type == UidiagramElementTypes.Button_3003) {
 				return this;
 			}
@@ -106,28 +103,22 @@ public class TableTableLstChildModelElementsCompartmentEditPart extends ShapeCom
 			if (type == UidiagramElementTypes.TextInput_3006) {
 				return this;
 			}
-			if (type == UidiagramElementTypes.DropDown_3007) {
-				return this;
-			}
-			if (type == UidiagramElementTypes.Menu_3008) {
-				return this;
-			}
 			if (type == UidiagramElementTypes.Img_3009) {
-				return this;
-			}
-			if (type == UidiagramElementTypes.Icon_3010) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.Table_3011) {
 				return this;
 			}
-			if (type == UidiagramElementTypes.Column_3012) {
+			if (type == UidiagramElementTypes.TableRow_3029) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.ComboBox_3013) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.RadioButton_3014) {
+				return this;
+			}
+			if (type == UidiagramElementTypes.FloatingButton_3031) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.UserInterface_3015) {

@@ -25,19 +25,16 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uidiagram.UidiagramPackage;
-import uidiagram.diagram.edit.parts.Button2EditPart;
-import uidiagram.diagram.edit.parts.CheckBox2EditPart;
-import uidiagram.diagram.edit.parts.Column2EditPart;
+import uidiagram.diagram.edit.parts.ButtonEditPart;
+import uidiagram.diagram.edit.parts.CheckBoxEditPart;
 import uidiagram.diagram.edit.parts.ComboBox2EditPart;
-import uidiagram.diagram.edit.parts.DropDown2EditPart;
-import uidiagram.diagram.edit.parts.GroupEditPart;
-import uidiagram.diagram.edit.parts.Icon2EditPart;
-import uidiagram.diagram.edit.parts.Img2EditPart;
-import uidiagram.diagram.edit.parts.Label2EditPart;
-import uidiagram.diagram.edit.parts.Menu2EditPart;
+import uidiagram.diagram.edit.parts.FloatingButton2EditPart;
+import uidiagram.diagram.edit.parts.ImgEditPart;
+import uidiagram.diagram.edit.parts.LabelEditPart;
 import uidiagram.diagram.edit.parts.RadioButton2EditPart;
-import uidiagram.diagram.edit.parts.Table2EditPart;
-import uidiagram.diagram.edit.parts.TextInput2EditPart;
+import uidiagram.diagram.edit.parts.TableEditPart;
+import uidiagram.diagram.edit.parts.TableRow2EditPart;
+import uidiagram.diagram.edit.parts.TextInputEditPart;
 import uidiagram.diagram.edit.parts.UserInterface3EditPart;
 import uidiagram.diagram.part.UidiagramDiagramUpdater;
 import uidiagram.diagram.part.UidiagramNodeDescriptor;
@@ -96,19 +93,16 @@ public class UserInterfaceUserInterfaceListWidgetsCompartment2CanonicalEditPolic
 	private boolean isMyDiagramElement(View view) {
 		int visualID = UidiagramVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case GroupEditPart.VISUAL_ID:
-		case Button2EditPart.VISUAL_ID:
-		case Label2EditPart.VISUAL_ID:
-		case CheckBox2EditPart.VISUAL_ID:
-		case TextInput2EditPart.VISUAL_ID:
-		case DropDown2EditPart.VISUAL_ID:
-		case Menu2EditPart.VISUAL_ID:
-		case Img2EditPart.VISUAL_ID:
-		case Icon2EditPart.VISUAL_ID:
-		case Table2EditPart.VISUAL_ID:
-		case Column2EditPart.VISUAL_ID:
+		case ButtonEditPart.VISUAL_ID:
+		case LabelEditPart.VISUAL_ID:
+		case CheckBoxEditPart.VISUAL_ID:
+		case TextInputEditPart.VISUAL_ID:
+		case ImgEditPart.VISUAL_ID:
+		case TableEditPart.VISUAL_ID:
+		case TableRow2EditPart.VISUAL_ID:
 		case ComboBox2EditPart.VISUAL_ID:
 		case RadioButton2EditPart.VISUAL_ID:
+		case FloatingButton2EditPart.VISUAL_ID:
 		case UserInterface3EditPart.VISUAL_ID:
 			return true;
 		}

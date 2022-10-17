@@ -62,19 +62,16 @@ public class UidiagramFactoryImpl extends EFactoryImpl implements UidiagramFacto
 			case UidiagramPackage.MODEL_ELEMENT: return createModelElement();
 			case UidiagramPackage.GRAPHICAL_CONTAINER: return createGraphicalContainer();
 			case UidiagramPackage.GRAPHICAL_INDIVIDUAL: return createGraphicalIndividual();
-			case UidiagramPackage.GROUP: return createGroup();
 			case UidiagramPackage.BUTTON: return createButton();
 			case UidiagramPackage.LABEL: return createLabel();
 			case UidiagramPackage.CHECK_BOX: return createCheckBox();
 			case UidiagramPackage.TEXT_INPUT: return createTextInput();
-			case UidiagramPackage.DROP_DOWN: return createDropDown();
-			case UidiagramPackage.MENU: return createMenu();
 			case UidiagramPackage.IMG: return createImg();
-			case UidiagramPackage.ICON: return createIcon();
 			case UidiagramPackage.TABLE: return createTable();
-			case UidiagramPackage.COLUMN: return createColumn();
+			case UidiagramPackage.TABLE_ROW: return createTableRow();
 			case UidiagramPackage.COMBO_BOX: return createComboBox();
 			case UidiagramPackage.RADIO_BUTTON: return createRadioButton();
+			case UidiagramPackage.FLOATING_BUTTON: return createFloatingButton();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -145,16 +142,6 @@ public class UidiagramFactoryImpl extends EFactoryImpl implements UidiagramFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Group createGroup() {
-		GroupImpl group = new GroupImpl();
-		return group;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Button createButton() {
 		ButtonImpl button = new ButtonImpl();
 		return button;
@@ -195,39 +182,9 @@ public class UidiagramFactoryImpl extends EFactoryImpl implements UidiagramFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DropDown createDropDown() {
-		DropDownImpl dropDown = new DropDownImpl();
-		return dropDown;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Menu createMenu() {
-		MenuImpl menu = new MenuImpl();
-		return menu;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Img createImg() {
 		ImgImpl img = new ImgImpl();
 		return img;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Icon createIcon() {
-		IconImpl icon = new IconImpl();
-		return icon;
 	}
 
 	/**
@@ -245,9 +202,9 @@ public class UidiagramFactoryImpl extends EFactoryImpl implements UidiagramFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Column createColumn() {
-		ColumnImpl column = new ColumnImpl();
-		return column;
+	public TableRow createTableRow() {
+		TableRowImpl tableRow = new TableRowImpl();
+		return tableRow;
 	}
 
 	/**
@@ -268,6 +225,16 @@ public class UidiagramFactoryImpl extends EFactoryImpl implements UidiagramFacto
 	public RadioButton createRadioButton() {
 		RadioButtonImpl radioButton = new RadioButtonImpl();
 		return radioButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FloatingButton createFloatingButton() {
+		FloatingButtonImpl floatingButton = new FloatingButtonImpl();
+		return floatingButton;
 	}
 
 	/**

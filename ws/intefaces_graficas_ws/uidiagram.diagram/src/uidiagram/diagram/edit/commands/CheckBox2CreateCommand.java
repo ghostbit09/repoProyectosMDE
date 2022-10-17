@@ -16,8 +16,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uidiagram.CheckBox;
+import uidiagram.GraphicalContainer;
 import uidiagram.UidiagramFactory;
-import uidiagram.UserInterface;
 
 /**
  * @generated
@@ -57,8 +57,8 @@ public class CheckBox2CreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		CheckBox newElement = UidiagramFactory.eINSTANCE.createCheckBox();
 
-		UserInterface owner = (UserInterface) getElementToEdit();
-		owner.getListWidgets().add(newElement);
+		GraphicalContainer owner = (GraphicalContainer) getElementToEdit();
+		owner.getLstChildModelElements().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

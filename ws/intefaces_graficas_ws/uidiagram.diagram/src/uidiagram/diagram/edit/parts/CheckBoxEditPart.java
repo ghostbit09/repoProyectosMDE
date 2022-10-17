@@ -5,10 +5,9 @@ package uidiagram.diagram.edit.parts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -37,7 +36,7 @@ public class CheckBoxEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 3005;
+	public static final int VISUAL_ID = 3018;
 
 	/**
 	* @generated
@@ -250,7 +249,7 @@ public class CheckBoxEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class CheckBoxFigure extends RoundedRectangle {
+	public class CheckBoxFigure extends RectangleFigure {
 
 		/**
 		 * @generated
@@ -261,7 +260,6 @@ public class CheckBoxEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public CheckBoxFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();

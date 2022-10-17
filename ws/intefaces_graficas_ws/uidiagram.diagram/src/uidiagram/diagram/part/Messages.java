@@ -271,122 +271,92 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Column3CreationTool_title;
+	public static String ComboBox3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Column3CreationTool_desc;
+	public static String ComboBox3CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String ComboBox4CreationTool_title;
+	public static String FloatingButton4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String ComboBox4CreationTool_desc;
+	public static String FloatingButton4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String DropDown5CreationTool_title;
+	public static String Img5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String DropDown5CreationTool_desc;
+	public static String Img5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Group6CreationTool_title;
+	public static String Label6CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Group6CreationTool_desc;
+	public static String Label6CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Icon7CreationTool_title;
+	public static String RadioButton7CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Icon7CreationTool_desc;
+	public static String RadioButton7CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Img8CreationTool_title;
+	public static String Table8CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Img8CreationTool_desc;
+	public static String Table8CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Label9CreationTool_title;
+	public static String TableRow9CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Label9CreationTool_desc;
+	public static String TableRow9CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Menu10CreationTool_title;
+	public static String TextInput10CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Menu10CreationTool_desc;
+	public static String TextInput10CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String RadioButton11CreationTool_title;
+	public static String UserInterface11CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String RadioButton11CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Table12CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Table12CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String TextInput13CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String TextInput13CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String UserInterface14CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String UserInterface14CreationTool_desc;
+	public static String UserInterface11CreationTool_desc;
 
 	/**
 	* @generated
@@ -396,17 +366,17 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String GroupGroupLstChildModelElementsCompartmentEditPart_title;
-
-	/**
-	* @generated
-	*/
-	public static String GroupGroupLstChildModelElementsCompartment2EditPart_title;
-
-	/**
-	* @generated
-	*/
 	public static String TableTableLstChildModelElementsCompartmentEditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String TableTableLstChildModelElementsCompartment2EditPart_title;
+
+	/**
+	* @generated
+	*/
+	public static String TableRowTableRowLstChildModelElementsCompartmentEditPart_title;
 
 	/**
 	* @generated
@@ -416,7 +386,7 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String TableTableLstChildModelElementsCompartment2EditPart_title;
+	public static String TableRowTableRowLstChildModelElementsCompartment2EditPart_title;
 
 	/**
 	* @generated

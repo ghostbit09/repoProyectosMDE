@@ -12,14 +12,13 @@
 [template public generateElement(anUserInterface : UserInterface)]
 [comment @main/]
 [file (anUserInterface.title.replace(' ', '').trim()+'.xml', false, 'UTF-8')]
-
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="[anUserInterface.backgroundColor/]"
     android:paddingHorizontal="16dp"
     tools:context=".MainActivity">
 
@@ -28,24 +27,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-		<TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Cliente"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#FF3700B3"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-
+        [generateVarWidgets(anUserInterface)/]
 
     </LinearLayout>
 </ScrollView>
-
 [/file]
 [/template]
 
@@ -60,30 +45,138 @@
 [/for]
 [/template]
 
-[template public generateIndividualElement(anIndividualElement : ModelElement) post(trim()) ]
+[template public generateIndividualElement(anIndividualElement : ModelElement)]
 [if (anIndividualElement.oclIsKindOf(Label))]
-private Label lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+<TextView
+	 [if (not anIndividualElement.modelElementId.oclIsUndefined() and not anIndividualElement.modelElementId.equalsIgnoreCase(''))]
+	 android:id="@+id/[anIndividualElement.modelElementId/]"
+	 [/if]
+     [if (not anIndividualElement.width.oclIsUndefined() and not anIndividualElement.width.equalsIgnoreCase(''))]
+	 android:layout_width="[anIndividualElement.width/]"
+	 [/if]
+	 [if (not anIndividualElement.height.oclIsUndefined() and not anIndividualElement.height.equalsIgnoreCase(''))]
+	 android:layout_height="[anIndividualElement.height/]"
+	 [/if]
+	 [if (not anIndividualElement.layout_marginTop.oclIsUndefined() and not anIndividualElement.layout_marginTop.equalsIgnoreCase(''))]
+	 android:layout_marginTop="[anIndividualElement.layout_marginTop/]"
+	 [/if]
+	 [if (not anIndividualElement.layout_marginBottom.oclIsUndefined() and not anIndividualElement.layout_marginBottom.equalsIgnoreCase(''))]
+	 android:layout_marginBottom="[anIndividualElement.layout_marginBottom/]"
+	 [/if]
+	 [if (not anIndividualElement.layout_marginStart.oclIsUndefined() and not anIndividualElement.layout_marginStart.equalsIgnoreCase(''))]
+	 android:layout_marginStart="[anIndividualElement.layout_marginStart/]"
+	 [/if]
+	 [if (not anIndividualElement.titleFont.oclIsUndefined() and not anIndividualElement.titleFont.equalsIgnoreCase(''))]
+	 android:fontFamily="[anIndividualElement.titleFont/]"
+	 [/if]
+	 [if (not anIndividualElement.name.oclIsUndefined() and not anIndividualElement.name.equalsIgnoreCase(''))]
+	 android:text="[anIndividualElement.name/]"
+	 [/if]
+	 [if (not anIndividualElement.textAppearance.oclIsUndefined() and not anIndividualElement.textAppearance.equalsIgnoreCase(''))]
+	 android:textAppearance="@style/[anIndividualElement.textAppearance/]"
+	 [/if]
+     android:textColor="[anIndividualElement.textColor/]"
+     android:textSize="[anIndividualElement.titleFontSize/]"
+	 [if (not anIndividualElement.textStyle.oclIsUndefined() and not anIndividualElement.textStyle.equalsIgnoreCase(''))]
+	 android:textStyle="[anIndividualElement.textStyle/]"
+	 [/if]
+	 />
 [/if]
 [if (anIndividualElement.oclIsKindOf(Button))]
-private Button lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+<Button
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"
+    android:layout_marginTop="[anIndividualElement.layout_marginTop/]"
+    android:layout_marginBottom="[anIndividualElement.layout_marginBottom/]"
+    android:fontFamily="[anIndividualElement.titleFont/]"
+    android:inputType="[anIndividualElement.inputType/]"
+    android:text="[anIndividualElement.name/]"
+    android:textSize="[anIndividualElement.titleFontSize/]"
+    android:textStyle="[anIndividualElement.textStyle/]"/>
 [/if]
 [if (anIndividualElement.oclIsKindOf(TextInput))]
-private TextComponent lbl[anIndividualElement.name.toLowerFirst().replace(' ','').replace(':','')/] 
+<EditText
+     android:id="@+id/[anIndividualElement.modelElementId/]"
+     android:layout_width="[anIndividualElement.width/]"
+     android:layout_height="[anIndividualElement.height/]"
+     android:hint="[anIndividualElement.name/]"
+     android:inputType="[anIndividualElement.inputType/]"
+     android:maxLength="[anIndividualElement.maxLength/]"/>
+[/if]
+[if (anIndividualElement.oclIsKindOf(ComboBox))]
+<Spinner
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_marginTop="[anIndividualElement.layout_marginTop/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"/>
+[/if]
+[if (anIndividualElement.oclIsKindOf(RadioButton))]
+<RadioButton
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"
+    android:layout_marginTop="[anIndividualElement.layout_marginTop/]"
+    android:text="[anIndividualElement.name/]"
+    android:textColor="[anIndividualElement.textColor/]"/>
+[/if]
+[if (anIndividualElement.oclIsKindOf(CheckBox))]
+<CheckBox
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"
+    android:layout_marginTop="[anIndividualElement.layout_marginTop/]"
+    android:text="[anIndividualElement.name/]"
+    android:textColor="[anIndividualElement.textColor/]"/>
+[/if]
+[if (anIndividualElement.oclIsKindOf(Img))]
+<ImageView
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"
+    app:srcCompat="[anIndividualElement.srcCompat/]"/>
+[/if]
+[if (anIndividualElement.oclIsKindOf(FloatingButton))]
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/[anIndividualElement.modelElementId/]"
+    android:layout_marginBottom="[anIndividualElement.layout_marginBottom/]"
+    android:layout_marginStart="[anIndividualElement.layout_marginStart/]"
+    android:layout_width="[anIndividualElement.width/]"
+    android:layout_height="[anIndividualElement.height/]"/>
 [/if]
 [/template]
 
 
 
 [template public generateGraphicalContainer(anGraphicalContainer : ModelElement)]
-[if (anGraphicalContainer.oclIsKindOf(Group))]
-Group group [anGraphicalContainer.name.toUpperFirst().replace(' ','')/]
+[if (anGraphicalContainer.oclIsKindOf(Table))]
+<TableLayout
+    android:layout_width="[anGraphicalContainer.width/]"
+    android:layout_height="[anGraphicalContainer.height/]"
+    android:layout_marginBottom="[anGraphicalContainer.layout_marginBottom/]">
+
 [for(widget : ModelElement | anGraphicalContainer.oclAsType(GraphicalContainer).lstChildModelElements)]
 [if (widget.oclIsKindOf(GraphicalIndividual))]
-[generateIndividualElement(widget)/]
+	[generateIndividualElement(widget)/]
 [/if]
 [if (widget.oclIsKindOf(GraphicalContainer))]
-[generateGraphicalContainer(widget)/]
+	[generateGraphicalContainer(widget)/]
 [/if]
 [/for]
+</TableLayout>
+[/if]
+[if (anGraphicalContainer.oclIsKindOf(TableRow))]
+<TableRow
+    android:id="@+id/[anGraphicalContainer.modelElementId/]"
+    android:layout_width="[anGraphicalContainer.width/]"
+    android:layout_height="[anGraphicalContainer.height/]"
+    android:background="[anGraphicalContainer.backgroundColor/]">
+
+[for(widget : ModelElement | anGraphicalContainer.oclAsType(GraphicalContainer).lstChildModelElements)]
+[if (widget.oclIsKindOf(GraphicalIndividual))]
+	[generateIndividualElement(widget)/]
+[/if]
+[/for]
+</TableRow>
 [/if]
 [/template]

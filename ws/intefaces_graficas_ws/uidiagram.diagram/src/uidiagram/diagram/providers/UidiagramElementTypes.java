@@ -22,26 +22,20 @@ import uidiagram.diagram.edit.parts.Button2EditPart;
 import uidiagram.diagram.edit.parts.ButtonEditPart;
 import uidiagram.diagram.edit.parts.CheckBox2EditPart;
 import uidiagram.diagram.edit.parts.CheckBoxEditPart;
-import uidiagram.diagram.edit.parts.Column2EditPart;
-import uidiagram.diagram.edit.parts.ColumnEditPart;
 import uidiagram.diagram.edit.parts.ComboBox2EditPart;
 import uidiagram.diagram.edit.parts.ComboBoxEditPart;
-import uidiagram.diagram.edit.parts.DropDown2EditPart;
-import uidiagram.diagram.edit.parts.DropDownEditPart;
-import uidiagram.diagram.edit.parts.Group2EditPart;
-import uidiagram.diagram.edit.parts.GroupEditPart;
-import uidiagram.diagram.edit.parts.Icon2EditPart;
-import uidiagram.diagram.edit.parts.IconEditPart;
+import uidiagram.diagram.edit.parts.FloatingButton2EditPart;
+import uidiagram.diagram.edit.parts.FloatingButtonEditPart;
 import uidiagram.diagram.edit.parts.Img2EditPart;
 import uidiagram.diagram.edit.parts.ImgEditPart;
 import uidiagram.diagram.edit.parts.Label2EditPart;
 import uidiagram.diagram.edit.parts.LabelEditPart;
-import uidiagram.diagram.edit.parts.Menu2EditPart;
-import uidiagram.diagram.edit.parts.MenuEditPart;
 import uidiagram.diagram.edit.parts.RadioButton2EditPart;
 import uidiagram.diagram.edit.parts.RadioButtonEditPart;
 import uidiagram.diagram.edit.parts.Table2EditPart;
 import uidiagram.diagram.edit.parts.TableEditPart;
+import uidiagram.diagram.edit.parts.TableRow2EditPart;
+import uidiagram.diagram.edit.parts.TableRowEditPart;
 import uidiagram.diagram.edit.parts.TextInput2EditPart;
 import uidiagram.diagram.edit.parts.TextInputEditPart;
 import uidiagram.diagram.edit.parts.Ui_DiagramEditPart;
@@ -88,11 +82,27 @@ public class UidiagramElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType Group_3001 = getElementType("uidiagram.diagram.Group_3001"); //$NON-NLS-1$
+	public static final IElementType Button_3016 = getElementType("uidiagram.diagram.Button_3016"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType Group_3002 = getElementType("uidiagram.diagram.Group_3002"); //$NON-NLS-1$
+	public static final IElementType Label_3017 = getElementType("uidiagram.diagram.Label_3017"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType CheckBox_3018 = getElementType("uidiagram.diagram.CheckBox_3018"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType TextInput_3019 = getElementType("uidiagram.diagram.TextInput_3019"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType Img_3022 = getElementType("uidiagram.diagram.Img_3022"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType Table_3024 = getElementType("uidiagram.diagram.Table_3024"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -112,19 +122,7 @@ public class UidiagramElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType DropDown_3007 = getElementType("uidiagram.diagram.DropDown_3007"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Menu_3008 = getElementType("uidiagram.diagram.Menu_3008"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
 	public static final IElementType Img_3009 = getElementType("uidiagram.diagram.Img_3009"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Icon_3010 = getElementType("uidiagram.diagram.Icon_3010"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -132,7 +130,7 @@ public class UidiagramElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType Column_3012 = getElementType("uidiagram.diagram.Column_3012"); //$NON-NLS-1$
+	public static final IElementType TableRow_3029 = getElementType("uidiagram.diagram.TableRow_3029"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -144,47 +142,15 @@ public class UidiagramElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType FloatingButton_3031 = getElementType("uidiagram.diagram.FloatingButton_3031"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
 	public static final IElementType UserInterface_3015 = getElementType("uidiagram.diagram.UserInterface_3015"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType Button_3016 = getElementType("uidiagram.diagram.Button_3016"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Label_3017 = getElementType("uidiagram.diagram.Label_3017"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType CheckBox_3018 = getElementType("uidiagram.diagram.CheckBox_3018"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType TextInput_3019 = getElementType("uidiagram.diagram.TextInput_3019"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType DropDown_3020 = getElementType("uidiagram.diagram.DropDown_3020"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Menu_3021 = getElementType("uidiagram.diagram.Menu_3021"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Img_3022 = getElementType("uidiagram.diagram.Img_3022"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Icon_3023 = getElementType("uidiagram.diagram.Icon_3023"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Table_3024 = getElementType("uidiagram.diagram.Table_3024"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Column_3025 = getElementType("uidiagram.diagram.Column_3025"); //$NON-NLS-1$
+	public static final IElementType TableRow_3032 = getElementType("uidiagram.diagram.TableRow_3032"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -193,6 +159,10 @@ public class UidiagramElementTypes {
 	* @generated
 	*/
 	public static final IElementType RadioButton_3027 = getElementType("uidiagram.diagram.RadioButton_3027"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType FloatingButton_3034 = getElementType("uidiagram.diagram.FloatingButton_3034"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -240,9 +210,17 @@ public class UidiagramElementTypes {
 
 			elements.put(UserInterface_2001, UidiagramPackage.eINSTANCE.getUserInterface());
 
-			elements.put(Group_3001, UidiagramPackage.eINSTANCE.getGroup());
+			elements.put(Button_3016, UidiagramPackage.eINSTANCE.getButton());
 
-			elements.put(Group_3002, UidiagramPackage.eINSTANCE.getGroup());
+			elements.put(Label_3017, UidiagramPackage.eINSTANCE.getLabel());
+
+			elements.put(CheckBox_3018, UidiagramPackage.eINSTANCE.getCheckBox());
+
+			elements.put(TextInput_3019, UidiagramPackage.eINSTANCE.getTextInput());
+
+			elements.put(Img_3022, UidiagramPackage.eINSTANCE.getImg());
+
+			elements.put(Table_3024, UidiagramPackage.eINSTANCE.getTable());
 
 			elements.put(Button_3003, UidiagramPackage.eINSTANCE.getButton());
 
@@ -252,47 +230,27 @@ public class UidiagramElementTypes {
 
 			elements.put(TextInput_3006, UidiagramPackage.eINSTANCE.getTextInput());
 
-			elements.put(DropDown_3007, UidiagramPackage.eINSTANCE.getDropDown());
-
-			elements.put(Menu_3008, UidiagramPackage.eINSTANCE.getMenu());
-
 			elements.put(Img_3009, UidiagramPackage.eINSTANCE.getImg());
-
-			elements.put(Icon_3010, UidiagramPackage.eINSTANCE.getIcon());
 
 			elements.put(Table_3011, UidiagramPackage.eINSTANCE.getTable());
 
-			elements.put(Column_3012, UidiagramPackage.eINSTANCE.getColumn());
+			elements.put(TableRow_3029, UidiagramPackage.eINSTANCE.getTableRow());
 
 			elements.put(ComboBox_3013, UidiagramPackage.eINSTANCE.getComboBox());
 
 			elements.put(RadioButton_3014, UidiagramPackage.eINSTANCE.getRadioButton());
 
+			elements.put(FloatingButton_3031, UidiagramPackage.eINSTANCE.getFloatingButton());
+
 			elements.put(UserInterface_3015, UidiagramPackage.eINSTANCE.getUserInterface());
 
-			elements.put(Button_3016, UidiagramPackage.eINSTANCE.getButton());
-
-			elements.put(Label_3017, UidiagramPackage.eINSTANCE.getLabel());
-
-			elements.put(CheckBox_3018, UidiagramPackage.eINSTANCE.getCheckBox());
-
-			elements.put(TextInput_3019, UidiagramPackage.eINSTANCE.getTextInput());
-
-			elements.put(DropDown_3020, UidiagramPackage.eINSTANCE.getDropDown());
-
-			elements.put(Menu_3021, UidiagramPackage.eINSTANCE.getMenu());
-
-			elements.put(Img_3022, UidiagramPackage.eINSTANCE.getImg());
-
-			elements.put(Icon_3023, UidiagramPackage.eINSTANCE.getIcon());
-
-			elements.put(Table_3024, UidiagramPackage.eINSTANCE.getTable());
-
-			elements.put(Column_3025, UidiagramPackage.eINSTANCE.getColumn());
+			elements.put(TableRow_3032, UidiagramPackage.eINSTANCE.getTableRow());
 
 			elements.put(ComboBox_3026, UidiagramPackage.eINSTANCE.getComboBox());
 
 			elements.put(RadioButton_3027, UidiagramPackage.eINSTANCE.getRadioButton());
+
+			elements.put(FloatingButton_3034, UidiagramPackage.eINSTANCE.getFloatingButton());
 
 			elements.put(UserInterface_3028, UidiagramPackage.eINSTANCE.getUserInterface());
 		}
@@ -314,33 +272,27 @@ public class UidiagramElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Ui_Diagram_1000);
 			KNOWN_ELEMENT_TYPES.add(UserInterface_2001);
-			KNOWN_ELEMENT_TYPES.add(Group_3001);
-			KNOWN_ELEMENT_TYPES.add(Group_3002);
-			KNOWN_ELEMENT_TYPES.add(Button_3003);
-			KNOWN_ELEMENT_TYPES.add(Label_3004);
-			KNOWN_ELEMENT_TYPES.add(CheckBox_3005);
-			KNOWN_ELEMENT_TYPES.add(TextInput_3006);
-			KNOWN_ELEMENT_TYPES.add(DropDown_3007);
-			KNOWN_ELEMENT_TYPES.add(Menu_3008);
-			KNOWN_ELEMENT_TYPES.add(Img_3009);
-			KNOWN_ELEMENT_TYPES.add(Icon_3010);
-			KNOWN_ELEMENT_TYPES.add(Table_3011);
-			KNOWN_ELEMENT_TYPES.add(Column_3012);
-			KNOWN_ELEMENT_TYPES.add(ComboBox_3013);
-			KNOWN_ELEMENT_TYPES.add(RadioButton_3014);
-			KNOWN_ELEMENT_TYPES.add(UserInterface_3015);
 			KNOWN_ELEMENT_TYPES.add(Button_3016);
 			KNOWN_ELEMENT_TYPES.add(Label_3017);
 			KNOWN_ELEMENT_TYPES.add(CheckBox_3018);
 			KNOWN_ELEMENT_TYPES.add(TextInput_3019);
-			KNOWN_ELEMENT_TYPES.add(DropDown_3020);
-			KNOWN_ELEMENT_TYPES.add(Menu_3021);
 			KNOWN_ELEMENT_TYPES.add(Img_3022);
-			KNOWN_ELEMENT_TYPES.add(Icon_3023);
 			KNOWN_ELEMENT_TYPES.add(Table_3024);
-			KNOWN_ELEMENT_TYPES.add(Column_3025);
+			KNOWN_ELEMENT_TYPES.add(Button_3003);
+			KNOWN_ELEMENT_TYPES.add(Label_3004);
+			KNOWN_ELEMENT_TYPES.add(CheckBox_3005);
+			KNOWN_ELEMENT_TYPES.add(TextInput_3006);
+			KNOWN_ELEMENT_TYPES.add(Img_3009);
+			KNOWN_ELEMENT_TYPES.add(Table_3011);
+			KNOWN_ELEMENT_TYPES.add(TableRow_3029);
+			KNOWN_ELEMENT_TYPES.add(ComboBox_3013);
+			KNOWN_ELEMENT_TYPES.add(RadioButton_3014);
+			KNOWN_ELEMENT_TYPES.add(FloatingButton_3031);
+			KNOWN_ELEMENT_TYPES.add(UserInterface_3015);
+			KNOWN_ELEMENT_TYPES.add(TableRow_3032);
 			KNOWN_ELEMENT_TYPES.add(ComboBox_3026);
 			KNOWN_ELEMENT_TYPES.add(RadioButton_3027);
+			KNOWN_ELEMENT_TYPES.add(FloatingButton_3034);
 			KNOWN_ELEMENT_TYPES.add(UserInterface_3028);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
@@ -355,60 +307,48 @@ public class UidiagramElementTypes {
 			return Ui_Diagram_1000;
 		case UserInterfaceEditPart.VISUAL_ID:
 			return UserInterface_2001;
-		case GroupEditPart.VISUAL_ID:
-			return Group_3001;
-		case Group2EditPart.VISUAL_ID:
-			return Group_3002;
 		case ButtonEditPart.VISUAL_ID:
-			return Button_3003;
+			return Button_3016;
 		case LabelEditPart.VISUAL_ID:
-			return Label_3004;
+			return Label_3017;
 		case CheckBoxEditPart.VISUAL_ID:
-			return CheckBox_3005;
+			return CheckBox_3018;
 		case TextInputEditPart.VISUAL_ID:
-			return TextInput_3006;
-		case DropDownEditPart.VISUAL_ID:
-			return DropDown_3007;
-		case MenuEditPart.VISUAL_ID:
-			return Menu_3008;
+			return TextInput_3019;
 		case ImgEditPart.VISUAL_ID:
-			return Img_3009;
-		case IconEditPart.VISUAL_ID:
-			return Icon_3010;
+			return Img_3022;
 		case TableEditPart.VISUAL_ID:
+			return Table_3024;
+		case Button2EditPart.VISUAL_ID:
+			return Button_3003;
+		case Label2EditPart.VISUAL_ID:
+			return Label_3004;
+		case CheckBox2EditPart.VISUAL_ID:
+			return CheckBox_3005;
+		case TextInput2EditPart.VISUAL_ID:
+			return TextInput_3006;
+		case Img2EditPart.VISUAL_ID:
+			return Img_3009;
+		case Table2EditPart.VISUAL_ID:
 			return Table_3011;
-		case ColumnEditPart.VISUAL_ID:
-			return Column_3012;
+		case TableRowEditPart.VISUAL_ID:
+			return TableRow_3029;
 		case ComboBoxEditPart.VISUAL_ID:
 			return ComboBox_3013;
 		case RadioButtonEditPart.VISUAL_ID:
 			return RadioButton_3014;
+		case FloatingButtonEditPart.VISUAL_ID:
+			return FloatingButton_3031;
 		case UserInterface2EditPart.VISUAL_ID:
 			return UserInterface_3015;
-		case Button2EditPart.VISUAL_ID:
-			return Button_3016;
-		case Label2EditPart.VISUAL_ID:
-			return Label_3017;
-		case CheckBox2EditPart.VISUAL_ID:
-			return CheckBox_3018;
-		case TextInput2EditPart.VISUAL_ID:
-			return TextInput_3019;
-		case DropDown2EditPart.VISUAL_ID:
-			return DropDown_3020;
-		case Menu2EditPart.VISUAL_ID:
-			return Menu_3021;
-		case Img2EditPart.VISUAL_ID:
-			return Img_3022;
-		case Icon2EditPart.VISUAL_ID:
-			return Icon_3023;
-		case Table2EditPart.VISUAL_ID:
-			return Table_3024;
-		case Column2EditPart.VISUAL_ID:
-			return Column_3025;
+		case TableRow2EditPart.VISUAL_ID:
+			return TableRow_3032;
 		case ComboBox2EditPart.VISUAL_ID:
 			return ComboBox_3026;
 		case RadioButton2EditPart.VISUAL_ID:
 			return RadioButton_3027;
+		case FloatingButton2EditPart.VISUAL_ID:
+			return FloatingButton_3034;
 		case UserInterface3EditPart.VISUAL_ID:
 			return UserInterface_3028;
 		}

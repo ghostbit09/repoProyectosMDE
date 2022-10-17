@@ -10,7 +10,7 @@ package uidiagram;
  *
  *
  * @see uidiagram.UidiagramPackage#getImg()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' figure='rectangle'"
  * @generated
  */
 public interface Img extends GraphicalIndividual {

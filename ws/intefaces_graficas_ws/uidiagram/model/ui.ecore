@@ -14,6 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="UserInterface" eSuperTypes="#//ModelElement">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="label.layout" value="center"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listWidgets" upperBound="-1"
@@ -23,13 +24,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionX" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="positionY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heigth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelElementId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_marginTop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_marginBottom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layout_marginStart" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backgroundColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textColor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleFont" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titleFontSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textStyle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textAppearance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="srcCompat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GraphicalContainer" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lstChildModelElements"
@@ -38,14 +47,10 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GraphicalIndividual" eSuperTypes="#//ModelElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//GraphicalContainer">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
-    </eAnnotations>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="label.layout" value="center"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//GraphicalIndividual">
@@ -57,31 +62,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="CheckBox" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextInput" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DropDown" eSuperTypes="#//GraphicalIndividual">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Menu" eSuperTypes="#//GraphicalIndividual">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Img" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Icon" eSuperTypes="#//GraphicalIndividual">
-    <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//GraphicalContainer">
@@ -89,10 +82,8 @@
       <details key="label" value="name"/>
       <details key="figure" value="rectangle"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lstColumn" upperBound="-1"
-        eType="#//Column" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//GraphicalIndividual">
+  <eClassifiers xsi:type="ecore:EClass" name="TableRow" eSuperTypes="#//GraphicalContainer">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="figure" value="rectangle"/>
@@ -101,9 +92,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComboBox" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RadioButton" eSuperTypes="#//GraphicalIndividual">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FloatingButton" eSuperTypes="#//GraphicalIndividual">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
     </eAnnotations>

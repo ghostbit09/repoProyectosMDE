@@ -34,18 +34,6 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case UserInterfaceNameEditPart.VISUAL_ID:
 				return new UserInterfaceNameEditPart(view);
 
-			case GroupEditPart.VISUAL_ID:
-				return new GroupEditPart(view);
-
-			case GroupNameEditPart.VISUAL_ID:
-				return new GroupNameEditPart(view);
-
-			case Group2EditPart.VISUAL_ID:
-				return new Group2EditPart(view);
-
-			case GroupName2EditPart.VISUAL_ID:
-				return new GroupName2EditPart(view);
-
 			case ButtonEditPart.VISUAL_ID:
 				return new ButtonEditPart(view);
 
@@ -70,59 +58,17 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case TextInputNameEditPart.VISUAL_ID:
 				return new TextInputNameEditPart(view);
 
-			case DropDownEditPart.VISUAL_ID:
-				return new DropDownEditPart(view);
-
-			case DropDownNameEditPart.VISUAL_ID:
-				return new DropDownNameEditPart(view);
-
-			case MenuEditPart.VISUAL_ID:
-				return new MenuEditPart(view);
-
-			case MenuNameEditPart.VISUAL_ID:
-				return new MenuNameEditPart(view);
-
 			case ImgEditPart.VISUAL_ID:
 				return new ImgEditPart(view);
 
 			case ImgNameEditPart.VISUAL_ID:
 				return new ImgNameEditPart(view);
 
-			case IconEditPart.VISUAL_ID:
-				return new IconEditPart(view);
-
-			case IconNameEditPart.VISUAL_ID:
-				return new IconNameEditPart(view);
-
 			case TableEditPart.VISUAL_ID:
 				return new TableEditPart(view);
 
 			case TableNameEditPart.VISUAL_ID:
 				return new TableNameEditPart(view);
-
-			case ColumnEditPart.VISUAL_ID:
-				return new ColumnEditPart(view);
-
-			case ColumnNameEditPart.VISUAL_ID:
-				return new ColumnNameEditPart(view);
-
-			case ComboBoxEditPart.VISUAL_ID:
-				return new ComboBoxEditPart(view);
-
-			case ComboBoxNameEditPart.VISUAL_ID:
-				return new ComboBoxNameEditPart(view);
-
-			case RadioButtonEditPart.VISUAL_ID:
-				return new RadioButtonEditPart(view);
-
-			case RadioButtonNameEditPart.VISUAL_ID:
-				return new RadioButtonNameEditPart(view);
-
-			case UserInterface2EditPart.VISUAL_ID:
-				return new UserInterface2EditPart(view);
-
-			case UserInterfaceName2EditPart.VISUAL_ID:
-				return new UserInterfaceName2EditPart(view);
 
 			case Button2EditPart.VISUAL_ID:
 				return new Button2EditPart(view);
@@ -148,29 +94,11 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case TextInputName2EditPart.VISUAL_ID:
 				return new TextInputName2EditPart(view);
 
-			case DropDown2EditPart.VISUAL_ID:
-				return new DropDown2EditPart(view);
-
-			case DropDownName2EditPart.VISUAL_ID:
-				return new DropDownName2EditPart(view);
-
-			case Menu2EditPart.VISUAL_ID:
-				return new Menu2EditPart(view);
-
-			case MenuName2EditPart.VISUAL_ID:
-				return new MenuName2EditPart(view);
-
 			case Img2EditPart.VISUAL_ID:
 				return new Img2EditPart(view);
 
 			case ImgName2EditPart.VISUAL_ID:
 				return new ImgName2EditPart(view);
-
-			case Icon2EditPart.VISUAL_ID:
-				return new Icon2EditPart(view);
-
-			case IconName2EditPart.VISUAL_ID:
-				return new IconName2EditPart(view);
 
 			case Table2EditPart.VISUAL_ID:
 				return new Table2EditPart(view);
@@ -178,11 +106,41 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case TableName2EditPart.VISUAL_ID:
 				return new TableName2EditPart(view);
 
-			case Column2EditPart.VISUAL_ID:
-				return new Column2EditPart(view);
+			case TableRowEditPart.VISUAL_ID:
+				return new TableRowEditPart(view);
 
-			case ColumnName2EditPart.VISUAL_ID:
-				return new ColumnName2EditPart(view);
+			case TableRowNameEditPart.VISUAL_ID:
+				return new TableRowNameEditPart(view);
+
+			case ComboBoxEditPart.VISUAL_ID:
+				return new ComboBoxEditPart(view);
+
+			case ComboBoxNameEditPart.VISUAL_ID:
+				return new ComboBoxNameEditPart(view);
+
+			case RadioButtonEditPart.VISUAL_ID:
+				return new RadioButtonEditPart(view);
+
+			case RadioButtonNameEditPart.VISUAL_ID:
+				return new RadioButtonNameEditPart(view);
+
+			case FloatingButtonEditPart.VISUAL_ID:
+				return new FloatingButtonEditPart(view);
+
+			case FloatingButtonNameEditPart.VISUAL_ID:
+				return new FloatingButtonNameEditPart(view);
+
+			case UserInterface2EditPart.VISUAL_ID:
+				return new UserInterface2EditPart(view);
+
+			case UserInterfaceName2EditPart.VISUAL_ID:
+				return new UserInterfaceName2EditPart(view);
+
+			case TableRow2EditPart.VISUAL_ID:
+				return new TableRow2EditPart(view);
+
+			case TableRowName2EditPart.VISUAL_ID:
+				return new TableRowName2EditPart(view);
 
 			case ComboBox2EditPart.VISUAL_ID:
 				return new ComboBox2EditPart(view);
@@ -196,6 +154,12 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case RadioButtonName2EditPart.VISUAL_ID:
 				return new RadioButtonName2EditPart(view);
 
+			case FloatingButton2EditPart.VISUAL_ID:
+				return new FloatingButton2EditPart(view);
+
+			case FloatingButtonName2EditPart.VISUAL_ID:
+				return new FloatingButtonName2EditPart(view);
+
 			case UserInterface3EditPart.VISUAL_ID:
 				return new UserInterface3EditPart(view);
 
@@ -205,20 +169,20 @@ public class UidiagramEditPartFactory implements EditPartFactory {
 			case UserInterfaceUserInterfaceListWidgetsCompartmentEditPart.VISUAL_ID:
 				return new UserInterfaceUserInterfaceListWidgetsCompartmentEditPart(view);
 
-			case GroupGroupLstChildModelElementsCompartmentEditPart.VISUAL_ID:
-				return new GroupGroupLstChildModelElementsCompartmentEditPart(view);
-
-			case GroupGroupLstChildModelElementsCompartment2EditPart.VISUAL_ID:
-				return new GroupGroupLstChildModelElementsCompartment2EditPart(view);
-
 			case TableTableLstChildModelElementsCompartmentEditPart.VISUAL_ID:
 				return new TableTableLstChildModelElementsCompartmentEditPart(view);
+
+			case TableTableLstChildModelElementsCompartment2EditPart.VISUAL_ID:
+				return new TableTableLstChildModelElementsCompartment2EditPart(view);
+
+			case TableRowTableRowLstChildModelElementsCompartmentEditPart.VISUAL_ID:
+				return new TableRowTableRowLstChildModelElementsCompartmentEditPart(view);
 
 			case UserInterfaceUserInterfaceListWidgetsCompartment2EditPart.VISUAL_ID:
 				return new UserInterfaceUserInterfaceListWidgetsCompartment2EditPart(view);
 
-			case TableTableLstChildModelElementsCompartment2EditPart.VISUAL_ID:
-				return new TableTableLstChildModelElementsCompartment2EditPart(view);
+			case TableRowTableRowLstChildModelElementsCompartment2EditPart.VISUAL_ID:
+				return new TableRowTableRowLstChildModelElementsCompartment2EditPart(view);
 
 			case UserInterfaceUserInterfaceListWidgetsCompartment3EditPart.VISUAL_ID:
 				return new UserInterfaceUserInterfaceListWidgetsCompartment3EditPart(view);

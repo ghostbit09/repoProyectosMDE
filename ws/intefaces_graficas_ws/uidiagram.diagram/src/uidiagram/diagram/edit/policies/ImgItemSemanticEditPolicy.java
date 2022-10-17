@@ -22,7 +22,7 @@ public class ImgItemSemanticEditPolicy extends UidiagramBaseItemSemanticEditPoli
 	* @generated
 	*/
 	public ImgItemSemanticEditPolicy() {
-		super(UidiagramElementTypes.Img_3009);
+		super(UidiagramElementTypes.Img_3022);
 	}
 
 	/**

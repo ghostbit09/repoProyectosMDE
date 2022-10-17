@@ -11,7 +11,7 @@ class Ui_Diagram {
     val UserInterface[*] listUserInterface;
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", label.layout= "center")
 class UserInterface extends ModelElement{
 
 	attr String title;
@@ -23,16 +23,25 @@ class UserInterface extends ModelElement{
 
 class ModelElement  {
     attr String name;
-    attr int positionX;
-    attr int positionY;
-    attr int width;
-    attr int heigth;
+    attr String modelElementId;
+    attr String layout_marginTop;
+	attr String layout_marginBottom;
+	attr String layout_marginStart;
+    attr String width;
+    attr String height;
     attr String backgroundColor;
+    attr String textColor;
     attr String titleFont;
     attr String titleFontSize;
+    attr String textStyle;
+    attr String textAppearance;
+    attr String inputType;
+    attr String srcCompat;
+    attr String maxLength;
 }
 
 class GraphicalContainer extends ModelElement {
+
 	 @gmf.compartment
 	 val ModelElement[*] lstChildModelElements; 
 }
@@ -41,68 +50,52 @@ class GraphicalIndividual extends ModelElement {
 	
 }
 
-@gmf.node(label = "name")
-class Group extends GraphicalContainer {
-	
-}
-
-@gmf.node(label = "name")
+@gmf.node(label = "name", label.layout= "center")
 class Button extends GraphicalIndividual {
-	
+
 }
 
 @gmf.node(label = "name", figure = "rectangle")
 class Label extends GraphicalIndividual {
-	
+
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", figure = "rectangle")
 class CheckBox extends GraphicalIndividual {
 	
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", figure = "rectangle")
 class TextInput extends GraphicalIndividual {
 	
 }
 
-@gmf.node(label = "name")
-class DropDown extends GraphicalIndividual {
-	
-}
-
-@gmf.node(label = "name")
-class Menu extends GraphicalIndividual {
-	
-}
-
-@gmf.node(label = "name")
+@gmf.node(label = "name", figure = "rectangle")
 class Img extends GraphicalIndividual {
-	
-}
-
-@gmf.node(label = "name")
-class Icon extends GraphicalIndividual {
 	
 }
 
 @gmf.node(label = "name", figure = "rectangle")
 class Table extends GraphicalContainer {
 		
-	val Column[*] lstColumn;
 }
 
 @gmf.node(label = "name", figure = "rectangle")
-class Column extends GraphicalIndividual {
+class TableRow extends GraphicalContainer {
 	
 }
 
-@gmf.node(label = "name")
+@gmf.node(label = "name", figure = "rectangle")
 class ComboBox extends GraphicalIndividual {
 	
 }
 
 @gmf.node(label = "name")
 class RadioButton extends GraphicalIndividual {
+	
+}
+
+@gmf.node(label = "name")
+class FloatingButton extends GraphicalIndividual {
 	
 }

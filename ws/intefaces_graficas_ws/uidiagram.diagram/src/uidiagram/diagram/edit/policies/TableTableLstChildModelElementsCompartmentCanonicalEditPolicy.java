@@ -25,19 +25,16 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 
 import uidiagram.UidiagramPackage;
-import uidiagram.diagram.edit.parts.ButtonEditPart;
-import uidiagram.diagram.edit.parts.CheckBoxEditPart;
-import uidiagram.diagram.edit.parts.ColumnEditPart;
+import uidiagram.diagram.edit.parts.Button2EditPart;
+import uidiagram.diagram.edit.parts.CheckBox2EditPart;
 import uidiagram.diagram.edit.parts.ComboBoxEditPart;
-import uidiagram.diagram.edit.parts.DropDownEditPart;
-import uidiagram.diagram.edit.parts.Group2EditPart;
-import uidiagram.diagram.edit.parts.IconEditPart;
-import uidiagram.diagram.edit.parts.ImgEditPart;
-import uidiagram.diagram.edit.parts.LabelEditPart;
-import uidiagram.diagram.edit.parts.MenuEditPart;
+import uidiagram.diagram.edit.parts.FloatingButtonEditPart;
+import uidiagram.diagram.edit.parts.Img2EditPart;
+import uidiagram.diagram.edit.parts.Label2EditPart;
 import uidiagram.diagram.edit.parts.RadioButtonEditPart;
-import uidiagram.diagram.edit.parts.TableEditPart;
-import uidiagram.diagram.edit.parts.TextInputEditPart;
+import uidiagram.diagram.edit.parts.Table2EditPart;
+import uidiagram.diagram.edit.parts.TableRowEditPart;
+import uidiagram.diagram.edit.parts.TextInput2EditPart;
 import uidiagram.diagram.edit.parts.UserInterface2EditPart;
 import uidiagram.diagram.part.UidiagramDiagramUpdater;
 import uidiagram.diagram.part.UidiagramNodeDescriptor;
@@ -76,7 +73,7 @@ public class TableTableLstChildModelElementsCompartmentCanonicalEditPolicy exten
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<UidiagramNodeDescriptor> childDescriptors = UidiagramDiagramUpdater
-				.getTableTableLstChildModelElementsCompartment_7004SemanticChildren(viewObject);
+				.getTableTableLstChildModelElementsCompartment_7006SemanticChildren(viewObject);
 		for (UidiagramNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -96,19 +93,16 @@ public class TableTableLstChildModelElementsCompartmentCanonicalEditPolicy exten
 	private boolean isMyDiagramElement(View view) {
 		int visualID = UidiagramVisualIDRegistry.getVisualID(view);
 		switch (visualID) {
-		case Group2EditPart.VISUAL_ID:
-		case ButtonEditPart.VISUAL_ID:
-		case LabelEditPart.VISUAL_ID:
-		case CheckBoxEditPart.VISUAL_ID:
-		case TextInputEditPart.VISUAL_ID:
-		case DropDownEditPart.VISUAL_ID:
-		case MenuEditPart.VISUAL_ID:
-		case ImgEditPart.VISUAL_ID:
-		case IconEditPart.VISUAL_ID:
-		case TableEditPart.VISUAL_ID:
-		case ColumnEditPart.VISUAL_ID:
+		case Button2EditPart.VISUAL_ID:
+		case Label2EditPart.VISUAL_ID:
+		case CheckBox2EditPart.VISUAL_ID:
+		case TextInput2EditPart.VISUAL_ID:
+		case Img2EditPart.VISUAL_ID:
+		case Table2EditPart.VISUAL_ID:
+		case TableRowEditPart.VISUAL_ID:
 		case ComboBoxEditPart.VISUAL_ID:
 		case RadioButtonEditPart.VISUAL_ID:
+		case FloatingButtonEditPart.VISUAL_ID:
 		case UserInterface2EditPart.VISUAL_ID:
 			return true;
 		}
@@ -124,7 +118,7 @@ public class TableTableLstChildModelElementsCompartmentCanonicalEditPolicy exten
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<UidiagramNodeDescriptor> childDescriptors = UidiagramDiagramUpdater
-				.getTableTableLstChildModelElementsCompartment_7004SemanticChildren((View) getHost().getModel());
+				.getTableTableLstChildModelElementsCompartment_7006SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

@@ -92,10 +92,6 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 				return createGraphicalIndividualAdapter();
 			}
 			@Override
-			public Adapter caseGroup(Group object) {
-				return createGroupAdapter();
-			}
-			@Override
 			public Adapter caseButton(Button object) {
 				return createButtonAdapter();
 			}
@@ -112,28 +108,16 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 				return createTextInputAdapter();
 			}
 			@Override
-			public Adapter caseDropDown(DropDown object) {
-				return createDropDownAdapter();
-			}
-			@Override
-			public Adapter caseMenu(Menu object) {
-				return createMenuAdapter();
-			}
-			@Override
 			public Adapter caseImg(Img object) {
 				return createImgAdapter();
-			}
-			@Override
-			public Adapter caseIcon(Icon object) {
-				return createIconAdapter();
 			}
 			@Override
 			public Adapter caseTable(Table object) {
 				return createTableAdapter();
 			}
 			@Override
-			public Adapter caseColumn(Column object) {
-				return createColumnAdapter();
+			public Adapter caseTableRow(TableRow object) {
+				return createTableRowAdapter();
 			}
 			@Override
 			public Adapter caseComboBox(ComboBox object) {
@@ -142,6 +126,10 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRadioButton(RadioButton object) {
 				return createRadioButtonAdapter();
+			}
+			@Override
+			public Adapter caseFloatingButton(FloatingButton object) {
+				return createFloatingButtonAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -248,20 +236,6 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uidiagram.Group <em>Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uidiagram.Group
-	 * @generated
-	 */
-	public Adapter createGroupAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link uidiagram.Button <em>Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -318,34 +292,6 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uidiagram.DropDown <em>Drop Down</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uidiagram.DropDown
-	 * @generated
-	 */
-	public Adapter createDropDownAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uidiagram.Menu <em>Menu</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uidiagram.Menu
-	 * @generated
-	 */
-	public Adapter createMenuAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link uidiagram.Img <em>Img</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -356,20 +302,6 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImgAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uidiagram.Icon <em>Icon</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uidiagram.Icon
-	 * @generated
-	 */
-	public Adapter createIconAdapter() {
 		return null;
 	}
 
@@ -388,16 +320,16 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uidiagram.Column <em>Column</em>}'.
+	 * Creates a new adapter for an object of class '{@link uidiagram.TableRow <em>Table Row</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see uidiagram.Column
+	 * @see uidiagram.TableRow
 	 * @generated
 	 */
-	public Adapter createColumnAdapter() {
+	public Adapter createTableRowAdapter() {
 		return null;
 	}
 
@@ -426,6 +358,20 @@ public class UidiagramAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRadioButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link uidiagram.FloatingButton <em>Floating Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see uidiagram.FloatingButton
+	 * @generated
+	 */
+	public Adapter createFloatingButtonAdapter() {
 		return null;
 	}
 

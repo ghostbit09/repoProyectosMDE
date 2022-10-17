@@ -15,9 +15,9 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.notation.View;
 
-import uidiagram.GraphicalContainer;
 import uidiagram.Table;
 import uidiagram.UidiagramFactory;
+import uidiagram.UserInterface;
 
 /**
  * @generated
@@ -57,8 +57,8 @@ public class TableCreateCommand extends EditElementCommand {
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		Table newElement = UidiagramFactory.eINSTANCE.createTable();
 
-		GraphicalContainer owner = (GraphicalContainer) getElementToEdit();
-		owner.getLstChildModelElements().add(newElement);
+		UserInterface owner = (UserInterface) getElementToEdit();
+		owner.getListWidgets().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

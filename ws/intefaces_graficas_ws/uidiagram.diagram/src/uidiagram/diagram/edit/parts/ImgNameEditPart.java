@@ -60,7 +60,7 @@ public class ImgNameEditPart extends CompartmentEditPart implements ITextAwareEd
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5007;
+	public static final int VISUAL_ID = 5018;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class ImgNameEditPart extends CompartmentEditPart implements ITextAwareEd
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.Img_3009, getParserElement(),
+			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.Img_3022, getParserElement(),
 					UidiagramVisualIDRegistry.getType(uidiagram.diagram.edit.parts.ImgNameEditPart.VISUAL_ID));
 		}
 		return parser;

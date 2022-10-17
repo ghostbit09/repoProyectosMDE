@@ -36,18 +36,15 @@ public class UidiagramPaletteFactory {
 		paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
 		paletteContainer.add(createButton1CreationTool());
 		paletteContainer.add(createCheckBox2CreationTool());
-		paletteContainer.add(createColumn3CreationTool());
-		paletteContainer.add(createComboBox4CreationTool());
-		paletteContainer.add(createDropDown5CreationTool());
-		paletteContainer.add(createGroup6CreationTool());
-		paletteContainer.add(createIcon7CreationTool());
-		paletteContainer.add(createImg8CreationTool());
-		paletteContainer.add(createLabel9CreationTool());
-		paletteContainer.add(createMenu10CreationTool());
-		paletteContainer.add(createRadioButton11CreationTool());
-		paletteContainer.add(createTable12CreationTool());
-		paletteContainer.add(createTextInput13CreationTool());
-		paletteContainer.add(createUserInterface14CreationTool());
+		paletteContainer.add(createComboBox3CreationTool());
+		paletteContainer.add(createFloatingButton4CreationTool());
+		paletteContainer.add(createImg5CreationTool());
+		paletteContainer.add(createLabel6CreationTool());
+		paletteContainer.add(createRadioButton7CreationTool());
+		paletteContainer.add(createTable8CreationTool());
+		paletteContainer.add(createTableRow9CreationTool());
+		paletteContainer.add(createTextInput10CreationTool());
+		paletteContainer.add(createUserInterface11CreationTool());
 		return paletteContainer;
 	}
 
@@ -56,12 +53,12 @@ public class UidiagramPaletteFactory {
 	*/
 	private ToolEntry createButton1CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Button_3003);
 		types.add(UidiagramElementTypes.Button_3016);
+		types.add(UidiagramElementTypes.Button_3003);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Button1CreationTool_title,
 				Messages.Button1CreationTool_desc, types);
 		entry.setId("createButton1CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Button_3003));
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Button_3016));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -71,12 +68,12 @@ public class UidiagramPaletteFactory {
 	*/
 	private ToolEntry createCheckBox2CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.CheckBox_3005);
 		types.add(UidiagramElementTypes.CheckBox_3018);
+		types.add(UidiagramElementTypes.CheckBox_3005);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.CheckBox2CreationTool_title,
 				Messages.CheckBox2CreationTool_desc, types);
 		entry.setId("createCheckBox2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.CheckBox_3005));
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.CheckBox_3018));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -84,28 +81,13 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createColumn3CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Column_3012);
-		types.add(UidiagramElementTypes.Column_3025);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Column3CreationTool_title,
-				Messages.Column3CreationTool_desc, types);
-		entry.setId("createColumn3CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Column_3012));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createComboBox4CreationTool() {
+	private ToolEntry createComboBox3CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(UidiagramElementTypes.ComboBox_3013);
 		types.add(UidiagramElementTypes.ComboBox_3026);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.ComboBox4CreationTool_title,
-				Messages.ComboBox4CreationTool_desc, types);
-		entry.setId("createComboBox4CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.ComboBox3CreationTool_title,
+				Messages.ComboBox3CreationTool_desc, types);
+		entry.setId("createComboBox3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.ComboBox_3013));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -114,14 +96,14 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createDropDown5CreationTool() {
+	private ToolEntry createFloatingButton4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.DropDown_3007);
-		types.add(UidiagramElementTypes.DropDown_3020);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.DropDown5CreationTool_title,
-				Messages.DropDown5CreationTool_desc, types);
-		entry.setId("createDropDown5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.DropDown_3007));
+		types.add(UidiagramElementTypes.FloatingButton_3031);
+		types.add(UidiagramElementTypes.FloatingButton_3034);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.FloatingButton4CreationTool_title,
+				Messages.FloatingButton4CreationTool_desc, types);
+		entry.setId("createFloatingButton4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.FloatingButton_3031));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -129,44 +111,14 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createGroup6CreationTool() {
+	private ToolEntry createImg5CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Group_3001);
-		types.add(UidiagramElementTypes.Group_3002);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Group6CreationTool_title,
-				Messages.Group6CreationTool_desc, types);
-		entry.setId("createGroup6CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Group_3001));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createIcon7CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Icon_3010);
-		types.add(UidiagramElementTypes.Icon_3023);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Icon7CreationTool_title,
-				Messages.Icon7CreationTool_desc, types);
-		entry.setId("createIcon7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Icon_3010));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createImg8CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Img_3009);
 		types.add(UidiagramElementTypes.Img_3022);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Img8CreationTool_title,
-				Messages.Img8CreationTool_desc, types);
-		entry.setId("createImg8CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Img_3009));
+		types.add(UidiagramElementTypes.Img_3009);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Img5CreationTool_title,
+				Messages.Img5CreationTool_desc, types);
+		entry.setId("createImg5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Img_3022));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -174,14 +126,14 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createLabel9CreationTool() {
+	private ToolEntry createLabel6CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Label_3004);
 		types.add(UidiagramElementTypes.Label_3017);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Label9CreationTool_title,
-				Messages.Label9CreationTool_desc, types);
-		entry.setId("createLabel9CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Label_3004));
+		types.add(UidiagramElementTypes.Label_3004);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Label6CreationTool_title,
+				Messages.Label6CreationTool_desc, types);
+		entry.setId("createLabel6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Label_3017));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -189,28 +141,13 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createMenu10CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Menu_3008);
-		types.add(UidiagramElementTypes.Menu_3021);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Menu10CreationTool_title,
-				Messages.Menu10CreationTool_desc, types);
-		entry.setId("createMenu10CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Menu_3008));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createRadioButton11CreationTool() {
+	private ToolEntry createRadioButton7CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(UidiagramElementTypes.RadioButton_3014);
 		types.add(UidiagramElementTypes.RadioButton_3027);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.RadioButton11CreationTool_title,
-				Messages.RadioButton11CreationTool_desc, types);
-		entry.setId("createRadioButton11CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.RadioButton7CreationTool_title,
+				Messages.RadioButton7CreationTool_desc, types);
+		entry.setId("createRadioButton7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.RadioButton_3014));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
@@ -219,14 +156,14 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTable12CreationTool() {
+	private ToolEntry createTable8CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.Table_3011);
 		types.add(UidiagramElementTypes.Table_3024);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Table12CreationTool_title,
-				Messages.Table12CreationTool_desc, types);
-		entry.setId("createTable12CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Table_3011));
+		types.add(UidiagramElementTypes.Table_3011);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Table8CreationTool_title,
+				Messages.Table8CreationTool_desc, types);
+		entry.setId("createTable8CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.Table_3024));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -234,14 +171,14 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createTextInput13CreationTool() {
+	private ToolEntry createTableRow9CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(UidiagramElementTypes.TextInput_3006);
-		types.add(UidiagramElementTypes.TextInput_3019);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.TextInput13CreationTool_title,
-				Messages.TextInput13CreationTool_desc, types);
-		entry.setId("createTextInput13CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.TextInput_3006));
+		types.add(UidiagramElementTypes.TableRow_3029);
+		types.add(UidiagramElementTypes.TableRow_3032);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.TableRow9CreationTool_title,
+				Messages.TableRow9CreationTool_desc, types);
+		entry.setId("createTableRow9CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.TableRow_3029));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -249,14 +186,29 @@ public class UidiagramPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createUserInterface14CreationTool() {
+	private ToolEntry createTextInput10CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(UidiagramElementTypes.TextInput_3019);
+		types.add(UidiagramElementTypes.TextInput_3006);
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.TextInput10CreationTool_title,
+				Messages.TextInput10CreationTool_desc, types);
+		entry.setId("createTextInput10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.TextInput_3019));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createUserInterface11CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(UidiagramElementTypes.UserInterface_2001);
 		types.add(UidiagramElementTypes.UserInterface_3015);
 		types.add(UidiagramElementTypes.UserInterface_3028);
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.UserInterface14CreationTool_title,
-				Messages.UserInterface14CreationTool_desc, types);
-		entry.setId("createUserInterface14CreationTool"); //$NON-NLS-1$
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.UserInterface11CreationTool_title,
+				Messages.UserInterface11CreationTool_desc, types);
+		entry.setId("createUserInterface11CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(UidiagramElementTypes.getImageDescriptor(UidiagramElementTypes.UserInterface_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;

@@ -91,9 +91,6 @@ public class UserInterfaceUserInterfaceListWidgetsCompartment2EditPart extends S
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == UidiagramElementTypes.Group_3001) {
-				return this;
-			}
 			if (type == UidiagramElementTypes.Button_3016) {
 				return this;
 			}
@@ -106,28 +103,22 @@ public class UserInterfaceUserInterfaceListWidgetsCompartment2EditPart extends S
 			if (type == UidiagramElementTypes.TextInput_3019) {
 				return this;
 			}
-			if (type == UidiagramElementTypes.DropDown_3020) {
-				return this;
-			}
-			if (type == UidiagramElementTypes.Menu_3021) {
-				return this;
-			}
 			if (type == UidiagramElementTypes.Img_3022) {
-				return this;
-			}
-			if (type == UidiagramElementTypes.Icon_3023) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.Table_3024) {
 				return this;
 			}
-			if (type == UidiagramElementTypes.Column_3025) {
+			if (type == UidiagramElementTypes.TableRow_3032) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.ComboBox_3026) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.RadioButton_3027) {
+				return this;
+			}
+			if (type == UidiagramElementTypes.FloatingButton_3034) {
 				return this;
 			}
 			if (type == UidiagramElementTypes.UserInterface_3028) {

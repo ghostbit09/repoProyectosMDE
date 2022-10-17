@@ -14,13 +14,21 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uidiagram.ModelElement#getName <em>Name</em>}</li>
- *   <li>{@link uidiagram.ModelElement#getPositionX <em>Position X</em>}</li>
- *   <li>{@link uidiagram.ModelElement#getPositionY <em>Position Y</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getModelElementId <em>Model Element Id</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getLayout_marginTop <em>Layout margin Top</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getLayout_marginBottom <em>Layout margin Bottom</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getLayout_marginStart <em>Layout margin Start</em>}</li>
  *   <li>{@link uidiagram.ModelElement#getWidth <em>Width</em>}</li>
- *   <li>{@link uidiagram.ModelElement#getHeigth <em>Heigth</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getHeight <em>Height</em>}</li>
  *   <li>{@link uidiagram.ModelElement#getBackgroundColor <em>Background Color</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getTextColor <em>Text Color</em>}</li>
  *   <li>{@link uidiagram.ModelElement#getTitleFont <em>Title Font</em>}</li>
  *   <li>{@link uidiagram.ModelElement#getTitleFontSize <em>Title Font Size</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getTextStyle <em>Text Style</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getTextAppearance <em>Text Appearance</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getInputType <em>Input Type</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getSrcCompat <em>Src Compat</em>}</li>
+ *   <li>{@link uidiagram.ModelElement#getMaxLength <em>Max Length</em>}</li>
  * </ul>
  *
  * @see uidiagram.UidiagramPackage#getModelElement()
@@ -55,56 +63,108 @@ public interface ModelElement extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Position X</b></em>' attribute.
+	 * Returns the value of the '<em><b>Model Element Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Position X</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Model Element Id</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Position X</em>' attribute.
-	 * @see #setPositionX(int)
-	 * @see uidiagram.UidiagramPackage#getModelElement_PositionX()
+	 * @return the value of the '<em>Model Element Id</em>' attribute.
+	 * @see #setModelElementId(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_ModelElementId()
 	 * @model
 	 * @generated
 	 */
-	int getPositionX();
+	String getModelElementId();
 
 	/**
-	 * Sets the value of the '{@link uidiagram.ModelElement#getPositionX <em>Position X</em>}' attribute.
+	 * Sets the value of the '{@link uidiagram.ModelElement#getModelElementId <em>Model Element Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Position X</em>' attribute.
-	 * @see #getPositionX()
+	 * @param value the new value of the '<em>Model Element Id</em>' attribute.
+	 * @see #getModelElementId()
 	 * @generated
 	 */
-	void setPositionX(int value);
+	void setModelElementId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Position Y</b></em>' attribute.
+	 * Returns the value of the '<em><b>Layout margin Top</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Position Y</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Layout margin Top</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Position Y</em>' attribute.
-	 * @see #setPositionY(int)
-	 * @see uidiagram.UidiagramPackage#getModelElement_PositionY()
+	 * @return the value of the '<em>Layout margin Top</em>' attribute.
+	 * @see #setLayout_marginTop(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_Layout_marginTop()
 	 * @model
 	 * @generated
 	 */
-	int getPositionY();
+	String getLayout_marginTop();
 
 	/**
-	 * Sets the value of the '{@link uidiagram.ModelElement#getPositionY <em>Position Y</em>}' attribute.
+	 * Sets the value of the '{@link uidiagram.ModelElement#getLayout_marginTop <em>Layout margin Top</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Position Y</em>' attribute.
-	 * @see #getPositionY()
+	 * @param value the new value of the '<em>Layout margin Top</em>' attribute.
+	 * @see #getLayout_marginTop()
 	 * @generated
 	 */
-	void setPositionY(int value);
+	void setLayout_marginTop(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Layout margin Bottom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Layout margin Bottom</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Layout margin Bottom</em>' attribute.
+	 * @see #setLayout_marginBottom(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_Layout_marginBottom()
+	 * @model
+	 * @generated
+	 */
+	String getLayout_marginBottom();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getLayout_marginBottom <em>Layout margin Bottom</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Layout margin Bottom</em>' attribute.
+	 * @see #getLayout_marginBottom()
+	 * @generated
+	 */
+	void setLayout_marginBottom(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Layout margin Start</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Layout margin Start</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Layout margin Start</em>' attribute.
+	 * @see #setLayout_marginStart(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_Layout_marginStart()
+	 * @model
+	 * @generated
+	 */
+	String getLayout_marginStart();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getLayout_marginStart <em>Layout margin Start</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Layout margin Start</em>' attribute.
+	 * @see #getLayout_marginStart()
+	 * @generated
+	 */
+	void setLayout_marginStart(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
@@ -115,12 +175,12 @@ public interface ModelElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(int)
+	 * @see #setWidth(String)
 	 * @see uidiagram.UidiagramPackage#getModelElement_Width()
 	 * @model
 	 * @generated
 	 */
-	int getWidth();
+	String getWidth();
 
 	/**
 	 * Sets the value of the '{@link uidiagram.ModelElement#getWidth <em>Width</em>}' attribute.
@@ -130,33 +190,33 @@ public interface ModelElement extends EObject {
 	 * @see #getWidth()
 	 * @generated
 	 */
-	void setWidth(int value);
+	void setWidth(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Heigth</b></em>' attribute.
+	 * Returns the value of the '<em><b>Height</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Heigth</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Height</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Heigth</em>' attribute.
-	 * @see #setHeigth(int)
-	 * @see uidiagram.UidiagramPackage#getModelElement_Heigth()
+	 * @return the value of the '<em>Height</em>' attribute.
+	 * @see #setHeight(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_Height()
 	 * @model
 	 * @generated
 	 */
-	int getHeigth();
+	String getHeight();
 
 	/**
-	 * Sets the value of the '{@link uidiagram.ModelElement#getHeigth <em>Heigth</em>}' attribute.
+	 * Sets the value of the '{@link uidiagram.ModelElement#getHeight <em>Height</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Heigth</em>' attribute.
-	 * @see #getHeigth()
+	 * @param value the new value of the '<em>Height</em>' attribute.
+	 * @see #getHeight()
 	 * @generated
 	 */
-	void setHeigth(int value);
+	void setHeight(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Background Color</b></em>' attribute.
@@ -183,6 +243,32 @@ public interface ModelElement extends EObject {
 	 * @generated
 	 */
 	void setBackgroundColor(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Text Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Text Color</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Text Color</em>' attribute.
+	 * @see #setTextColor(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_TextColor()
+	 * @model
+	 * @generated
+	 */
+	String getTextColor();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getTextColor <em>Text Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Text Color</em>' attribute.
+	 * @see #getTextColor()
+	 * @generated
+	 */
+	void setTextColor(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Title Font</b></em>' attribute.
@@ -235,5 +321,135 @@ public interface ModelElement extends EObject {
 	 * @generated
 	 */
 	void setTitleFontSize(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Text Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Text Style</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Text Style</em>' attribute.
+	 * @see #setTextStyle(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_TextStyle()
+	 * @model
+	 * @generated
+	 */
+	String getTextStyle();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getTextStyle <em>Text Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Text Style</em>' attribute.
+	 * @see #getTextStyle()
+	 * @generated
+	 */
+	void setTextStyle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Text Appearance</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Text Appearance</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Text Appearance</em>' attribute.
+	 * @see #setTextAppearance(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_TextAppearance()
+	 * @model
+	 * @generated
+	 */
+	String getTextAppearance();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getTextAppearance <em>Text Appearance</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Text Appearance</em>' attribute.
+	 * @see #getTextAppearance()
+	 * @generated
+	 */
+	void setTextAppearance(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Type</em>' attribute.
+	 * @see #setInputType(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_InputType()
+	 * @model
+	 * @generated
+	 */
+	String getInputType();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getInputType <em>Input Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input Type</em>' attribute.
+	 * @see #getInputType()
+	 * @generated
+	 */
+	void setInputType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Src Compat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Src Compat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Src Compat</em>' attribute.
+	 * @see #setSrcCompat(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_SrcCompat()
+	 * @model
+	 * @generated
+	 */
+	String getSrcCompat();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getSrcCompat <em>Src Compat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Src Compat</em>' attribute.
+	 * @see #getSrcCompat()
+	 * @generated
+	 */
+	void setSrcCompat(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Max Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Max Length</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Max Length</em>' attribute.
+	 * @see #setMaxLength(String)
+	 * @see uidiagram.UidiagramPackage#getModelElement_MaxLength()
+	 * @model
+	 * @generated
+	 */
+	String getMaxLength();
+
+	/**
+	 * Sets the value of the '{@link uidiagram.ModelElement#getMaxLength <em>Max Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Max Length</em>' attribute.
+	 * @see #getMaxLength()
+	 * @generated
+	 */
+	void setMaxLength(String value);
 
 } // ModelElement

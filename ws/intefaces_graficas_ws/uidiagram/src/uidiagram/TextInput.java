@@ -10,7 +10,7 @@ package uidiagram;
  *
  *
  * @see uidiagram.UidiagramPackage#getTextInput()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' figure='rectangle'"
  * @generated
  */
 public interface TextInput extends GraphicalIndividual {

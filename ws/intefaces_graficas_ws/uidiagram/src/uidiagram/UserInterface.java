@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see uidiagram.UidiagramPackage#getUserInterface()
- * @model annotation="gmf.node label='name'"
+ * @model annotation="gmf.node label='name' label.layout='center'"
  * @generated
  */
 public interface UserInterface extends ModelElement {

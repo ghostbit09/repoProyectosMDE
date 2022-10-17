@@ -5,10 +5,9 @@ package uidiagram.diagram.edit.parts;
 
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.RoundedRectangle;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -250,7 +249,7 @@ public class ComboBox2EditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class ComboBoxFigure extends RoundedRectangle {
+	public class ComboBoxFigure extends RectangleFigure {
 
 		/**
 		 * @generated
@@ -261,7 +260,6 @@ public class ComboBox2EditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		public ComboBoxFigure() {
-			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();

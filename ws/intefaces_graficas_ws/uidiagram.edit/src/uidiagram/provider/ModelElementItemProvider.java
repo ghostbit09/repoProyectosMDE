@@ -61,13 +61,21 @@ public class ModelElementItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addPositionXPropertyDescriptor(object);
-			addPositionYPropertyDescriptor(object);
+			addModelElementIdPropertyDescriptor(object);
+			addLayout_marginTopPropertyDescriptor(object);
+			addLayout_marginBottomPropertyDescriptor(object);
+			addLayout_marginStartPropertyDescriptor(object);
 			addWidthPropertyDescriptor(object);
-			addHeigthPropertyDescriptor(object);
+			addHeightPropertyDescriptor(object);
 			addBackgroundColorPropertyDescriptor(object);
+			addTextColorPropertyDescriptor(object);
 			addTitleFontPropertyDescriptor(object);
 			addTitleFontSizePropertyDescriptor(object);
+			addTextStylePropertyDescriptor(object);
+			addTextAppearancePropertyDescriptor(object);
+			addInputTypePropertyDescriptor(object);
+			addSrcCompatPropertyDescriptor(object);
+			addMaxLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,45 +103,89 @@ public class ModelElementItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Position X feature.
+	 * This adds a property descriptor for the Model Element Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPositionXPropertyDescriptor(Object object) {
+	protected void addModelElementIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ModelElement_positionX_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_positionX_feature", "_UI_ModelElement_type"),
-				 UidiagramPackage.Literals.MODEL_ELEMENT__POSITION_X,
+				 getString("_UI_ModelElement_modelElementId_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_modelElementId_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__MODEL_ELEMENT_ID,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Position Y feature.
+	 * This adds a property descriptor for the Layout margin Top feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPositionYPropertyDescriptor(Object object) {
+	protected void addLayout_marginTopPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ModelElement_positionY_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_positionY_feature", "_UI_ModelElement_type"),
-				 UidiagramPackage.Literals.MODEL_ELEMENT__POSITION_Y,
+				 getString("_UI_ModelElement_layout_marginTop_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_layout_marginTop_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__LAYOUT_MARGIN_TOP,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Layout margin Bottom feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayout_marginBottomPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_layout_marginBottom_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_layout_marginBottom_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__LAYOUT_MARGIN_BOTTOM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Layout margin Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayout_marginStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_layout_marginStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_layout_marginStart_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__LAYOUT_MARGIN_START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -155,29 +207,29 @@ public class ModelElementItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Heigth feature.
+	 * This adds a property descriptor for the Height feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addHeigthPropertyDescriptor(Object object) {
+	protected void addHeightPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ModelElement_heigth_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_heigth_feature", "_UI_ModelElement_type"),
-				 UidiagramPackage.Literals.MODEL_ELEMENT__HEIGTH,
+				 getString("_UI_ModelElement_height_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_height_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__HEIGHT,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -196,6 +248,28 @@ public class ModelElementItemProvider
 				 getString("_UI_ModelElement_backgroundColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_backgroundColor_feature", "_UI_ModelElement_type"),
 				 UidiagramPackage.Literals.MODEL_ELEMENT__BACKGROUND_COLOR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Text Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_textColor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_textColor_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__TEXT_COLOR,
 				 true,
 				 false,
 				 false,
@@ -249,6 +323,116 @@ public class ModelElementItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Text Style feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextStylePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_textStyle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_textStyle_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__TEXT_STYLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Text Appearance feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextAppearancePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_textAppearance_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_textAppearance_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__TEXT_APPEARANCE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_inputType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_inputType_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__INPUT_TYPE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Src Compat feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrcCompatPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_srcCompat_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_srcCompat_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__SRC_COMPAT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Max Length feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMaxLengthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ModelElement_maxLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModelElement_maxLength_feature", "_UI_ModelElement_type"),
+				 UidiagramPackage.Literals.MODEL_ELEMENT__MAX_LENGTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ModelElement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,13 +471,21 @@ public class ModelElementItemProvider
 
 		switch (notification.getFeatureID(ModelElement.class)) {
 			case UidiagramPackage.MODEL_ELEMENT__NAME:
-			case UidiagramPackage.MODEL_ELEMENT__POSITION_X:
-			case UidiagramPackage.MODEL_ELEMENT__POSITION_Y:
+			case UidiagramPackage.MODEL_ELEMENT__MODEL_ELEMENT_ID:
+			case UidiagramPackage.MODEL_ELEMENT__LAYOUT_MARGIN_TOP:
+			case UidiagramPackage.MODEL_ELEMENT__LAYOUT_MARGIN_BOTTOM:
+			case UidiagramPackage.MODEL_ELEMENT__LAYOUT_MARGIN_START:
 			case UidiagramPackage.MODEL_ELEMENT__WIDTH:
-			case UidiagramPackage.MODEL_ELEMENT__HEIGTH:
+			case UidiagramPackage.MODEL_ELEMENT__HEIGHT:
 			case UidiagramPackage.MODEL_ELEMENT__BACKGROUND_COLOR:
+			case UidiagramPackage.MODEL_ELEMENT__TEXT_COLOR:
 			case UidiagramPackage.MODEL_ELEMENT__TITLE_FONT:
 			case UidiagramPackage.MODEL_ELEMENT__TITLE_FONT_SIZE:
+			case UidiagramPackage.MODEL_ELEMENT__TEXT_STYLE:
+			case UidiagramPackage.MODEL_ELEMENT__TEXT_APPEARANCE:
+			case UidiagramPackage.MODEL_ELEMENT__INPUT_TYPE:
+			case UidiagramPackage.MODEL_ELEMENT__SRC_COMPAT:
+			case UidiagramPackage.MODEL_ELEMENT__MAX_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

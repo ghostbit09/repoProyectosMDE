@@ -60,7 +60,7 @@ public class TextInputName2EditPart extends CompartmentEditPart implements IText
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5015;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	* @generated
@@ -295,7 +295,7 @@ public class TextInputName2EditPart extends CompartmentEditPart implements IText
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.TextInput_3019, getParserElement(),
+			parser = UidiagramParserProvider.getParser(UidiagramElementTypes.TextInput_3006, getParserElement(),
 					UidiagramVisualIDRegistry.getType(uidiagram.diagram.edit.parts.TextInputName2EditPart.VISUAL_ID));
 		}
 		return parser;
