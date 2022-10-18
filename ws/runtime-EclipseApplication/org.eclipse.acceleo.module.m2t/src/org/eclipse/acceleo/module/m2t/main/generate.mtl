@@ -75,8 +75,12 @@
 	 [if (not anIndividualElement.textAppearance.oclIsUndefined() and not anIndividualElement.textAppearance.equalsIgnoreCase(''))]
 	 android:textAppearance="@style/[anIndividualElement.textAppearance/]"
 	 [/if]
-     android:textColor="[anIndividualElement.textColor/]"
-     android:textSize="[anIndividualElement.titleFontSize/]"
+	 [if (not anIndividualElement.textColor.oclIsUndefined() and not anIndividualElement.textColor.equalsIgnoreCase(''))]
+	 android:textColor="[anIndividualElement.textColor/]"
+	 [/if]
+	 [if (not anIndividualElement.titleFontSize.oclIsUndefined() and not anIndividualElement.titleFontSize.equalsIgnoreCase(''))]
+	 android:textSize="[anIndividualElement.titleFontSize/]"
+	 [/if]
 	 [if (not anIndividualElement.textStyle.oclIsUndefined() and not anIndividualElement.textStyle.equalsIgnoreCase(''))]
 	 android:textStyle="[anIndividualElement.textStyle/]"
 	 [/if]
