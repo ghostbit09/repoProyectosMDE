@@ -1,0 +1,43 @@
+@namespace(uri="SQLGenerator", prefix="SQLGenerator")
+@gmf
+package SQLGenerator;
+
+class ModelFactory {
+
+	 val Schema[*] listSchemas;
+}
+
+class ModelElement  {
+    attr String modelElement_id;
+    attr String name;
+    attr String kind;
+}
+
+class Schema extends ModelElement {
+	
+	val Table[*] listTables; 
+}
+
+class Table extends ModelElement {
+
+	val Column[*] listColumns;
+	val PrimaryKey[*] listPrimaryKeys;
+	val ForeignKey[*] listForeignKeys;
+}
+
+class Column extends ModelElement {
+
+	attr String type;
+	val PrimaryKey[*] listPrimaryKeys;
+	val ForeignKey[*] listForeignKeys;
+}
+
+class PrimaryKey extends ModelElement {
+
+	val Column[*] listColumns;
+}
+
+class ForeignKey extends ModelElement {
+	
+	val Column[*] listColumns;
+}
