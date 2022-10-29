@@ -19,6 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MBSAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#isConstante <em>Constante</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#getRuta <em>Ruta</em>}</li>
+ *   <li>{@link abstracta.MBSAtributo#getIsPrimaryKey <em>Is Primary Key</em>}</li>
+ *   <li>{@link abstracta.MBSAtributo#getIsNotNull <em>Is Not Null</em>}</li>
+ *   <li>{@link abstracta.MBSAtributo#getIsAutoincrementable <em>Is Autoincrementable</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getMBSAtributo()
@@ -181,5 +184,83 @@ public interface MBSAtributo extends EObject {
 	 * @generated
 	 */
 	void setRuta(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Primary Key</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Primary Key</em>' attribute.
+	 * @see #setIsPrimaryKey(Boolean)
+	 * @see abstracta.AbstractaPackage#getMBSAtributo_IsPrimaryKey()
+	 * @model
+	 * @generated
+	 */
+	Boolean getIsPrimaryKey();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MBSAtributo#getIsPrimaryKey <em>Is Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Primary Key</em>' attribute.
+	 * @see #getIsPrimaryKey()
+	 * @generated
+	 */
+	void setIsPrimaryKey(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Not Null</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Not Null</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Not Null</em>' attribute.
+	 * @see #setIsNotNull(Boolean)
+	 * @see abstracta.AbstractaPackage#getMBSAtributo_IsNotNull()
+	 * @model
+	 * @generated
+	 */
+	Boolean getIsNotNull();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MBSAtributo#getIsNotNull <em>Is Not Null</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Not Null</em>' attribute.
+	 * @see #getIsNotNull()
+	 * @generated
+	 */
+	void setIsNotNull(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Autoincrementable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Autoincrementable</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Autoincrementable</em>' attribute.
+	 * @see #setIsAutoincrementable(Boolean)
+	 * @see abstracta.AbstractaPackage#getMBSAtributo_IsAutoincrementable()
+	 * @model
+	 * @generated
+	 */
+	Boolean getIsAutoincrementable();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MBSAtributo#getIsAutoincrementable <em>Is Autoincrementable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Autoincrementable</em>' attribute.
+	 * @see #getIsAutoincrementable()
+	 * @generated
+	 */
+	void setIsAutoincrementable(Boolean value);
 
 } // MBSAtributo

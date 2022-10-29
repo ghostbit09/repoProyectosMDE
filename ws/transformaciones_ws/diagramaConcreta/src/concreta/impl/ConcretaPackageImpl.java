@@ -459,6 +459,33 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMBSAtributo_IsPrimaryKey() {
+		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMBSAtributo_IsNotNull() {
+		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMBSAtributo_IsAutoincrementable() {
+		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMBSRelacion() {
 		return mbsRelacionEClass;
 	}
@@ -621,6 +648,9 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__VALOR_DEFECTO);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__CONSTANTE);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__RUTA);
+		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_PRIMARY_KEY);
+		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_NOT_NULL);
+		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_AUTOINCREMENTABLE);
 
 		mbsRelacionEClass = createEClass(MBS_RELACION);
 		createEAttribute(mbsRelacionEClass, MBS_RELACION__NOMBRE);
@@ -705,6 +735,9 @@ public class ConcretaPackageImpl extends EPackageImpl implements ConcretaPackage
 		initEAttribute(getMBSAtributo_ValorDefecto(), ecorePackage.getEString(), "valorDefecto", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_Constante(), ecorePackage.getEBoolean(), "constante", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSAtributo_IsPrimaryKey(), ecorePackage.getEBooleanObject(), "isPrimaryKey", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSAtributo_IsNotNull(), ecorePackage.getEBooleanObject(), "isNotNull", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSAtributo_IsAutoincrementable(), ecorePackage.getEBooleanObject(), "isAutoincrementable", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mbsRelacionEClass, MBSRelacion.class, "MBSRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMBSRelacion_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, MBSRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

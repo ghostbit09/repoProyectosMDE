@@ -403,13 +403,40 @@ public interface AbstractaPackage extends EPackage {
 	int MBS_ATRIBUTO__RUTA = 5;
 
 	/**
+	 * The feature id for the '<em><b>Is Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_ATRIBUTO__IS_PRIMARY_KEY = 6;
+
+	/**
+	 * The feature id for the '<em><b>Is Not Null</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_ATRIBUTO__IS_NOT_NULL = 7;
+
+	/**
+	 * The feature id for the '<em><b>Is Autoincrementable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_ATRIBUTO__IS_AUTOINCREMENTABLE = 8;
+
+	/**
 	 * The number of structural features of the '<em>MBS Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_ATRIBUTO_FEATURE_COUNT = 6;
+	int MBS_ATRIBUTO_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.
@@ -891,6 +918,39 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getMBSAtributo_Ruta();
 
 	/**
+	 * Returns the meta object for the attribute '{@link abstracta.MBSAtributo#getIsPrimaryKey <em>Is Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Primary Key</em>'.
+	 * @see abstracta.MBSAtributo#getIsPrimaryKey()
+	 * @see #getMBSAtributo()
+	 * @generated
+	 */
+	EAttribute getMBSAtributo_IsPrimaryKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.MBSAtributo#getIsNotNull <em>Is Not Null</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Not Null</em>'.
+	 * @see abstracta.MBSAtributo#getIsNotNull()
+	 * @see #getMBSAtributo()
+	 * @generated
+	 */
+	EAttribute getMBSAtributo_IsNotNull();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.MBSAtributo#getIsAutoincrementable <em>Is Autoincrementable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Autoincrementable</em>'.
+	 * @see abstracta.MBSAtributo#getIsAutoincrementable()
+	 * @see #getMBSAtributo()
+	 * @generated
+	 */
+	EAttribute getMBSAtributo_IsAutoincrementable();
+
+	/**
 	 * Returns the meta object for class '{@link abstracta.MBSRelacion <em>MBS Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1313,6 +1373,30 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_ATRIBUTO__RUTA = eINSTANCE.getMBSAtributo_Ruta();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MBS_ATRIBUTO__IS_PRIMARY_KEY = eINSTANCE.getMBSAtributo_IsPrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Not Null</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MBS_ATRIBUTO__IS_NOT_NULL = eINSTANCE.getMBSAtributo_IsNotNull();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Autoincrementable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MBS_ATRIBUTO__IS_AUTOINCREMENTABLE = eINSTANCE.getMBSAtributo_IsAutoincrementable();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.

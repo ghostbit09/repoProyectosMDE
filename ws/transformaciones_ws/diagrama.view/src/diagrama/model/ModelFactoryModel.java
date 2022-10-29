@@ -4,6 +4,7 @@ import abstracta.AbstractaPackage;
 import concreta.ConcretaFactory;
 import concreta.ConcretaPackage;
 import concreta.ModelFactory;
+import sql_metamodel.Sql_metamodelPackage;
 
 public class ModelFactoryModel {
 	
@@ -22,7 +23,8 @@ public class ModelFactoryModel {
 	ModelFactory modelFactory = ConcretaFactory.eINSTANCE.createModelFactory();
 	private ModelFactory modelFactoryConcreta;
 	private abstracta.ModelFactory modelFactoryAbstracta;
-
+	private sql_metamodel.ModelFactory modelFactorySQL;
+	
 	public ModelFactoryModel() {
 	}
 
@@ -68,6 +70,28 @@ public class ModelFactoryModel {
 		return modelFactory;
 	}
 	
+	public sql_metamodel.ModelFactory cargarSQLMetamodel(){
+		
+		sql_metamodel.ModelFactory modelFactory = null;
+
+		Sql_metamodelPackage whoownmePackage =  Sql_metamodelPackage.eINSTANCE;
+		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.sql_metamodel");
+		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+
+		try {
+			resource.load(null);
+			modelFactory = (sql_metamodel.ModelFactory)resource.getContents().get(0);
+			System.out.println("loaded: " + modelFactory);
+		}
+		catch (java.io.IOException e) {
+			System.out.println("failed to read " + uri); 		
+			System.out.println(e);
+		}
+		return modelFactory;
+	}
+	
 	public void salvarAbstracta() {
 		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.abstracta");
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
@@ -82,7 +106,7 @@ public class ModelFactoryModel {
 
 		return;
 
-}
+	}
 
 	
 
@@ -100,6 +124,12 @@ public class ModelFactoryModel {
 		modelFactoryAbstracta = cargarAbstracta();
 		TransformacionM2T transformacionM2T = new TransformacionM2T(modelFactoryAbstracta);
 		transformacionM2T.transformarM2T();
+	}
+	
+	public void generarModelToERD() {
+		modelFactoryAbstracta = cargarAbstracta();
+		modelFactorySQL = cargarSQLMetamodel();
+		TransformacionUML2ERD transformacionUml2Erd = new TransformacionUML2ERD(modelFactoryAbstracta, modelFactorySQL);
 	}
 
 }

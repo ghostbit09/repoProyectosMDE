@@ -26,6 +26,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link concreta.impl.MBSAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
  *   <li>{@link concreta.impl.MBSAtributoImpl#isConstante <em>Constante</em>}</li>
  *   <li>{@link concreta.impl.MBSAtributoImpl#getRuta <em>Ruta</em>}</li>
+ *   <li>{@link concreta.impl.MBSAtributoImpl#getIsPrimaryKey <em>Is Primary Key</em>}</li>
+ *   <li>{@link concreta.impl.MBSAtributoImpl#getIsNotNull <em>Is Not Null</em>}</li>
+ *   <li>{@link concreta.impl.MBSAtributoImpl#getIsAutoincrementable <em>Is Autoincrementable</em>}</li>
  * </ul>
  *
  * @generated
@@ -150,6 +153,66 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * @ordered
 	 */
 	protected String ruta = RUTA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsPrimaryKey() <em>Is Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_PRIMARY_KEY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIsPrimaryKey() <em>Is Primary Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsPrimaryKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isPrimaryKey = IS_PRIMARY_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsNotNull() <em>Is Not Null</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsNotNull()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_NOT_NULL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIsNotNull() <em>Is Not Null</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsNotNull()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isNotNull = IS_NOT_NULL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsAutoincrementable() <em>Is Autoincrementable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsAutoincrementable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_AUTOINCREMENTABLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIsAutoincrementable() <em>Is Autoincrementable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsAutoincrementable()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isAutoincrementable = IS_AUTOINCREMENTABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,6 +364,69 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Boolean getIsPrimaryKey() {
+		return isPrimaryKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPrimaryKey(Boolean newIsPrimaryKey) {
+		Boolean oldIsPrimaryKey = isPrimaryKey;
+		isPrimaryKey = newIsPrimaryKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY, oldIsPrimaryKey, isPrimaryKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean getIsNotNull() {
+		return isNotNull;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsNotNull(Boolean newIsNotNull) {
+		Boolean oldIsNotNull = isNotNull;
+		isNotNull = newIsNotNull;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL, oldIsNotNull, isNotNull));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean getIsAutoincrementable() {
+		return isAutoincrementable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsAutoincrementable(Boolean newIsAutoincrementable) {
+		Boolean oldIsAutoincrementable = isAutoincrementable;
+		isAutoincrementable = newIsAutoincrementable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE, oldIsAutoincrementable, isAutoincrementable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -316,6 +442,12 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return isConstante();
 			case ConcretaPackage.MBS_ATRIBUTO__RUTA:
 				return getRuta();
+			case ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+				return getIsPrimaryKey();
+			case ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
+				return getIsNotNull();
+			case ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
+				return getIsAutoincrementable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -345,6 +477,15 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return;
 			case ConcretaPackage.MBS_ATRIBUTO__RUTA:
 				setRuta((String)newValue);
+				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+				setIsPrimaryKey((Boolean)newValue);
+				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
+				setIsNotNull((Boolean)newValue);
+				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
+				setIsAutoincrementable((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,6 +517,15 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 			case ConcretaPackage.MBS_ATRIBUTO__RUTA:
 				setRuta(RUTA_EDEFAULT);
 				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+				setIsPrimaryKey(IS_PRIMARY_KEY_EDEFAULT);
+				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
+				setIsNotNull(IS_NOT_NULL_EDEFAULT);
+				return;
+			case ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
+				setIsAutoincrementable(IS_AUTOINCREMENTABLE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -400,6 +550,12 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return constante != CONSTANTE_EDEFAULT;
 			case ConcretaPackage.MBS_ATRIBUTO__RUTA:
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
+			case ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+				return IS_PRIMARY_KEY_EDEFAULT == null ? isPrimaryKey != null : !IS_PRIMARY_KEY_EDEFAULT.equals(isPrimaryKey);
+			case ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
+				return IS_NOT_NULL_EDEFAULT == null ? isNotNull != null : !IS_NOT_NULL_EDEFAULT.equals(isNotNull);
+			case ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
+				return IS_AUTOINCREMENTABLE_EDEFAULT == null ? isAutoincrementable != null : !IS_AUTOINCREMENTABLE_EDEFAULT.equals(isAutoincrementable);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -426,6 +582,12 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 		result.append(constante);
 		result.append(", ruta: ");
 		result.append(ruta);
+		result.append(", isPrimaryKey: ");
+		result.append(isPrimaryKey);
+		result.append(", isNotNull: ");
+		result.append(isNotNull);
+		result.append(", isAutoincrementable: ");
+		result.append(isAutoincrementable);
 		result.append(')');
 		return result.toString();
 	}

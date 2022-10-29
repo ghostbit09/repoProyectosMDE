@@ -50,6 +50,9 @@ class MBSAtributo {
 	attr String ValorDefecto;
 	attr boolean constante;
 	attr String ruta;
+	attr Boolean isPrimaryKey;
+	attr Boolean isNotNull;
+	attr Boolean isAutoincrementable;
 	
 }
 

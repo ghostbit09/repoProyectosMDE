@@ -54,6 +54,7 @@ public class GeneratorView extends ViewPart {
 		grpGeneracionDeModelo_2.setBounds(10, 154, 574, 132);
 		
 		Button btnGenerateMt = new Button(grpGeneracionDeModelo_2, SWT.NONE);
+		btnGenerateMt.setEnabled(false);
 		btnGenerateMt.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
@@ -64,6 +65,22 @@ public class GeneratorView extends ViewPart {
 		});
 		btnGenerateMt.setText("Generate M2T");
 		btnGenerateMt.setBounds(219, 55, 138, 25);
+		
+		Group grpGeneracionDeModelo_2_1 = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo_2_1.setText("Generacion de modelo UML a relacional");
+		grpGeneracionDeModelo_2_1.setBounds(10, 302, 574, 132);
+		
+		Button btnGenerateMm_1 = new Button(grpGeneracionDeModelo_2_1, SWT.NONE);
+		btnGenerateMm_1.setText("Generate M2M");
+		btnGenerateMm_1.setBounds(219, 55, 138, 25);
+		
+		Group grpGeneracionDeModelo_2_2 = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo_2_2.setText("Generacion de modelo relacional a SQL");
+		grpGeneracionDeModelo_2_2.setBounds(10, 446, 574, 132);
+		
+		Button btnGenerateModelTo = new Button(grpGeneracionDeModelo_2_2, SWT.NONE);
+		btnGenerateModelTo.setText("Generate Model to SQL");
+		btnGenerateModelTo.setBounds(219, 55, 138, 25);
 
 	}
 

@@ -166,6 +166,9 @@ public class TransformacionM2M {
 				atributoNuevo.setTipo(atributo.getTipo());
 				atributoNuevo.setConstante(atributo.isConstante());
 				atributoNuevo.setValorDefecto(atributo.getValorDefecto());
+				atributoNuevo.setIsAutoincrementable(atributo.getIsAutoincrementable());
+				atributoNuevo.setIsNotNull(atributo.getIsNotNull());
+				atributoNuevo.setIsPrimaryKey(atributo.getIsPrimaryKey());
 				claseAbstracta.getAtributos().add(atributoNuevo);
 			}
 		}

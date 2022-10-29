@@ -66,6 +66,9 @@ public class MBSAtributoItemProvider
 			addValorDefectoPropertyDescriptor(object);
 			addConstantePropertyDescriptor(object);
 			addRutaPropertyDescriptor(object);
+			addIsPrimaryKeyPropertyDescriptor(object);
+			addIsNotNullPropertyDescriptor(object);
+			addIsAutoincrementablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -203,6 +206,72 @@ public class MBSAtributoItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Primary Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsPrimaryKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSAtributo_isPrimaryKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSAtributo_isPrimaryKey_feature", "_UI_MBSAtributo_type"),
+				 ConcretaPackage.Literals.MBS_ATRIBUTO__IS_PRIMARY_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Not Null feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsNotNullPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSAtributo_isNotNull_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSAtributo_isNotNull_feature", "_UI_MBSAtributo_type"),
+				 ConcretaPackage.Literals.MBS_ATRIBUTO__IS_NOT_NULL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Autoincrementable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsAutoincrementablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSAtributo_isAutoincrementable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSAtributo_isAutoincrementable_feature", "_UI_MBSAtributo_type"),
+				 ConcretaPackage.Literals.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MBSAtributo.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +315,9 @@ public class MBSAtributoItemProvider
 			case ConcretaPackage.MBS_ATRIBUTO__VALOR_DEFECTO:
 			case ConcretaPackage.MBS_ATRIBUTO__CONSTANTE:
 			case ConcretaPackage.MBS_ATRIBUTO__RUTA:
+			case ConcretaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+			case ConcretaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
+			case ConcretaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

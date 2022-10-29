@@ -1,0 +1,51 @@
+@namespace(uri="sql_metamodel", prefix="sql_metamodel")
+@gmf
+package sql_metamodel;
+
+class ModelFactory {
+
+	 val Schema[*] listSchemas;
+	 ref Table[*] listAllTables;
+}
+
+class ModelElement  {
+    attr String name;
+}
+
+class Schema extends ModelElement {
+	
+	val Table[*] listTables; 
+}
+
+class Table extends ModelElement {
+
+	val PrimaryKey[*] listPrimaryKeys;
+	val ForeignKey[*] listForeignKeys;
+	val Column[*] listColumns;
+	val Relation[*] listRelations;
+}
+
+class Column extends ModelElement {
+
+	attr String type;
+	attr Boolean isNotNull;
+	attr Boolean isAutoIncremetable;
+}
+
+class Relation {
+  
+    ref Table source;
+    ref Table target;
+    attr String multiplicidadA;
+    attr String multiplicidadB;
+}
+
+class PrimaryKey extends Column{
+	
+}
+
+class ForeignKey{
+	
+	attr String name;
+	ref PrimaryKey primaryKey;
+}
