@@ -305,13 +305,22 @@ public interface Sql_metamodelPackage extends EPackage {
 	int RELATION__TARGET = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATION__NAME = 2;
+
+	/**
 	 * The feature id for the '<em><b>Multiplicidad A</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__MULTIPLICIDAD_A = 2;
+	int RELATION__MULTIPLICIDAD_A = 3;
 
 	/**
 	 * The feature id for the '<em><b>Multiplicidad B</b></em>' attribute.
@@ -320,7 +329,7 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION__MULTIPLICIDAD_B = 3;
+	int RELATION__MULTIPLICIDAD_B = 4;
 
 	/**
 	 * The number of structural features of the '<em>Relation</em>' class.
@@ -329,7 +338,7 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATION_FEATURE_COUNT = 4;
+	int RELATION_FEATURE_COUNT = 5;
 
 
 	/**
@@ -404,7 +413,34 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY__NAME = 0;
+	int FOREIGN_KEY__NAME = COLUMN__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY__TYPE = COLUMN__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Is Not Null</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY__IS_NOT_NULL = COLUMN__IS_NOT_NULL;
+
+	/**
+	 * The feature id for the '<em><b>Is Auto Incremetable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FOREIGN_KEY__IS_AUTO_INCREMETABLE = COLUMN__IS_AUTO_INCREMETABLE;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' reference.
@@ -413,7 +449,7 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY__PRIMARY_KEY = 1;
+	int FOREIGN_KEY__PRIMARY_KEY = COLUMN_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Foreign Key</em>' class.
@@ -422,7 +458,7 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOREIGN_KEY_FEATURE_COUNT = 2;
+	int FOREIGN_KEY_FEATURE_COUNT = COLUMN_FEATURE_COUNT + 1;
 
 
 	/**
@@ -629,6 +665,17 @@ public interface Sql_metamodelPackage extends EPackage {
 	EReference getRelation_Target();
 
 	/**
+	 * Returns the meta object for the attribute '{@link sql_metamodel.Relation#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see sql_metamodel.Relation#getName()
+	 * @see #getRelation()
+	 * @generated
+	 */
+	EAttribute getRelation_Name();
+
+	/**
 	 * Returns the meta object for the attribute '{@link sql_metamodel.Relation#getMultiplicidadA <em>Multiplicidad A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -669,17 +716,6 @@ public interface Sql_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getForeignKey();
-
-	/**
-	 * Returns the meta object for the attribute '{@link sql_metamodel.ForeignKey#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see sql_metamodel.ForeignKey#getName()
-	 * @see #getForeignKey()
-	 * @generated
-	 */
-	EAttribute getForeignKey_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link sql_metamodel.ForeignKey#getPrimaryKey <em>Primary Key</em>}'.
@@ -879,6 +915,14 @@ public interface Sql_metamodelPackage extends EPackage {
 		EReference RELATION__TARGET = eINSTANCE.getRelation_Target();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RELATION__NAME = eINSTANCE.getRelation_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Multiplicidad A</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -913,14 +957,6 @@ public interface Sql_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FOREIGN_KEY = eINSTANCE.getForeignKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FOREIGN_KEY__NAME = eINSTANCE.getForeignKey_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Primary Key</b></em>' reference feature.

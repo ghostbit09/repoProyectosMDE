@@ -116,6 +116,8 @@ public class Sql_metamodelSwitch<T> extends Switch<T> {
 			case Sql_metamodelPackage.FOREIGN_KEY: {
 				ForeignKey foreignKey = (ForeignKey)theEObject;
 				T result = caseForeignKey(foreignKey);
+				if (result == null) result = caseColumn(foreignKey);
+				if (result == null) result = caseModelElement(foreignKey);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

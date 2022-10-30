@@ -451,7 +451,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSAtributo_IsNotNull() {
+	public EAttribute getMBSAtributo_IsForeignKey() {
 		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -460,8 +460,17 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMBSAtributo_IsAutoincrementable() {
+	public EAttribute getMBSAtributo_IsNotNull() {
 		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMBSAtributo_IsAutoincrementable() {
+		return (EAttribute)mbsAtributoEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -630,6 +639,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__CONSTANTE);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__RUTA);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_PRIMARY_KEY);
+		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_FOREIGN_KEY);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_NOT_NULL);
 		createEAttribute(mbsAtributoEClass, MBS_ATRIBUTO__IS_AUTOINCREMENTABLE);
 
@@ -715,6 +725,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getMBSAtributo_Constante(), ecorePackage.getEBoolean(), "constante", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_IsPrimaryKey(), ecorePackage.getEBooleanObject(), "isPrimaryKey", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMBSAtributo_IsForeignKey(), ecorePackage.getEBooleanObject(), "isForeignKey", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_IsNotNull(), ecorePackage.getEBooleanObject(), "isNotNull", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMBSAtributo_IsAutoincrementable(), ecorePackage.getEBooleanObject(), "isAutoincrementable", null, 0, 1, MBSAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

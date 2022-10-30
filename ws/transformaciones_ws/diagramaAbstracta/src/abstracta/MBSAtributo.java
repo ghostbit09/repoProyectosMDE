@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.MBSAtributo#isConstante <em>Constante</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#getIsPrimaryKey <em>Is Primary Key</em>}</li>
+ *   <li>{@link abstracta.MBSAtributo#getIsForeignKey <em>Is Foreign Key</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#getIsNotNull <em>Is Not Null</em>}</li>
  *   <li>{@link abstracta.MBSAtributo#getIsAutoincrementable <em>Is Autoincrementable</em>}</li>
  * </ul>
@@ -210,6 +211,32 @@ public interface MBSAtributo extends EObject {
 	 * @generated
 	 */
 	void setIsPrimaryKey(Boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Foreign Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Foreign Key</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Foreign Key</em>' attribute.
+	 * @see #setIsForeignKey(Boolean)
+	 * @see abstracta.AbstractaPackage#getMBSAtributo_IsForeignKey()
+	 * @model
+	 * @generated
+	 */
+	Boolean getIsForeignKey();
+
+	/**
+	 * Sets the value of the '{@link abstracta.MBSAtributo#getIsForeignKey <em>Is Foreign Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Foreign Key</em>' attribute.
+	 * @see #getIsForeignKey()
+	 * @generated
+	 */
+	void setIsForeignKey(Boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Not Null</b></em>' attribute.

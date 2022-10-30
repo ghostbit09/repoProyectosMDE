@@ -71,6 +71,14 @@ public class GeneratorView extends ViewPart {
 		grpGeneracionDeModelo_2_1.setBounds(10, 302, 574, 132);
 		
 		Button btnGenerateMm_1 = new Button(grpGeneracionDeModelo_2_1, SWT.NONE);
+		btnGenerateMm_1.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarModelToERD();
+			}
+		});
 		btnGenerateMm_1.setText("Generate M2M");
 		btnGenerateMm_1.setBounds(219, 55, 138, 25);
 		

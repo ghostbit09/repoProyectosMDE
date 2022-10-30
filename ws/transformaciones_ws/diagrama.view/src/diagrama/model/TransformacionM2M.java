@@ -169,6 +169,7 @@ public class TransformacionM2M {
 				atributoNuevo.setIsAutoincrementable(atributo.getIsAutoincrementable());
 				atributoNuevo.setIsNotNull(atributo.getIsNotNull());
 				atributoNuevo.setIsPrimaryKey(atributo.getIsPrimaryKey());
+				atributoNuevo.setIsForeignKey(atributo.getIsForeignKey());
 				claseAbstracta.getAtributos().add(atributoNuevo);
 			}
 		}

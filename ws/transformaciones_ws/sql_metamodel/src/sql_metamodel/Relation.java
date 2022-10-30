@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link sql_metamodel.Relation#getSource <em>Source</em>}</li>
  *   <li>{@link sql_metamodel.Relation#getTarget <em>Target</em>}</li>
+ *   <li>{@link sql_metamodel.Relation#getName <em>Name</em>}</li>
  *   <li>{@link sql_metamodel.Relation#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link sql_metamodel.Relation#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  * </ul>
@@ -75,6 +76,32 @@ public interface Relation extends EObject {
 	 * @generated
 	 */
 	void setTarget(Table value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see sql_metamodel.Sql_metamodelPackage#getRelation_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link sql_metamodel.Relation#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Multiplicidad A</b></em>' attribute.

@@ -2,8 +2,6 @@
  */
 package sql_metamodel.tests;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 import sql_metamodel.ForeignKey;
@@ -15,15 +13,7 @@ import sql_metamodel.Sql_metamodelFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ForeignKeyTest extends TestCase {
-
-	/**
-	 * The fixture for this Foreign Key test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ForeignKey fixture = null;
+public class ForeignKeyTest extends ColumnTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class ForeignKeyTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Foreign Key test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ForeignKey fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Foreign Key test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected ForeignKey getFixture() {
-		return fixture;
+		return (ForeignKey)fixture;
 	}
 
 	/**

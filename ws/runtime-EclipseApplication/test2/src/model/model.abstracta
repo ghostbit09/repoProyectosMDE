@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta="abstracta" listaTodasLasClases="//@listaPaquetes.0/@listaClases.0 //@listaPaquetes.0/@listaClases.1 //@listaPaquetes.0/@listaClases.2 //@listaPaquetes.0/@listaClases.3 //@listaPaquetes.0/@listaClases.4" listaTodosLosPaquetes="//@listaPaquetes.0">
+  <listaPaquetes nombre="IBG" ruta="">
+    <listaClases nombre="Ciudad" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla ciudad" ruta="IBG">
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Ciudad" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="descripcion" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listaClases.1" nombre="ciudadSede" tipo="composicion" multiplicidadA="1" multiplicidadB="*" rolA="ciudad" rolB="sede" navegabilidadA="true" navegabilidadB="true"/>
+    </listaClases>
+    <listaClases nombre="Sede" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla sede" ruta="IBG">
+      <atributos nombre="codigoSede" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ValorDefecto="" ruta="Sede" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="false" isForeignKey="true" isNotNull="true" isAutoincrementable="true"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.3" nombre="sedeCliente" tipo="asociacion" multiplicidadA="*" multiplicidadB="*" rolA="sede" rolB="cliente" navegabilidadA="true" navegabilidadB="true"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.4" nombre="sedeEmpleado" tipo="composicion" multiplicidadA="*" multiplicidadB="*" rolA="sede" rolB="empleado" navegabilidadA="true" navegabilidadB="true"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.0" nombre="ciudadSede" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="sede" rolB="ciudad" navegabilidadA="true" navegabilidadB="true"/>
+    </listaClases>
+    <listaClases nombre="Persona" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla persona" ruta="IBG">
+      <atributos nombre="cedula" tipo="String" modificadorAcesso="private" ruta="Persona" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="nombre" tipo="String" modificadorAcesso="Persona" ruta="Persona" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="apellido" tipo="String" modificadorAcesso="private" ruta="Persona" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="email" tipo="String" modificadorAcesso="private" ruta="Persona" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
+    </listaClases>
+    <listaClases nombre="Cliente" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla cliente" ruta="IBG">
+      <atributos nombre="categoria" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.3" target="//@listaPaquetes.0/@listaClases.2" nombre="clientePersona" tipo="herencia" rolA="cliente" rolB="persona" navegabilidadA="true" navegabilidadB="false"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.3" target="//@listaPaquetes.0/@listaClases.1" nombre="sedeCliente" tipo="asociacion" multiplicidadA="*" multiplicidadB="*" rolA="cliente" rolB="sede" navegabilidadA="true" navegabilidadB="true"/>
+    </listaClases>
+    <listaClases nombre="Empleado" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla empleado" ruta="IBG">
+      <atributos nombre="cargo" tipo="String" modificadorAcesso="private" ruta="Empleado" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.4" target="//@listaPaquetes.0/@listaClases.2" nombre="empleadoPersona" tipo="herencia" rolA="empleado" rolB="persona" navegabilidadA="true" navegabilidadB="false"/>
+      <listaRelaciones source="//@listaPaquetes.0/@listaClases.4" target="//@listaPaquetes.0/@listaClases.1" nombre="sedeEmpleado" tipo="composicion" multiplicidadA="*" multiplicidadB="*" rolA="empleado" rolB="sede" navegabilidadA="true" navegabilidadB="true"/>
+    </listaClases>
+  </listaPaquetes>
+</abstracta:ModelFactory>

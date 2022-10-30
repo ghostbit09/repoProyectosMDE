@@ -431,13 +431,22 @@ public interface ConcretaPackage extends EPackage {
 	int MBS_ATRIBUTO__IS_PRIMARY_KEY = 6;
 
 	/**
+	 * The feature id for the '<em><b>Is Foreign Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MBS_ATRIBUTO__IS_FOREIGN_KEY = 7;
+
+	/**
 	 * The feature id for the '<em><b>Is Not Null</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_ATRIBUTO__IS_NOT_NULL = 7;
+	int MBS_ATRIBUTO__IS_NOT_NULL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Is Autoincrementable</b></em>' attribute.
@@ -446,7 +455,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_ATRIBUTO__IS_AUTOINCREMENTABLE = 8;
+	int MBS_ATRIBUTO__IS_AUTOINCREMENTABLE = 9;
 
 	/**
 	 * The number of structural features of the '<em>MBS Atributo</em>' class.
@@ -455,7 +464,7 @@ public interface ConcretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MBS_ATRIBUTO_FEATURE_COUNT = 9;
+	int MBS_ATRIBUTO_FEATURE_COUNT = 10;
 
 	/**
 	 * The meta object id for the '{@link concreta.impl.MBSRelacionImpl <em>MBS Relacion</em>}' class.
@@ -958,6 +967,17 @@ public interface ConcretaPackage extends EPackage {
 	EAttribute getMBSAtributo_IsPrimaryKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link concreta.MBSAtributo#getIsForeignKey <em>Is Foreign Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Foreign Key</em>'.
+	 * @see concreta.MBSAtributo#getIsForeignKey()
+	 * @see #getMBSAtributo()
+	 * @generated
+	 */
+	EAttribute getMBSAtributo_IsForeignKey();
+
+	/**
 	 * Returns the meta object for the attribute '{@link concreta.MBSAtributo#getIsNotNull <em>Is Not Null</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1420,6 +1440,14 @@ public interface ConcretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MBS_ATRIBUTO__IS_PRIMARY_KEY = eINSTANCE.getMBSAtributo_IsPrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Foreign Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MBS_ATRIBUTO__IS_FOREIGN_KEY = eINSTANCE.getMBSAtributo_IsForeignKey();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Not Null</b></em>' attribute feature.

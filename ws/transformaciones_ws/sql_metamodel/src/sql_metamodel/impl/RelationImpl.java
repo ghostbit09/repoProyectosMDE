@@ -24,6 +24,7 @@ import sql_metamodel.Table;
  * <ul>
  *   <li>{@link sql_metamodel.impl.RelationImpl#getSource <em>Source</em>}</li>
  *   <li>{@link sql_metamodel.impl.RelationImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link sql_metamodel.impl.RelationImpl#getName <em>Name</em>}</li>
  *   <li>{@link sql_metamodel.impl.RelationImpl#getMultiplicidadA <em>Multiplicidad A</em>}</li>
  *   <li>{@link sql_metamodel.impl.RelationImpl#getMultiplicidadB <em>Multiplicidad B</em>}</li>
  * </ul>
@@ -50,6 +51,26 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * @ordered
 	 */
 	protected Table target;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMultiplicidadA() <em>Multiplicidad A</em>}' attribute.
@@ -191,6 +212,27 @@ public class RelationImpl extends EObjectImpl implements Relation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Sql_metamodelPackage.RELATION__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getMultiplicidadA() {
 		return multiplicidadA;
 	}
@@ -242,6 +284,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case Sql_metamodelPackage.RELATION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
+			case Sql_metamodelPackage.RELATION__NAME:
+				return getName();
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_A:
 				return getMultiplicidadA();
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_B:
@@ -263,6 +307,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 				return;
 			case Sql_metamodelPackage.RELATION__TARGET:
 				setTarget((Table)newValue);
+				return;
+			case Sql_metamodelPackage.RELATION__NAME:
+				setName((String)newValue);
 				return;
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_A:
 				setMultiplicidadA((String)newValue);
@@ -288,6 +335,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 			case Sql_metamodelPackage.RELATION__TARGET:
 				setTarget((Table)null);
 				return;
+			case Sql_metamodelPackage.RELATION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_A:
 				setMultiplicidadA(MULTIPLICIDAD_A_EDEFAULT);
 				return;
@@ -310,6 +360,8 @@ public class RelationImpl extends EObjectImpl implements Relation {
 				return source != null;
 			case Sql_metamodelPackage.RELATION__TARGET:
 				return target != null;
+			case Sql_metamodelPackage.RELATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_A:
 				return MULTIPLICIDAD_A_EDEFAULT == null ? multiplicidadA != null : !MULTIPLICIDAD_A_EDEFAULT.equals(multiplicidadA);
 			case Sql_metamodelPackage.RELATION__MULTIPLICIDAD_B:
@@ -328,7 +380,9 @@ public class RelationImpl extends EObjectImpl implements Relation {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (multiplicidadA: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", multiplicidadA: ");
 		result.append(multiplicidadA);
 		result.append(", multiplicidadB: ");
 		result.append(multiplicidadB);

@@ -46,6 +46,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/constante"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/ruta"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/isPrimaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/isForeignKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/isNotNull"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//MBSAtributo/isAutoincrementable"/>
     </genClasses>

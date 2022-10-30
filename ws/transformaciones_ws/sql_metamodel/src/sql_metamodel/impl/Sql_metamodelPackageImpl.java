@@ -320,7 +320,7 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelation_MultiplicidadA() {
+	public EAttribute getRelation_Name() {
 		return (EAttribute)relationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -329,8 +329,17 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelation_MultiplicidadB() {
+	public EAttribute getRelation_MultiplicidadA() {
 		return (EAttribute)relationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRelation_MultiplicidadB() {
+		return (EAttribute)relationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -356,17 +365,8 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getForeignKey_Name() {
-		return (EAttribute)foreignKeyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getForeignKey_PrimaryKey() {
-		return (EReference)foreignKeyEClass.getEStructuralFeatures().get(1);
+		return (EReference)foreignKeyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -421,13 +421,13 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 		relationEClass = createEClass(RELATION);
 		createEReference(relationEClass, RELATION__SOURCE);
 		createEReference(relationEClass, RELATION__TARGET);
+		createEAttribute(relationEClass, RELATION__NAME);
 		createEAttribute(relationEClass, RELATION__MULTIPLICIDAD_A);
 		createEAttribute(relationEClass, RELATION__MULTIPLICIDAD_B);
 
 		primaryKeyEClass = createEClass(PRIMARY_KEY);
 
 		foreignKeyEClass = createEClass(FOREIGN_KEY);
-		createEAttribute(foreignKeyEClass, FOREIGN_KEY__NAME);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__PRIMARY_KEY);
 	}
 
@@ -463,6 +463,7 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 		tableEClass.getESuperTypes().add(this.getModelElement());
 		columnEClass.getESuperTypes().add(this.getModelElement());
 		primaryKeyEClass.getESuperTypes().add(this.getColumn());
+		foreignKeyEClass.getESuperTypes().add(this.getColumn());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(modelFactoryEClass, ModelFactory.class, "ModelFactory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -489,13 +490,13 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 		initEClass(relationEClass, Relation.class, "Relation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRelation_Source(), this.getTable(), null, "source", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRelation_Target(), this.getTable(), null, "target", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRelation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_MultiplicidadA(), ecorePackage.getEString(), "multiplicidadA", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRelation_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primaryKeyEClass, PrimaryKey.class, "PrimaryKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(foreignKeyEClass, ForeignKey.class, "ForeignKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getForeignKey_Name(), ecorePackage.getEString(), "name", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getForeignKey_PrimaryKey(), this.getPrimaryKey(), null, "primaryKey", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

@@ -51,6 +51,7 @@ class MBSAtributo {
 	attr boolean constante;
 	attr String ruta;
 	attr Boolean isPrimaryKey;
+	attr Boolean isForeignKey;
 	attr Boolean isNotNull;
 	attr Boolean isAutoincrementable;
 	

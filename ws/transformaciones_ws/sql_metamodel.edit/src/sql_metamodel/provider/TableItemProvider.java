@@ -164,6 +164,11 @@ public class TableItemProvider extends ModelElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(Sql_metamodelPackage.Literals.TABLE__LIST_COLUMNS,
+				 Sql_metamodelFactory.eINSTANCE.createForeignKey()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(Sql_metamodelPackage.Literals.TABLE__LIST_RELATIONS,
 				 Sql_metamodelFactory.eINSTANCE.createRelation()));
 	}
@@ -181,7 +186,8 @@ public class TableItemProvider extends ModelElementItemProvider {
 
 		boolean qualify =
 			childFeature == Sql_metamodelPackage.Literals.TABLE__LIST_PRIMARY_KEYS ||
-			childFeature == Sql_metamodelPackage.Literals.TABLE__LIST_COLUMNS;
+			childFeature == Sql_metamodelPackage.Literals.TABLE__LIST_COLUMNS ||
+			childFeature == Sql_metamodelPackage.Literals.TABLE__LIST_FOREIGN_KEYS;
 
 		if (qualify) {
 			return getString

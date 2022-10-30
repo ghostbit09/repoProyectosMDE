@@ -36,6 +36,7 @@ class Relation {
   
     ref Table source;
     ref Table target;
+    attr String name;
     attr String multiplicidadA;
     attr String multiplicidadB;
 }
@@ -44,8 +45,7 @@ class PrimaryKey extends Column{
 	
 }
 
-class ForeignKey{
+class ForeignKey extends Column{
 	
-	attr String name;
 	ref PrimaryKey primaryKey;
 }

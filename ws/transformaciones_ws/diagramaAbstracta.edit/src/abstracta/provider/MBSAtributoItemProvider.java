@@ -67,6 +67,7 @@ public class MBSAtributoItemProvider
 			addConstantePropertyDescriptor(object);
 			addRutaPropertyDescriptor(object);
 			addIsPrimaryKeyPropertyDescriptor(object);
+			addIsForeignKeyPropertyDescriptor(object);
 			addIsNotNullPropertyDescriptor(object);
 			addIsAutoincrementablePropertyDescriptor(object);
 		}
@@ -228,6 +229,28 @@ public class MBSAtributoItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Foreign Key feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsForeignKeyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MBSAtributo_isForeignKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MBSAtributo_isForeignKey_feature", "_UI_MBSAtributo_type"),
+				 AbstractaPackage.Literals.MBS_ATRIBUTO__IS_FOREIGN_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Is Not Null feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -316,6 +339,7 @@ public class MBSAtributoItemProvider
 			case AbstractaPackage.MBS_ATRIBUTO__CONSTANTE:
 			case AbstractaPackage.MBS_ATRIBUTO__RUTA:
 			case AbstractaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
+			case AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY:
 			case AbstractaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
 			case AbstractaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

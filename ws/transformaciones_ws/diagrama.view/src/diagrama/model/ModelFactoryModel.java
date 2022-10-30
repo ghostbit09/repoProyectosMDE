@@ -34,7 +34,7 @@ public class ModelFactoryModel {
 		ConcretaPackage whoownmePackage =  ConcretaPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/"+"model.concreta");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/"+"model.concreta");
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {
@@ -55,7 +55,7 @@ public class ModelFactoryModel {
 		AbstractaPackage whoownmePackage =  AbstractaPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.abstracta");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.abstracta");
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {
@@ -77,7 +77,7 @@ public class ModelFactoryModel {
 		Sql_metamodelPackage whoownmePackage =  Sql_metamodelPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.sql_metamodel");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.sql_metamodel");
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 
 		try {
@@ -93,7 +93,7 @@ public class ModelFactoryModel {
 	}
 	
 	public void salvarAbstracta() {
-		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test/src/model/model.abstracta");
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.abstracta");
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
 		resource.getContents().add(modelFactoryAbstracta);
@@ -108,7 +108,21 @@ public class ModelFactoryModel {
 
 	}
 
-	
+	public void salvarAbstractaSQL() {
+		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI.createURI("platform:/resource/test2/src/model/model.sql_metamodel");
+		org.eclipse.emf.ecore.resource.ResourceSet resourceSet= new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
+		org.eclipse.emf.ecore.resource.Resource resource = resourceSet.createResource(uri);
+		resource.getContents().add(modelFactorySQL);
+		try {
+			resource.save(java.util.Collections.EMPTY_MAP);
+		} catch (java.io.IOException e) {
+			// TO-DO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return;
+
+	}
 
 	public void generarModelToModel() {
 		
@@ -130,6 +144,8 @@ public class ModelFactoryModel {
 		modelFactoryAbstracta = cargarAbstracta();
 		modelFactorySQL = cargarSQLMetamodel();
 		TransformacionUML2ERD transformacionUml2Erd = new TransformacionUML2ERD(modelFactoryAbstracta, modelFactorySQL);
+		transformacionUml2Erd.transformarUMLToERD();
+		salvarAbstractaSQL();
 	}
 
 }

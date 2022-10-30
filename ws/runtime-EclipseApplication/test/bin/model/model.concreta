@@ -2,31 +2,31 @@
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="Inventario" descripcion="Diagrama de clases de un Ecommerce">
     <listaClases nombre="Usuario" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Clase Usuario" ruta="main/kotlin/clases">
-      <atributos nombre="id" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="true" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="email" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="contraseña" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="lastLogin" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="id" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="email" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="contraseña" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="lastLogin" tipo="String" modificadorAcesso="private" ruta="Usuario" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <metodos nombre="obtenerSesion" modificadorAcceso="private" tipoRetorno="String" ruta="Usuario" parametros="email: String, id: String"/>
     </listaClases>
     <listaClases nombre="Cliente" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Clase Cliente" ruta="main/kotlin/clases">
-      <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="direccionFacturacion" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isNotNull="false" isAutoincrementable="false"/>
-      <atributos nombre="direccionDefault" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="direccionFacturacion" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
+      <atributos nombre="direccionDefault" tipo="String" modificadorAcesso="private" ruta="Cliente" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <metodos nombre="registrar" modificadorAcceso="public" tipoRetorno="void" ruta="Cliente" parametros="email: String, contraseña: String, id: String"/>
       <metodos nombre="login" modificadorAcceso="public" tipoRetorno="void" ruta="Cliente" parametros="email: String, contraseña: String"/>
     </listaClases>
     <listaClases nombre="Pedido" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Clase Pedido" ruta="main/kotlin/clases">
-      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Pedido" isPrimaryKey="true" isNotNull="true" isAutoincrementable="true"/>
-      <atributos nombre="fechaPedido" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="estado" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="precio" tipo="Float" modificadorAcesso="private" valorDefecto="0.0" ruta="Pedido" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Pedido" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="fechaPedido" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="estado" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Pedido" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="precio" tipo="Float" modificadorAcesso="private" valorDefecto="0.0" ruta="Pedido" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <metodos nombre="actualizarEstado" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="estado: String"/>
       <metodos nombre="realizarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="pedido: Pedido"/>
       <metodos nombre="cancelarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="Pedido" parametros="id: Int"/>
     </listaClases>
     <listaClases nombre="CarritoCompras" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Clase Carrito Compras" ruta="main/kotlin/clases">
-      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras" isPrimaryKey="true" isNotNull="true" isAutoincrementable="true"/>
-      <atributos nombre="idProducto" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras" isPrimaryKey="false" isNotNull="true" isAutoincrementable="false"/>
+      <atributos nombre="id" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="idProducto" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="CarritoCompras" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <metodos nombre="añadirProducto" modificadorAcceso="public" tipoRetorno="Producto" ruta="CarritoCompras" parametros="producto: Producto"/>
       <metodos nombre="removerProducto" modificadorAcceso="public" tipoRetorno="String" ruta="CarritoCompras" parametros="producto: Producto"/>
       <metodos nombre="mostrarProductos" modificadorAcceso="public" tipoRetorno="void" ruta="CarritoCompras" parametros=""/>
@@ -41,9 +41,9 @@
       <metodos nombre="cancelarPedido" modificadorAcceso="public" tipoRetorno="void" ruta="DetallePedido" parametros="pedido: Pedido"/>
     </listaClases>
     <listaRelaciones nombre="clienteUsuario" tipo="herencia" navegabilidadA="true" navegabilidadB="false" source="//@listaDiagramas.0/@listaClases.1" target="//@listaDiagramas.0/@listaClases.0"/>
-    <listaRelaciones nombre="carritoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="carrito" rolB="cliente" navegabilidadA="true" navegabilidadB="false" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.1"/>
-    <listaRelaciones nombre="pedidoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="pedido" rolB="cliente" navegabilidadA="true" navegabilidadB="false" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.1"/>
-    <listaRelaciones nombre="detallePedido" tipo="composicion" multiplicidadA="1" multiplicidadB="1" rolA="detallePedido" rolB="pedido" navegabilidadA="true" navegabilidadB="false" source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.2"/>
+    <listaRelaciones nombre="carritoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="carrito" rolB="cliente" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.3" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaRelaciones nombre="pedidoCliente" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="pedido" rolB="cliente" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.2" target="//@listaDiagramas.0/@listaClases.1"/>
+    <listaRelaciones nombre="detallePedido" tipo="composicion" multiplicidadA="1" multiplicidadB="1" rolA="detallePedido" rolB="pedido" navegabilidadA="true" navegabilidadB="true" source="//@listaDiagramas.0/@listaClases.4" target="//@listaDiagramas.0/@listaClases.2"/>
     <listaPaquetes nombre="main"/>
     <listaPaquetes nombre="kotlin" ruta="main/"/>
     <listaPaquetes nombre="clases" ruta="main/kotlin/"/>

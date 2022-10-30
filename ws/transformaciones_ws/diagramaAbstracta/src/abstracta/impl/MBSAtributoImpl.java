@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link abstracta.impl.MBSAtributoImpl#isConstante <em>Constante</em>}</li>
  *   <li>{@link abstracta.impl.MBSAtributoImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.impl.MBSAtributoImpl#getIsPrimaryKey <em>Is Primary Key</em>}</li>
+ *   <li>{@link abstracta.impl.MBSAtributoImpl#getIsForeignKey <em>Is Foreign Key</em>}</li>
  *   <li>{@link abstracta.impl.MBSAtributoImpl#getIsNotNull <em>Is Not Null</em>}</li>
  *   <li>{@link abstracta.impl.MBSAtributoImpl#getIsAutoincrementable <em>Is Autoincrementable</em>}</li>
  * </ul>
@@ -173,6 +174,26 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * @ordered
 	 */
 	protected Boolean isPrimaryKey = IS_PRIMARY_KEY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsForeignKey() <em>Is Foreign Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsForeignKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_FOREIGN_KEY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIsForeignKey() <em>Is Foreign Key</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsForeignKey()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isForeignKey = IS_FOREIGN_KEY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIsNotNull() <em>Is Not Null</em>}' attribute.
@@ -385,6 +406,27 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Boolean getIsForeignKey() {
+		return isForeignKey;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsForeignKey(Boolean newIsForeignKey) {
+		Boolean oldIsForeignKey = isForeignKey;
+		isForeignKey = newIsForeignKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY, oldIsForeignKey, isForeignKey));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Boolean getIsNotNull() {
 		return isNotNull;
 	}
@@ -444,6 +486,8 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return getRuta();
 			case AbstractaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
 				return getIsPrimaryKey();
+			case AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY:
+				return getIsForeignKey();
 			case AbstractaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
 				return getIsNotNull();
 			case AbstractaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
@@ -480,6 +524,9 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return;
 			case AbstractaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
 				setIsPrimaryKey((Boolean)newValue);
+				return;
+			case AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY:
+				setIsForeignKey((Boolean)newValue);
 				return;
 			case AbstractaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
 				setIsNotNull((Boolean)newValue);
@@ -520,6 +567,9 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 			case AbstractaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
 				setIsPrimaryKey(IS_PRIMARY_KEY_EDEFAULT);
 				return;
+			case AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY:
+				setIsForeignKey(IS_FOREIGN_KEY_EDEFAULT);
+				return;
 			case AbstractaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
 				setIsNotNull(IS_NOT_NULL_EDEFAULT);
 				return;
@@ -552,6 +602,8 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case AbstractaPackage.MBS_ATRIBUTO__IS_PRIMARY_KEY:
 				return IS_PRIMARY_KEY_EDEFAULT == null ? isPrimaryKey != null : !IS_PRIMARY_KEY_EDEFAULT.equals(isPrimaryKey);
+			case AbstractaPackage.MBS_ATRIBUTO__IS_FOREIGN_KEY:
+				return IS_FOREIGN_KEY_EDEFAULT == null ? isForeignKey != null : !IS_FOREIGN_KEY_EDEFAULT.equals(isForeignKey);
 			case AbstractaPackage.MBS_ATRIBUTO__IS_NOT_NULL:
 				return IS_NOT_NULL_EDEFAULT == null ? isNotNull != null : !IS_NOT_NULL_EDEFAULT.equals(isNotNull);
 			case AbstractaPackage.MBS_ATRIBUTO__IS_AUTOINCREMENTABLE:
@@ -584,6 +636,8 @@ public class MBSAtributoImpl extends EObjectImpl implements MBSAtributo {
 		result.append(ruta);
 		result.append(", isPrimaryKey: ");
 		result.append(isPrimaryKey);
+		result.append(", isForeignKey: ");
+		result.append(isForeignKey);
 		result.append(", isNotNull: ");
 		result.append(isNotNull);
 		result.append(", isAutoincrementable: ");
