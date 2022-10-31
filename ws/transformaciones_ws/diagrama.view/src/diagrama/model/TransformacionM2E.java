@@ -1,3 +1,11 @@
+/*
+ * Codigo desarrollado por
+ * 
+ * Braian Camilo Piedrahita Rodriguez
+ * Melissa Ortiz Perez
+ * Sebastian Quintero Osorio
+ * 
+ */
 package diagrama.model;
 
 import abstracta.MBSAtributo;
@@ -12,12 +20,12 @@ import sql_metamodel.Schema;
 import sql_metamodel.Sql_metamodelFactory;
 import sql_metamodel.Table;
 
-public class TransformacionUML2ERD {
+public class TransformacionM2E {
 	
 	private abstracta.ModelFactory modelFactoryAbstracta;
 	private sql_metamodel.ModelFactory modelFactorySQL;
 	
-	public TransformacionUML2ERD(ModelFactory modelFactoryAbstracta, sql_metamodel.ModelFactory modelFactorySQL) {
+	public TransformacionM2E(ModelFactory modelFactoryAbstracta, sql_metamodel.ModelFactory modelFactorySQL) {
 		super();
 		this.modelFactoryAbstracta = modelFactoryAbstracta;
 		this.modelFactorySQL = modelFactorySQL;
@@ -25,7 +33,7 @@ public class TransformacionUML2ERD {
 	
 	public String transformarUMLToERD() {
 		
-		String mensaje = "Se ha realizado la transformacion Uml2Erd";
+		String mensaje = "Se ha realizado la transformacion M2E";
 		
 		if(modelFactorySQL.getListSchemas().size()>0) {
 			
@@ -125,7 +133,7 @@ public class TransformacionUML2ERD {
 			if(atributo.getIsPrimaryKey()) {
 				
 				//Se crea la llave primaria en caso de que el atributo sea una llave primaria
-				PrimaryKey primaryKeyTabla = crearPrimaryKey(atributo);
+				PrimaryKey primaryKeyTabla = crearPrimaryKey(atributo, tabla.getName());
 				
 				tabla.getListPrimaryKeys().add(primaryKeyTabla);
 			}else {
@@ -306,26 +314,14 @@ public class TransformacionUML2ERD {
 		return null;
 	}
 	
-	private abstracta.MBSClase obtenerClaseAbstracta(String nombre) {
-		
-		for(MBSClase clase : modelFactoryAbstracta.getListaTodasLasClases()) {
-			
-			if(clase.getNombre().equals(nombre)) {
-				
-				return clase;
-			}
-		}
-		
-		return null;
-	}
-	
-	private sql_metamodel.PrimaryKey crearPrimaryKey(abstracta.MBSAtributo atributo){
+	private sql_metamodel.PrimaryKey crearPrimaryKey(abstracta.MBSAtributo atributo, String nombreTabla){
 		
 		sql_metamodel.PrimaryKey primaryKey = Sql_metamodelFactory.eINSTANCE.createPrimaryKey();
 		
 		primaryKey.setName(atributo.getNombre());
 		primaryKey.setIsAutoIncremetable(atributo.getIsAutoincrementable());
 		primaryKey.setIsNotNull(atributo.getIsNotNull());
+		primaryKey.setTableName(nombreTabla);
 		
 		if(atributo.getTipo().equals("String")) {
 			
@@ -359,6 +355,7 @@ public class TransformacionUML2ERD {
 						pk.setIsNotNull(tableTarget.getListPrimaryKeys().get(0).getIsNotNull());
 						pk.setIsAutoIncremetable(tableTarget.getListPrimaryKeys().get(0).getIsAutoIncremetable());
 						pk.setType(tableTarget.getListPrimaryKeys().get(0).getType());
+						pk.setTableName(tableSource.getName());
 						tableSource.getListPrimaryKeys().add(pk);
 					}
 					
@@ -399,19 +396,22 @@ public class TransformacionUML2ERD {
 				
 				PrimaryKey pk = Sql_metamodelFactory.eINSTANCE.createPrimaryKey();
 				pk.setName("id");
-				pk.setIsAutoIncremetable(true);
+				pk.setIsAutoIncremetable(false);
 				pk.setIsNotNull(true);
 				pk.setType("integer");
+				pk.setTableName(nombre1);
 				table.getListPrimaryKeys().add(pk);
 				
 				ForeignKey fks = Sql_metamodelFactory.eINSTANCE.createForeignKey();
 				fks.setName(keySource.getName());
+				fks.setType(keySource.getType());
 				fks.setIsAutoIncremetable(keySource.getIsAutoIncremetable());
 				fks.setIsNotNull(keySource.getIsNotNull());
 				fks.setPrimaryKey(keySource);
 				
 				ForeignKey fkt = Sql_metamodelFactory.eINSTANCE.createForeignKey();
 				fkt.setName(keyTarget.getName());
+				fkt.setType(keyTarget.getType());
 				fkt.setIsAutoIncremetable(keyTarget.getIsAutoIncremetable());
 				fkt.setIsNotNull(keyTarget.getIsNotNull());
 				fkt.setPrimaryKey(keyTarget);

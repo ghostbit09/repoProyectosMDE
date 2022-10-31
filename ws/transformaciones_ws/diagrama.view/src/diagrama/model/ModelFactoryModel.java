@@ -143,9 +143,16 @@ public class ModelFactoryModel {
 	public void generarModelToERD() {
 		modelFactoryAbstracta = cargarAbstracta();
 		modelFactorySQL = cargarSQLMetamodel();
-		TransformacionUML2ERD transformacionUml2Erd = new TransformacionUML2ERD(modelFactoryAbstracta, modelFactorySQL);
+		TransformacionM2E transformacionUml2Erd = new TransformacionM2E(modelFactoryAbstracta, modelFactorySQL);
 		transformacionUml2Erd.transformarUMLToERD();
 		salvarAbstractaSQL();
+	}
+	
+	public void generarModelToSQL() {
+		
+		modelFactorySQL = cargarSQLMetamodel();
+		TransformacionM2SQL transformacionM2Sql = new TransformacionM2SQL(modelFactorySQL);
+		transformacionM2Sql.transformarM2SQL();
 	}
 
 }

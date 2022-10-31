@@ -2,15 +2,15 @@
 <abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta="abstracta" listaTodasLasClases="//@listaPaquetes.0/@listaClases.0 //@listaPaquetes.0/@listaClases.1 //@listaPaquetes.0/@listaClases.2 //@listaPaquetes.0/@listaClases.3 //@listaPaquetes.0/@listaClases.4" listaTodosLosPaquetes="//@listaPaquetes.0">
   <listaPaquetes nombre="IBG" ruta="">
     <listaClases nombre="Ciudad" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla ciudad" ruta="IBG">
-      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Ciudad" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Ciudad" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="descripcion" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
       <listaRelaciones source="//@listaPaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listaClases.1" nombre="ciudadSede" tipo="composicion" multiplicidadA="1" multiplicidadB="*" rolA="ciudad" rolB="sede" navegabilidadA="true" navegabilidadB="true"/>
     </listaClases>
     <listaClases nombre="Sede" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla sede" ruta="IBG">
-      <atributos nombre="codigoSede" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoSede" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ValorDefecto="" ruta="Sede" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="false" isForeignKey="true" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" ValorDefecto="0" ruta="Sede" isPrimaryKey="false" isForeignKey="true" isNotNull="true" isAutoincrementable="false"/>
       <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.3" nombre="sedeCliente" tipo="asociacion" multiplicidadA="*" multiplicidadB="*" rolA="sede" rolB="cliente" navegabilidadA="true" navegabilidadB="true"/>
       <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.4" nombre="sedeEmpleado" tipo="composicion" multiplicidadA="*" multiplicidadB="*" rolA="sede" rolB="empleado" navegabilidadA="true" navegabilidadB="true"/>
       <listaRelaciones source="//@listaPaquetes.0/@listaClases.1" target="//@listaPaquetes.0/@listaClases.0" nombre="ciudadSede" tipo="composicion" multiplicidadA="*" multiplicidadB="1" rolA="sede" rolB="ciudad" navegabilidadA="true" navegabilidadB="true"/>

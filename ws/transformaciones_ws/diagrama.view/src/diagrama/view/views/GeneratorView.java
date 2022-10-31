@@ -18,6 +18,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 
 public class GeneratorView extends ViewPart {
@@ -32,9 +33,11 @@ public class GeneratorView extends ViewPart {
 
 	@Override
 	public void createPartControl(Composite parent) {
+		parent.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
 		parent.setLayout(null);
 		
 		Group grpGeneracionDeModelo = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
 		grpGeneracionDeModelo.setText("Generacion de modelo a modelo");
 		grpGeneracionDeModelo.setBounds(10, 10, 574, 132);
 		
@@ -50,6 +53,7 @@ public class GeneratorView extends ViewPart {
 		btnGenerateMm.setText("Generate M2M");
 		
 		Group grpGeneracionDeModelo_2 = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo_2.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
 		grpGeneracionDeModelo_2.setText("Generacion de modelo a texto");
 		grpGeneracionDeModelo_2.setBounds(10, 154, 574, 132);
 		
@@ -67,6 +71,7 @@ public class GeneratorView extends ViewPart {
 		btnGenerateMt.setBounds(219, 55, 138, 25);
 		
 		Group grpGeneracionDeModelo_2_1 = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo_2_1.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
 		grpGeneracionDeModelo_2_1.setText("Generacion de modelo UML a relacional");
 		grpGeneracionDeModelo_2_1.setBounds(10, 302, 574, 132);
 		
@@ -79,14 +84,23 @@ public class GeneratorView extends ViewPart {
 				mfm.generarModelToERD();
 			}
 		});
-		btnGenerateMm_1.setText("Generate M2M");
+		btnGenerateMm_1.setText("Generate M2E");
 		btnGenerateMm_1.setBounds(219, 55, 138, 25);
 		
 		Group grpGeneracionDeModelo_2_2 = new Group(parent, SWT.NONE);
+		grpGeneracionDeModelo_2_2.setBackground(SWTResourceManager.getColor(SWT.COLOR_TITLE_BACKGROUND_GRADIENT));
 		grpGeneracionDeModelo_2_2.setText("Generacion de modelo relacional a SQL");
 		grpGeneracionDeModelo_2_2.setBounds(10, 446, 574, 132);
 		
 		Button btnGenerateModelTo = new Button(grpGeneracionDeModelo_2_2, SWT.NONE);
+		btnGenerateModelTo.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarModelToSQL();
+			}
+		});
 		btnGenerateModelTo.setText("Generate Model to SQL");
 		btnGenerateModelTo.setBounds(219, 55, 138, 25);
 

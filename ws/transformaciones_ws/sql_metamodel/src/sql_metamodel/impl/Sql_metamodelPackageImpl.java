@@ -356,6 +356,15 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPrimaryKey_TableName() {
+		return (EAttribute)primaryKeyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getForeignKey() {
 		return foreignKeyEClass;
 	}
@@ -426,6 +435,7 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 		createEAttribute(relationEClass, RELATION__MULTIPLICIDAD_B);
 
 		primaryKeyEClass = createEClass(PRIMARY_KEY);
+		createEAttribute(primaryKeyEClass, PRIMARY_KEY__TABLE_NAME);
 
 		foreignKeyEClass = createEClass(FOREIGN_KEY);
 		createEReference(foreignKeyEClass, FOREIGN_KEY__PRIMARY_KEY);
@@ -495,6 +505,7 @@ public class Sql_metamodelPackageImpl extends EPackageImpl implements Sql_metamo
 		initEAttribute(getRelation_MultiplicidadB(), ecorePackage.getEString(), "multiplicidadB", null, 0, 1, Relation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primaryKeyEClass, PrimaryKey.class, "PrimaryKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrimaryKey_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, PrimaryKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(foreignKeyEClass, ForeignKey.class, "ForeignKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getForeignKey_PrimaryKey(), this.getPrimaryKey(), null, "primaryKey", null, 0, 1, ForeignKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

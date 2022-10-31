@@ -2,27 +2,27 @@
 <sql_metamodel:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sql_metamodel="sql_metamodel" listAllTables="//@listSchemas.0/@listTables.0 //@listSchemas.0/@listTables.1 //@listSchemas.0/@listTables.2 //@listSchemas.0/@listTables.3 //@listSchemas.0/@listTables.4 //@listSchemas.0/@listTables.5 //@listSchemas.0/@listTables.6">
   <listSchemas name="IBG">
     <listTables name="Ciudad">
-      <listPrimaryKeys name="codigoCiudad" type="integer" isNotNull="true" isAutoIncremetable="true"/>
+      <listPrimaryKeys name="codigoCiudad" type="integer" isNotNull="true" isAutoIncremetable="false" tableName="Ciudad"/>
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="descripcion" type="varchar(100)" isNotNull="false" isAutoIncremetable="false"/>
       <listRelations source="//@listSchemas.0/@listTables.0" target="//@listSchemas.0/@listTables.1" name="ciudadSede" multiplicidadA="1" multiplicidadB="*"/>
     </listTables>
     <listTables name="Sede">
-      <listPrimaryKeys name="codigoSede" type="integer" isNotNull="true" isAutoIncremetable="true"/>
-      <listForeignKeys name="codigoCiudad" type="integer" isNotNull="true" isAutoIncremetable="true" primaryKey="//@listSchemas.0/@listTables.0/@listPrimaryKeys.0"/>
+      <listPrimaryKeys name="codigoSede" type="integer" isNotNull="true" isAutoIncremetable="false" tableName="Sede"/>
+      <listForeignKeys name="codigoCiudad" type="integer" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.0/@listPrimaryKeys.0"/>
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listRelations source="//@listSchemas.0/@listTables.1" target="//@listSchemas.0/@listTables.5" name="Sede_Cliente_Sede" multiplicidadA="1" multiplicidadB="*"/>
       <listRelations source="//@listSchemas.0/@listTables.1" target="//@listSchemas.0/@listTables.6" name="Sede_Empleado_Sede" multiplicidadA="1" multiplicidadB="*"/>
       <listRelations source="//@listSchemas.0/@listTables.1" target="//@listSchemas.0/@listTables.0" name="ciudadSede" multiplicidadA="*" multiplicidadB="1"/>
     </listTables>
     <listTables name="Persona">
-      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false"/>
+      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false" tableName="Persona"/>
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="apellido" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="email" type="varchar(100)" isNotNull="false" isAutoIncremetable="false"/>
     </listTables>
     <listTables name="Cliente">
-      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false"/>
+      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false" tableName="Cliente"/>
       <listColumns name="categoria" type="varchar(100)" isNotNull="false" isAutoIncremetable="false"/>
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="apellido" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
@@ -31,7 +31,7 @@
       <listRelations source="//@listSchemas.0/@listTables.3" target="//@listSchemas.0/@listTables.2" name="clientePersona"/>
     </listTables>
     <listTables name="Empleado">
-      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false"/>
+      <listPrimaryKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false" tableName="Empleado"/>
       <listColumns name="cargo" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="apellido" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
@@ -40,16 +40,16 @@
       <listRelations source="//@listSchemas.0/@listTables.4" target="//@listSchemas.0/@listTables.2" name="empleadoPersona"/>
     </listTables>
     <listTables name="Sede_Cliente">
-      <listPrimaryKeys name="id" type="integer" isNotNull="true" isAutoIncremetable="true"/>
-      <listForeignKeys name="codigoSede" isNotNull="true" isAutoIncremetable="true" primaryKey="//@listSchemas.0/@listTables.1/@listPrimaryKeys.0"/>
-      <listForeignKeys name="cedula" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.3/@listPrimaryKeys.0"/>
+      <listPrimaryKeys name="id" type="integer" isNotNull="true" isAutoIncremetable="false" tableName="Sede_Cliente"/>
+      <listForeignKeys name="codigoSede" type="integer" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.1/@listPrimaryKeys.0"/>
+      <listForeignKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.3/@listPrimaryKeys.0"/>
       <listRelations source="//@listSchemas.0/@listTables.5" target="//@listSchemas.0/@listTables.1" name="Sede_Cliente_Sede" multiplicidadA="*" multiplicidadB="1"/>
       <listRelations source="//@listSchemas.0/@listTables.5" target="//@listSchemas.0/@listTables.3" name="Sede_Cliente_Cliente" multiplicidadA="*" multiplicidadB="1"/>
     </listTables>
     <listTables name="Sede_Empleado">
-      <listPrimaryKeys name="id" type="integer" isNotNull="true" isAutoIncremetable="true"/>
-      <listForeignKeys name="codigoSede" isNotNull="true" isAutoIncremetable="true" primaryKey="//@listSchemas.0/@listTables.1/@listPrimaryKeys.0"/>
-      <listForeignKeys name="cedula" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.4/@listPrimaryKeys.0"/>
+      <listPrimaryKeys name="id" type="integer" isNotNull="true" isAutoIncremetable="false" tableName="Sede_Empleado"/>
+      <listForeignKeys name="codigoSede" type="integer" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.1/@listPrimaryKeys.0"/>
+      <listForeignKeys name="cedula" type="varchar(10)" isNotNull="true" isAutoIncremetable="false" primaryKey="//@listSchemas.0/@listTables.4/@listPrimaryKeys.0"/>
       <listRelations source="//@listSchemas.0/@listTables.6" target="//@listSchemas.0/@listTables.1" name="Sede_Empleado_Sede" multiplicidadA="*" multiplicidadB="1"/>
       <listRelations source="//@listSchemas.0/@listTables.6" target="//@listSchemas.0/@listTables.4" name="Sede_Empleado_Empleado" multiplicidadA="*" multiplicidadB="1"/>
     </listTables>

@@ -2,14 +2,14 @@
 <concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:concreta="concreta">
   <listaDiagramas nombre="IBG" descripcion="Ejemplo de diagrama UML">
     <listaClases nombre="Ciudad" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla ciudad" ruta="IBG">
-      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Ciudad" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Ciudad" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="nombre" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="descripcion" tipo="String" modificadorAcesso="private" ruta="Ciudad" isPrimaryKey="false" isForeignKey="false" isNotNull="false" isAutoincrementable="false"/>
     </listaClases>
     <listaClases nombre="Sede" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla sede" ruta="IBG">
-      <atributos nombre="codigoSede" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Sede" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoSede" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Sede" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
       <atributos nombre="nombre" tipo="String" modificadorAcesso="private" valorDefecto="" ruta="Sede" isPrimaryKey="false" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>
-      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Sede" isPrimaryKey="false" isForeignKey="true" isNotNull="true" isAutoincrementable="true"/>
+      <atributos nombre="codigoCiudad" tipo="Int" modificadorAcesso="private" valorDefecto="0" ruta="Sede" isPrimaryKey="false" isForeignKey="true" isNotNull="true" isAutoincrementable="false"/>
     </listaClases>
     <listaClases nombre="Persona" estereotipo="@Stereotype" modificadorAcceso="public" descripcion="Tabla persona" ruta="IBG">
       <atributos nombre="cedula" tipo="String" modificadorAcesso="private" ruta="Persona" isPrimaryKey="true" isForeignKey="false" isNotNull="true" isAutoincrementable="false"/>

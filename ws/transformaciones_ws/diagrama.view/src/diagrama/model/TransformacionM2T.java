@@ -1,3 +1,11 @@
+/*
+ * Codigo desarrollado por
+ * 
+ * Braian Camilo Piedrahita Rodriguez
+ * Melissa Ortiz Perez
+ * Sebastian Quintero Osorio
+ * 
+ */
 package diagrama.model;
 
 import java.io.File;

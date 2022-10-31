@@ -43,6 +43,7 @@ class Relation {
 
 class PrimaryKey extends Column{
 	
+	attr String tableName;
 }
 
 class ForeignKey extends Column{

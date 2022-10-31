@@ -388,13 +388,22 @@ public interface Sql_metamodelPackage extends EPackage {
 	int PRIMARY_KEY__IS_AUTO_INCREMETABLE = COLUMN__IS_AUTO_INCREMETABLE;
 
 	/**
+	 * The feature id for the '<em><b>Table Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMARY_KEY__TABLE_NAME = COLUMN_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Primary Key</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMARY_KEY_FEATURE_COUNT = COLUMN_FEATURE_COUNT + 0;
+	int PRIMARY_KEY_FEATURE_COUNT = COLUMN_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link sql_metamodel.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
@@ -708,6 +717,17 @@ public interface Sql_metamodelPackage extends EPackage {
 	EClass getPrimaryKey();
 
 	/**
+	 * Returns the meta object for the attribute '{@link sql_metamodel.PrimaryKey#getTableName <em>Table Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Table Name</em>'.
+	 * @see sql_metamodel.PrimaryKey#getTableName()
+	 * @see #getPrimaryKey()
+	 * @generated
+	 */
+	EAttribute getPrimaryKey_TableName();
+
+	/**
 	 * Returns the meta object for class '{@link sql_metamodel.ForeignKey <em>Foreign Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,6 +967,14 @@ public interface Sql_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRIMARY_KEY = eINSTANCE.getPrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Table Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIMARY_KEY__TABLE_NAME = eINSTANCE.getPrimaryKey_TableName();
 
 		/**
 		 * The meta object literal for the '{@link sql_metamodel.impl.ForeignKeyImpl <em>Foreign Key</em>}' class.
