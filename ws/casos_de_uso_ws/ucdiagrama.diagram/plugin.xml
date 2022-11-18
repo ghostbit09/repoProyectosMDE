@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="ucdiagram_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="ucdiagram_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="ucdiagram.diagram.part.UcdiagramDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/UcdiagramDiagramFile.gif"
+         extensions="ucdiagram_diagram"
+         default="true"
+         class="ucdiagram.diagram.part.UcdiagramDiagramEditor"
+         matchingStrategy="ucdiagram.diagram.part.UcdiagramMatchingStrategy"
+         contributorClass="ucdiagram.diagram.part.UcdiagramDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="ucdiagram.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/UcdiagramDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="ucdiagram.diagram.part.UcdiagramCreationWizard"
+  	     id="ucdiagram.diagram.part.UcdiagramCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="ucdiagrama.diagram.InitDiagram"
+            nameFilter="*.ucdiagram"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="ucdiagram.diagram.part.UcdiagramInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="ucdiagrama.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="UcdiagramPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="ucdiagram.diagram.part.UcdiagramDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="UcdiagramPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="ucdiagram.diagram.part.UcdiagramDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="UcdiagramPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="ucdiagram.diagram.part.UcdiagramDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="UcdiagramRender">
+         <Priority name="Lowest"/>
+         <ViewId id="ucdiagram.diagram.part.UcdiagramDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="ucdiagram.diagram.providers.UcdiagramMarkerNavigationProvider">
+         <MarkerType name="ucdiagrama.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Ucdiagram Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="ucdiagram.diagram.providers.UcdiagramValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="ucdiagram.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="ucdiagrama.diagram.general"
+            name="%prefpage.ucdiagrama.diagram.general"
+            class="ucdiagram.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="ucdiagrama.diagram.appearance"
+            name="%prefpage.ucdiagrama.diagram.appearance"
+            category="ucdiagrama.diagram.general"
+            class="ucdiagram.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="ucdiagrama.diagram.connections"
+            name="%prefpage.ucdiagrama.diagram.connections"
+            category="ucdiagrama.diagram.general"
+            class="ucdiagram.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="ucdiagrama.diagram.printing"
+            name="%prefpage.ucdiagrama.diagram.printing"
+            category="ucdiagrama.diagram.general"
+            class="ucdiagram.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="ucdiagrama.diagram.rulersAndGrid"
+            name="%prefpage.ucdiagrama.diagram.rulersAndGrid"
+            category="ucdiagrama.diagram.general"
+            class="ucdiagram.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="ucdiagrama.diagram"
+            labelProvider="ucdiagram.diagram.sheet.UcdiagramSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="ucdiagrama.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="ucdiagrama.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="ucdiagram.diagram.sheet.UcdiagramPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="ucdiagram.diagram.providers.UcdiagramViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="ucdiagram"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Ucdiagram"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,2004,3001"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="ucdiagram.diagram.providers.UcdiagramEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Ucdiagram"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2002,2004,3001"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5010,5013,5012"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="ucdiagram.diagram.providers.assistants.UcdiagramModelingAssistantProviderOfUc_diagramEditPart">
+         <Priority name="Lowest"/>
+         <object class="ucdiagram.diagram.edit.parts.Uc_diagramEditPart" id="Uc_diagram_1000"/>
+         <context elements="Uc_diagram_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="ucdiagram.diagram.providers.assistants.UcdiagramModelingAssistantProviderOfActorEditPart">
+         <Priority name="Lowest"/>
+         <object class="ucdiagram.diagram.edit.parts.ActorEditPart" id="Actor_2002"/>
+         <context elements="Actor_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="ucdiagram.diagram.providers.assistants.UcdiagramModelingAssistantProviderOfLimitBoxEditPart">
+         <Priority name="Lowest"/>
+         <object class="ucdiagram.diagram.edit.parts.LimitBoxEditPart" id="LimitBox_2004"/>
+         <context elements="LimitBox_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="ucdiagram.diagram.providers.assistants.UcdiagramModelingAssistantProviderOfUseCaseEditPart">
+         <Priority name="Lowest"/>
+         <object class="ucdiagram.diagram.edit.parts.UseCaseEditPart" id="UseCase_3001"/>
+         <context elements="UseCase_3001"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="ucdiagram.diagram.providers.UcdiagramIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="ucdiagram.diagram.providers.UcdiagramParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="ucdiagram.diagram.providers.UcdiagramShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2002,2004"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.Uc_diagram_1000"
+               name="%metatype.name.Uc_diagram_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="uc_diagram"
+               edithelper="ucdiagram.diagram.edit.helpers.Uc_diagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.Actor_2002"
+               name="%metatype.name.Actor_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Actor"
+               edithelper="ucdiagram.diagram.edit.helpers.ActorEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.LimitBox_2004"
+               name="%metatype.name.LimitBox_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="LimitBox"
+               edithelper="ucdiagram.diagram.edit.helpers.LimitBoxEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.UseCase_3001"
+               name="%metatype.name.UseCase_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="UseCase"
+               edithelper="ucdiagram.diagram.edit.helpers.UseCaseEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.ComRelationship_4001"
+               name="%metatype.name.ComRelationship_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="comRelationship"
+               edithelper="ucdiagram.diagram.edit.helpers.ComRelationshipEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.IncludeRelationship_4002"
+               name="%metatype.name.IncludeRelationship_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="includeRelationship"
+               edithelper="ucdiagram.diagram.edit.helpers.IncludeRelationshipEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://ucdiagram">
+         <metamodelType
+               id="ucdiagrama.diagram.ExtendsRelationship_4003"
+               name="%metatype.name.ExtendsRelationship_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="extendsRelationship"
+               edithelper="ucdiagram.diagram.edit.helpers.ExtendsRelationshipEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="ucdiagrama.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="ucdiagrama.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="ucdiagrama.diagram.TypeContext">
+         <elementType ref="ucdiagrama.diagram.Uc_diagram_1000"/>
+         <elementType ref="ucdiagrama.diagram.Actor_2002"/>
+         <elementType ref="ucdiagrama.diagram.LimitBox_2004"/>
+         <elementType ref="ucdiagrama.diagram.UseCase_3001"/>
+         <elementType ref="ucdiagrama.diagram.ComRelationship_4001"/>
+         <elementType ref="ucdiagrama.diagram.IncludeRelationship_4002"/>
+         <elementType ref="ucdiagrama.diagram.ExtendsRelationship_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="ucdiagrama.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="ucdiagrama.diagram"
+           properties="isURIEditorInput"
+           class="ucdiagram.diagram.part.UcdiagramUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="ucdiagrama.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="ucdiagrama.diagram"
+           properties="isShortcut"
+           class="ucdiagram.diagram.part.UcdiagramShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="ucdiagrama.diagram.resourceContent"/>
+			<contentExtension pattern="ucdiagrama.diagram.domainResourceContent"/>
+            <contentExtension pattern="ucdiagrama.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="ucdiagrama.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="ucdiagrama.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="ucdiagram.diagram.navigator.UcdiagramNavigatorContentProvider" 
+            labelProvider="ucdiagram.diagram.navigator.UcdiagramNavigatorLabelProvider"
+            icon="icons/obj16/UcdiagramDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="ucdiagram_diagram"/>
+               </and>
+               <instanceof value="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="ucdiagrama.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="ucdiagrama.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="ucdiagrama.diagram.navigatorSorter" 
+               class="ucdiagram.diagram.navigator.UcdiagramNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="ucdiagram_diagram"/>
+                  </and>
+                  <instanceof value="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="ucdiagrama.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="ucdiagram.diagram.navigator.UcdiagramDomainNavigatorContentProvider" 
+            labelProvider="ucdiagram.diagram.navigator.UcdiagramDomainNavigatorLabelProvider"
+            icon="icons/obj16/UcdiagramDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="ucdiagram"/>
+               </and>
+               <instanceof value="ucdiagram.diagram.navigator.UcdiagramDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="ucdiagram.diagram.navigator.UcdiagramDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="ucdiagrama.diagram.navigatorActionProvider"
+            class="ucdiagram.diagram.navigator.UcdiagramNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="ucdiagrama.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="ucdiagrama.diagram.navigatorLinkHelper"
+            class="ucdiagram.diagram.navigator.UcdiagramNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="ucdiagrama.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="ucdiagram.diagram.navigator.UcdiagramAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="ucdiagram.diagram.part.UcdiagramDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="ucdiagram.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="ucdiagram.diagram.updateDiagram"
+         contextId="ucdiagram.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="ucdiagrama.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="ucdiagram.diagram.part.UcdiagramDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="ucdiagram.diagram.edit.parts.Uc_diagramEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="ucdiagram.diagram.part.UcdiagramDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="ucdiagrama.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="ucdiagram.diagram.part.UcdiagramDiagramEditorID"
+         defaultHandler="ucdiagram.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

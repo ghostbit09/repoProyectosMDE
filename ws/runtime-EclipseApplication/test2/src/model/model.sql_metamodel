@@ -27,7 +27,7 @@
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="apellido" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="email" type="varchar(100)" isNotNull="false" isAutoIncremetable="false"/>
-      <listRelations source="//@listSchemas.0/@listTables.3" target="//@listSchemas.0/@listTables.5" multiplicidadA="1" multiplicidadB="*"/>
+      <listRelations source="//@listSchemas.0/@listTables.3" target="//@listSchemas.0/@listTables.5" name="Sede_Cliente_Cliente" multiplicidadA="1" multiplicidadB="*"/>
       <listRelations source="//@listSchemas.0/@listTables.3" target="//@listSchemas.0/@listTables.2" name="clientePersona"/>
     </listTables>
     <listTables name="Empleado">
@@ -36,7 +36,7 @@
       <listColumns name="nombre" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="apellido" type="varchar(100)" isNotNull="true" isAutoIncremetable="false"/>
       <listColumns name="email" type="varchar(100)" isNotNull="false" isAutoIncremetable="false"/>
-      <listRelations source="//@listSchemas.0/@listTables.4" target="//@listSchemas.0/@listTables.6" multiplicidadA="1" multiplicidadB="*"/>
+      <listRelations source="//@listSchemas.0/@listTables.4" target="//@listSchemas.0/@listTables.6" name="Sede_Empleado_Empleado" multiplicidadA="1" multiplicidadB="*"/>
       <listRelations source="//@listSchemas.0/@listTables.4" target="//@listSchemas.0/@listTables.2" name="empleadoPersona"/>
     </listTables>
     <listTables name="Sede_Cliente">

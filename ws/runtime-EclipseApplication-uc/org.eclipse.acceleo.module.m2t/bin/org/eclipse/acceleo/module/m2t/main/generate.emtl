@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="org::eclipse::acceleo::module::m2t::main::generate" startHeaderPosition="83" endHeaderPosition="206">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="80" value="&#xD;&#xA;The documentation of the module generate.&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://ucdiagram#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;Documentacion de diagramas de casos de uso&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|-----------------------------------------------------------------------&#xA;|                        "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="                            &#xA;|-----------------------------------------------------------------------&#xA;| Codigo: "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/useCaseId"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="          | Fecha: "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/date"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="          &#xA;|-----------------------------------------------------------------------&#xA;| Descripcion:&#xA;|  "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/description"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Actores:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generateActors">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateElement/anuc_diagram">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Objetivo:&#xA;|   "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/objective"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Precondiciones:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generatePreconditions">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Postcondiciones:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generatePostconditions">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Flujo de eventos:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generateFlowEvents">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Sitaciones excepcionales:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generateExceptions">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Anotaciones:&#xA;|&#x9;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/annotations"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Puntos de extension:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generateExtensionPoints">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateElement/anuc_diagram">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;| Puntos de inclusion:&#xA;"/>
+            <body xsi:type="mtl:TemplateInvocation" definition="/0/generateIncludePoints">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <argument xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateElement/%/%.1/%/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateElement/anuc_diagram">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+              </argument>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;|-----------------------------------------------------------------------&#xA;&#xA;&#xA;"/>
+            <loopVariable name="useCase">
+              <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(UseCase)">
+              <source xsi:type="ocl.ecore:VariableExp" name="box" referredVariable="/0/generateElement/%/%.1/box">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//LimitBox/useCases"/>
+            </iterSet>
+          </body>
+          <loopVariable name="box">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(LimitBox)">
+            <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/9">
+              <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//uc_diagram/listBoxes"/>
+          </iterSet>
+        </body>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/trim">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/replace">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateElement/anuc_diagram">
+                  <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//uc_diagram/name"/>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </source>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".docx">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="126" endPosition="206" value="&#xD;&#xA;The documentation of the template generateElement.&#xD;&#xA;@param anuc_diagram&#xD;&#xA;&#xD;&#xA;"/>
+        <parametersDocumentation name="anuc_diagram">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="anuc_diagram">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateActors" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://ucdiagram#//Actor"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="comRel" referredVariable="/0/generateActors/%/comRel">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//comRelationship/source"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//Actor/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="comRel" referredVariable="/0/generateActors/%/comRel">
+                  <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//comRelationship/target"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateActors/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <loopVariable name="comRel">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(comRelationship)">
+          <source xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateActors/anuc_diagram">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//uc_diagram/listComRels"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+      <parameter name="anuc_diagram">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generatePreconditions" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - "/>
+        <body xsi:type="ocl.ecore:VariableExp" name="precondition" referredVariable="/0/generatePreconditions/%/precondition.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="precondition">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(String)">
+          <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generatePreconditions/useCase">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/listPreconditions"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generatePostconditions" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - "/>
+        <body xsi:type="ocl.ecore:VariableExp" name="postcondition" referredVariable="/0/generatePostconditions/%/postcondition.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <loopVariable name="postcondition">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(String)">
+          <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generatePostconditions/useCase">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/listPostconditions"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateFlowEvents" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - "/>
+        <body xsi:type="ocl.ecore:VariableExp" name="flowEvent" referredVariable="/0/generateFlowEvents/%/flowEvent.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="flowEvent">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(String)">
+          <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateFlowEvents/useCase">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/listFlowEvents"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateExceptions" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - "/>
+        <body xsi:type="ocl.ecore:VariableExp" name="exception" referredVariable="/0/generateExceptions/%/exception.1">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="exception">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(String)">
+          <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateExceptions/useCase">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/listExceptions"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateExtensionPoints" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - Caso de uso &quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="extRel" referredVariable="/0/generateExtensionPoints/%/extRel">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//extendsRelationship/source"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="extRel" referredVariable="/0/generateExtensionPoints/%/extRel">
+                  <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//extendsRelationship/target"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateExtensionPoints/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <loopVariable name="extRel">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(extendsRelationship)">
+          <source xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateExtensionPoints/anuc_diagram">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//uc_diagram/listExtRels"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+      <parameter name="anuc_diagram">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateIncludePoints" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="|  - Caso de uso &quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="incRel" referredVariable="/0/generateIncludePoints/%/incRel">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//includeRelationship/target"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="incRel" referredVariable="/0/generateIncludePoints/%/incRel">
+                  <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//includeRelationship/source"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="useCase" referredVariable="/0/generateIncludePoints/useCase">
+                <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://ucdiagram#//UseCase/name"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <loopVariable name="incRel">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/8/OrderedSet(includeRelationship)">
+          <source xsi:type="ocl.ecore:VariableExp" name="anuc_diagram" referredVariable="/0/generateIncludePoints/anuc_diagram">
+            <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://ucdiagram#//uc_diagram/listIncRels"/>
+        </iterSet>
+      </body>
+      <parameter name="useCase">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+      </parameter>
+      <parameter name="anuc_diagram">
+        <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="replace">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="substring">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="replacement">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="trim">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+      <eOperations name="equalsIgnoreCase">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anuc_diagram">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateActors">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateActors"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+        <eParameters name="anuc_diagram">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generatePreconditions">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generatePreconditions"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generatePostconditions">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generatePostconditions"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateFlowEvents">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateFlowEvents"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateExceptions">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateExceptions"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateExtensionPoints">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateExtensionPoints"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+        <eParameters name="anuc_diagram">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateIncludePoints">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateIncludePoints"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="useCase">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+        </eParameters>
+        <eParameters name="anuc_diagram">
+          <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ucdiagram_uc_diagram_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://ucdiagram#//uc_diagram"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ucdiagram_UseCase_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://ucdiagram#//UseCase"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(LimitBox)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(UseCase)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(comRelationship)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(String)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(extendsRelationship)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(includeRelationship)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//LimitBox"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//uc_diagram"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//comRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//extendsRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//includeRelationship"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://ucdiagram#//UseCase"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/%">
+      <details key="start" value="29"/>
+      <details key="end" value="82"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement">
+      <details key="start" value="209"/>
+      <details key="end" value="2142"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%">
+      <details key="start" value="287"/>
+      <details key="end" value="2130"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%/%">
+      <details key="start" value="362"/>
+      <details key="end" value="410"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%/%.1">
+      <details key="start" value="410"/>
+      <details key="end" value="2122"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%/%.1/%">
+      <details key="start" value="444"/>
+      <details key="end" value="2115"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%/%.1/%/%">
+      <details key="start" value="484"/>
+      <details key="end" value="582"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%/%.1/%/%.1">
+      <details key="start" value="583"/>
+      <details key="end" value="595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%/%.1/%/%.1/useCase">
+      <details key="start" value="583"/>
+      <details key="end" value="590"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%/%.1/%/%.2">
+      <details key="start" value="597"/>
+      <details key="end" value="709"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%/%.1/%/%.3">
+      <details key="start" value="710"/>
+      <details key="end" value="727"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%/%.1/%/%.3/useCase">
+      <details key="start" value="710"/>
+      <details key="end" value="717"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%/%.1/%/%.4">
+      <details key="start" value="729"/>
+      <details key="end" value="748"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%/%.1/%/%.5">
+      <details key="start" value="749"/>
+      <details key="end" value="761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%/%.1/%/%.5/useCase">
+      <details key="start" value="749"/>
+      <details key="end" value="756"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%/%.1/%/%.6">
+      <details key="start" value="763"/>
+      <details key="end" value="865"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%/%.1/%/%.7">
+      <details key="start" value="866"/>
+      <details key="end" value="885"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%/%.1/%/%.7/useCase">
+      <details key="start" value="866"/>
+      <details key="end" value="873"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%/%.1/%/%.8">
+      <details key="start" value="887"/>
+      <details key="end" value="972"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%/%.1/%/%.9">
+      <details key="start" value="973"/>
+      <details key="end" value="1010"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%/%.1/%/%.9/useCase">
+      <details key="start" value="988"/>
+      <details key="end" value="995"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%/%.1/%/%.9/anuc_diagram">
+      <details key="start" value="997"/>
+      <details key="end" value="1009"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%/%.1/%/%.10">
+      <details key="start" value="1012"/>
+      <details key="end" value="1102"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%/%.1/%/%.11">
+      <details key="start" value="1103"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%/%.1/%/%.11/useCase">
+      <details key="start" value="1103"/>
+      <details key="end" value="1110"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%/%.1/%/%.12">
+      <details key="start" value="1122"/>
+      <details key="end" value="1214"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%/%.1/%/%.13">
+      <details key="start" value="1215"/>
+      <details key="end" value="1245"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%/%.1/%/%.13/useCase">
+      <details key="start" value="1237"/>
+      <details key="end" value="1244"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%/%.1/%/%.14">
+      <details key="start" value="1247"/>
+      <details key="end" value="1340"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%/%.1/%/%.15">
+      <details key="start" value="1341"/>
+      <details key="end" value="1372"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%/%.1/%/%.15/useCase">
+      <details key="start" value="1364"/>
+      <details key="end" value="1371"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%/%.1/%/%.16">
+      <details key="start" value="1374"/>
+      <details key="end" value="1468"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%/%.1/%/%.17">
+      <details key="start" value="1469"/>
+      <details key="end" value="1496"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%/%.1/%/%.17/useCase">
+      <details key="start" value="1488"/>
+      <details key="end" value="1495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%/%.1/%/%.18">
+      <details key="start" value="1498"/>
+      <details key="end" value="1600"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/%/%.1/%/%.19">
+      <details key="start" value="1601"/>
+      <details key="end" value="1628"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/%/%.1/%/%.19/useCase">
+      <details key="start" value="1620"/>
+      <details key="end" value="1627"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/%/%.1/%/%.20">
+      <details key="start" value="1630"/>
+      <details key="end" value="1721"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/%/%.1/%/%.21">
+      <details key="start" value="1722"/>
+      <details key="end" value="1741"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/%/%.1/%/%.21/useCase">
+      <details key="start" value="1722"/>
+      <details key="end" value="1729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateElement/%/%.1/%/%.22">
+      <details key="start" value="1743"/>
+      <details key="end" value="1840"/>
+      <details key="line" value="48"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement/%/%.1/%/%.23">
+      <details key="start" value="1841"/>
+      <details key="end" value="1887"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/%/%.1/%/%.23/useCase">
+      <details key="start" value="1865"/>
+      <details key="end" value="1872"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/%/%.1/%/%.23/anuc_diagram">
+      <details key="start" value="1874"/>
+      <details key="end" value="1886"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/%/%.1/%/%.24">
+      <details key="start" value="1889"/>
+      <details key="end" value="1986"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/%/%.1/%/%.25">
+      <details key="start" value="1987"/>
+      <details key="end" value="2031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/%/%.1/%/%.25/useCase">
+      <details key="start" value="2009"/>
+      <details key="end" value="2016"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/%/%.1/%/%.25/anuc_diagram">
+      <details key="start" value="2018"/>
+      <details key="end" value="2030"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/%/%.1/%/%.26">
+      <details key="start" value="2033"/>
+      <details key="end" value="2109"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/%/%.1/%/useCase">
+      <details key="start" value="449"/>
+      <details key="end" value="466"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/%/%.1/%/%.27">
+      <details key="start" value="469"/>
+      <details key="end" value="481"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/%/%.1/%/%.27/box">
+      <details key="start" value="469"/>
+      <details key="end" value="472"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/%/%.1/box">
+      <details key="start" value="415"/>
+      <details key="end" value="429"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/%/%.1/%.1">
+      <details key="start" value="432"/>
+      <details key="end" value="441"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateElement/%/%.1/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateElement/%/%.2">
+      <details key="start" value="294"/>
+      <details key="end" value="343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateElement/%/%.2/%">
+      <details key="start" value="294"/>
+      <details key="end" value="335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateElement/%/%.2/%/%">
+      <details key="start" value="294"/>
+      <details key="end" value="328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateElement/%/%.2/%/%/%">
+      <details key="start" value="294"/>
+      <details key="end" value="311"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateElement/%/%.2/%/%/%/anuc_diagram">
+      <details key="start" value="294"/>
+      <details key="end" value="306"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateElement/%/%.2/%/%/%.1">
+      <details key="start" value="320"/>
+      <details key="end" value="323"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateElement/%/%.2/%/%/%.2">
+      <details key="start" value="325"/>
+      <details key="end" value="327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateElement/%/%.2/%.1">
+      <details key="start" value="336"/>
+      <details key="end" value="343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateElement/%/%.3">
+      <details key="start" value="352"/>
+      <details key="end" value="359"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateElement/%.1">
+      <details key="start" value="123"/>
+      <details key="end" value="208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateElement/%.1/anuc_diagram">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateElement/anuc_diagram">
+      <details key="start" value="242"/>
+      <details key="end" value="267"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateActors">
+      <details key="start" value="2144"/>
+      <details key="end" value="2390"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateActors/%">
+      <details key="start" value="2223"/>
+      <details key="end" value="2378"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateActors/%/%">
+      <details key="start" value="2282"/>
+      <details key="end" value="2371"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateActors/%/%/%">
+      <details key="start" value="2339"/>
+      <details key="end" value="2344"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateActors/%/%/%.1">
+      <details key="start" value="2345"/>
+      <details key="end" value="2363"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateActors/%/%/%.1/%">
+      <details key="start" value="2345"/>
+      <details key="end" value="2358"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateActors/%/%/%.1/%/comRel">
+      <details key="start" value="2345"/>
+      <details key="end" value="2351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateActors/%/%/%.2">
+      <details key="start" value="2365"/>
+      <details key="end" value="2366"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateActors/%/%/%.3">
+      <details key="start" value="2286"/>
+      <details key="end" value="2337"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateActors/%/%/%.3/%">
+      <details key="start" value="2287"/>
+      <details key="end" value="2305"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateActors/%/%/%.3/%/%">
+      <details key="start" value="2287"/>
+      <details key="end" value="2300"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateActors/%/%/%.3/%/%/comRel">
+      <details key="start" value="2287"/>
+      <details key="end" value="2293"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateActors/%/%/%.3/%.1">
+      <details key="start" value="2323"/>
+      <details key="end" value="2335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateActors/%/%/%.3/%.1/useCase">
+      <details key="start" value="2323"/>
+      <details key="end" value="2330"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateActors/%/comRel">
+      <details key="start" value="2228"/>
+      <details key="end" value="2252"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateActors/%/%.1">
+      <details key="start" value="2255"/>
+      <details key="end" value="2279"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateActors/%/%.1/anuc_diagram">
+      <details key="start" value="2255"/>
+      <details key="end" value="2267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateActors/useCase">
+      <details key="start" value="2176"/>
+      <details key="end" value="2193"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateActors/anuc_diagram">
+      <details key="start" value="2195"/>
+      <details key="end" value="2220"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generatePreconditions">
+      <details key="start" value="2392"/>
+      <details key="end" value="2547"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generatePreconditions/%">
+      <details key="start" value="2451"/>
+      <details key="end" value="2535"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generatePreconditions/%/%">
+      <details key="start" value="2508"/>
+      <details key="end" value="2513"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generatePreconditions/%/precondition">
+      <details key="start" value="2514"/>
+      <details key="end" value="2526"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generatePreconditions/%/%.1">
+      <details key="start" value="2528"/>
+      <details key="end" value="2529"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generatePreconditions/%/precondition.1">
+      <details key="start" value="2456"/>
+      <details key="end" value="2477"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generatePreconditions/%/%.2">
+      <details key="start" value="2480"/>
+      <details key="end" value="2505"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generatePreconditions/%/%.2/useCase">
+      <details key="start" value="2480"/>
+      <details key="end" value="2487"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generatePreconditions/useCase">
+      <details key="start" value="2431"/>
+      <details key="end" value="2448"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generatePostconditions">
+      <details key="start" value="2549"/>
+      <details key="end" value="2707"/>
+      <details key="line" value="76"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generatePostconditions/%">
+      <details key="start" value="2609"/>
+      <details key="end" value="2695"/>
+      <details key="line" value="77"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generatePostconditions/%/%">
+      <details key="start" value="2668"/>
+      <details key="end" value="2673"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generatePostconditions/%/postcondition">
+      <details key="start" value="2674"/>
+      <details key="end" value="2687"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generatePostconditions/%/postcondition.1">
+      <details key="start" value="2614"/>
+      <details key="end" value="2636"/>
+      <details key="line" value="77"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generatePostconditions/%/%.1">
+      <details key="start" value="2639"/>
+      <details key="end" value="2665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generatePostconditions/%/%.1/useCase">
+      <details key="start" value="2639"/>
+      <details key="end" value="2646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generatePostconditions/useCase">
+      <details key="start" value="2589"/>
+      <details key="end" value="2606"/>
+      <details key="line" value="76"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateFlowEvents">
+      <details key="start" value="2709"/>
+      <details key="end" value="2852"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateFlowEvents/%">
+      <details key="start" value="2765"/>
+      <details key="end" value="2840"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateFlowEvents/%/%">
+      <details key="start" value="2816"/>
+      <details key="end" value="2821"/>
+      <details key="line" value="83"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateFlowEvents/%/flowEvent">
+      <details key="start" value="2822"/>
+      <details key="end" value="2831"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateFlowEvents/%/%.1">
+      <details key="start" value="2833"/>
+      <details key="end" value="2834"/>
+      <details key="line" value="84"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateFlowEvents/%/flowEvent.1">
+      <details key="start" value="2770"/>
+      <details key="end" value="2788"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateFlowEvents/%/%.2">
+      <details key="start" value="2791"/>
+      <details key="end" value="2813"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateFlowEvents/%/%.2/useCase">
+      <details key="start" value="2791"/>
+      <details key="end" value="2798"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateFlowEvents/useCase">
+      <details key="start" value="2745"/>
+      <details key="end" value="2762"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateExceptions">
+      <details key="start" value="2854"/>
+      <details key="end" value="2997"/>
+      <details key="line" value="87"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateExceptions/%">
+      <details key="start" value="2910"/>
+      <details key="end" value="2985"/>
+      <details key="line" value="88"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateExceptions/%/%">
+      <details key="start" value="2961"/>
+      <details key="end" value="2966"/>
+      <details key="line" value="89"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateExceptions/%/exception">
+      <details key="start" value="2967"/>
+      <details key="end" value="2976"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateExceptions/%/%.1">
+      <details key="start" value="2978"/>
+      <details key="end" value="2979"/>
+      <details key="line" value="90"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateExceptions/%/exception.1">
+      <details key="start" value="2915"/>
+      <details key="end" value="2933"/>
+      <details key="line" value="88"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateExceptions/%/%.2">
+      <details key="start" value="2936"/>
+      <details key="end" value="2958"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateExceptions/%/%.2/useCase">
+      <details key="start" value="2936"/>
+      <details key="end" value="2943"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateExceptions/useCase">
+      <details key="start" value="2890"/>
+      <details key="end" value="2907"/>
+      <details key="line" value="87"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateExtensionPoints">
+      <details key="start" value="2999"/>
+      <details key="end" value="3272"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateExtensionPoints/%">
+      <details key="start" value="3087"/>
+      <details key="end" value="3260"/>
+      <details key="line" value="94"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateExtensionPoints/%/%">
+      <details key="start" value="3150"/>
+      <details key="end" value="3253"/>
+      <details key="line" value="95"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateExtensionPoints/%/%/%">
+      <details key="start" value="3207"/>
+      <details key="end" value="3225"/>
+      <details key="line" value="96"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateExtensionPoints/%/%/%.1">
+      <details key="start" value="3226"/>
+      <details key="end" value="3244"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateExtensionPoints/%/%/%.1/%">
+      <details key="start" value="3226"/>
+      <details key="end" value="3239"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateExtensionPoints/%/%/%.1/%/extRel">
+      <details key="start" value="3226"/>
+      <details key="end" value="3232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateExtensionPoints/%/%/%.2">
+      <details key="start" value="3246"/>
+      <details key="end" value="3248"/>
+      <details key="line" value="96"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateExtensionPoints/%/%/%.3">
+      <details key="start" value="3154"/>
+      <details key="end" value="3205"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateExtensionPoints/%/%/%.3/%">
+      <details key="start" value="3155"/>
+      <details key="end" value="3173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateExtensionPoints/%/%/%.3/%/%">
+      <details key="start" value="3155"/>
+      <details key="end" value="3168"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateExtensionPoints/%/%/%.3/%/%/extRel">
+      <details key="start" value="3155"/>
+      <details key="end" value="3161"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateExtensionPoints/%/%/%.3/%.1">
+      <details key="start" value="3191"/>
+      <details key="end" value="3203"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generateExtensionPoints/%/%/%.3/%.1/useCase">
+      <details key="start" value="3191"/>
+      <details key="end" value="3198"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generateExtensionPoints/%/extRel">
+      <details key="start" value="3092"/>
+      <details key="end" value="3120"/>
+      <details key="line" value="94"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generateExtensionPoints/%/%.1">
+      <details key="start" value="3123"/>
+      <details key="end" value="3147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateExtensionPoints/%/%.1/anuc_diagram">
+      <details key="start" value="3123"/>
+      <details key="end" value="3135"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateExtensionPoints/useCase">
+      <details key="start" value="3040"/>
+      <details key="end" value="3057"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateExtensionPoints/anuc_diagram">
+      <details key="start" value="3059"/>
+      <details key="end" value="3084"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateIncludePoints">
+      <details key="start" value="3274"/>
+      <details key="end" value="3545"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateIncludePoints/%">
+      <details key="start" value="3360"/>
+      <details key="end" value="3533"/>
+      <details key="line" value="102"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateIncludePoints/%/%">
+      <details key="start" value="3423"/>
+      <details key="end" value="3526"/>
+      <details key="line" value="103"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateIncludePoints/%/%/%">
+      <details key="start" value="3480"/>
+      <details key="end" value="3498"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateIncludePoints/%/%/%.1">
+      <details key="start" value="3499"/>
+      <details key="end" value="3517"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateIncludePoints/%/%/%.1/%">
+      <details key="start" value="3499"/>
+      <details key="end" value="3512"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateIncludePoints/%/%/%.1/%/incRel">
+      <details key="start" value="3499"/>
+      <details key="end" value="3505"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateIncludePoints/%/%/%.2">
+      <details key="start" value="3519"/>
+      <details key="end" value="3521"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateIncludePoints/%/%/%.3">
+      <details key="start" value="3427"/>
+      <details key="end" value="3478"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateIncludePoints/%/%/%.3/%">
+      <details key="start" value="3428"/>
+      <details key="end" value="3446"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateIncludePoints/%/%/%.3/%/%">
+      <details key="start" value="3428"/>
+      <details key="end" value="3441"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/generateIncludePoints/%/%/%.3/%/%/incRel">
+      <details key="start" value="3428"/>
+      <details key="end" value="3434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/generateIncludePoints/%/%/%.3/%.1">
+      <details key="start" value="3464"/>
+      <details key="end" value="3476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/generateIncludePoints/%/%/%.3/%.1/useCase">
+      <details key="start" value="3464"/>
+      <details key="end" value="3471"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generateIncludePoints/%/incRel">
+      <details key="start" value="3365"/>
+      <details key="end" value="3393"/>
+      <details key="line" value="102"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/generateIncludePoints/%/%.1">
+      <details key="start" value="3396"/>
+      <details key="end" value="3420"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generateIncludePoints/%/%.1/anuc_diagram">
+      <details key="start" value="3396"/>
+      <details key="end" value="3408"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generateIncludePoints/useCase">
+      <details key="start" value="3313"/>
+      <details key="end" value="3330"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generateIncludePoints/anuc_diagram">
+      <details key="start" value="3332"/>
+      <details key="end" value="3357"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

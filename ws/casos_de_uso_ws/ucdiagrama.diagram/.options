@@ -1,0 +1,7 @@
+# Tracing options for the ucdiagrama.diagram plug-in
+
+# Common issues
+ucdiagrama.diagram/debug=false
+
+# Visual IDs
+ucdiagrama.diagram/debug/visualID=false

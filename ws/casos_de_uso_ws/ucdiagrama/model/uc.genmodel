@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/ucdiagrama/src" modelPluginID="ucdiagrama"
+    modelName="Ucdiagram" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>uc.emf</foreignModel>
+  <genPackages prefix="Ucdiagram" disposableProviderFactory="true" ecorePackage="uc.ecore#/">
+    <genClasses ecoreClass="uc.ecore#//ModelFactory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//ModelFactory/listDiagrams"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//uc_diagram">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//uc_diagram/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//uc_diagram/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//uc_diagram/listActors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//uc_diagram/listBoxes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//uc_diagram/listComRels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//uc_diagram/listIncRels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//uc_diagram/listExtRels"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//Actor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//Actor/name"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//UseCase">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/useCaseId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/objective"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/listPreconditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/listPostconditions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/listFlowEvents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/listExceptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//UseCase/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//LimitBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//LimitBox/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uc.ecore#//LimitBox/useCases"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//comRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//comRelationship/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//comRelationship/target"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//includeRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//includeRelationship/labelName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//includeRelationship/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//includeRelationship/target"/>
+    </genClasses>
+    <genClasses ecoreClass="uc.ecore#//extendsRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uc.ecore#//extendsRelationship/labelName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//extendsRelationship/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uc.ecore#//extendsRelationship/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

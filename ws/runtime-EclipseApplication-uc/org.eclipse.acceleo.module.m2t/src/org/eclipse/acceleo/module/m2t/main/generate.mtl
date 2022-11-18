@@ -1,0 +1,107 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://ucdiagram')]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param anuc_diagram
+ */]
+[template public generateElement(anuc_diagram : uc_diagram)]
+[comment @main/]
+[file (anuc_diagram.name.replace(' ', '').trim()+'.docx', false, 'UTF-8')]
+
+			Documentacion de diagramas de casos de uso
+
+[for(box : LimitBox | listBoxes)]
+[for(useCase : UseCase | box.useCases)]
+|-----------------------------------------------------------------------
+|                        [useCase.name/]                            
+|-----------------------------------------------------------------------
+| Codigo: [useCase.useCaseId/]          | Fecha: [useCase.date/]          
+|-----------------------------------------------------------------------
+| Descripcion:
+|  [useCase.description/]
+|-----------------------------------------------------------------------
+| Actores:
+[generateActors(useCase, anuc_diagram)/]
+|-----------------------------------------------------------------------
+| Objetivo:
+|   [useCase.objective/]
+|-----------------------------------------------------------------------
+| Precondiciones:
+[generatePreconditions(useCase)/]
+|-----------------------------------------------------------------------
+| Postcondiciones:
+[generatePostconditions(useCase)/]
+|-----------------------------------------------------------------------
+| Flujo de eventos:
+[generateFlowEvents(useCase)/]
+|-----------------------------------------------------------------------
+| Sitaciones excepcionales:
+[generateExceptions(useCase)/]
+|-----------------------------------------------------------------------
+| Anotaciones:
+|	[useCase.annotations/]
+|-----------------------------------------------------------------------
+| Puntos de extension:
+[generateExtensionPoints(useCase, anuc_diagram)/]
+|-----------------------------------------------------------------------
+| Puntos de inclusion:
+[generateIncludePoints(useCase, anuc_diagram)/]
+|-----------------------------------------------------------------------
+
+
+[/for]
+[/for]
+[/file]
+[/template]
+
+[template public generateActors(useCase : UseCase, anuc_diagram : uc_diagram)]
+[for(comRel : comRelationship | anuc_diagram.listComRels)]
+[if (comRel.target.name.equalsIgnoreCase(useCase.name))]
+|  - [comRel.source.name/]
+[/if]
+[/for]
+[/template]
+
+[template public generatePreconditions(useCase : UseCase)]
+[for(precondition : String | useCase.listPreconditions)]
+|  - [precondition/]
+[/for]
+[/template]
+
+[template public generatePostconditions(useCase : UseCase)]
+[for(postcondition : String | useCase.listPostconditions)]
+|  - [postcondition/][/for]
+[/template]
+
+[template public generateFlowEvents(useCase : UseCase)]
+[for(flowEvent : String | useCase.listFlowEvents)]
+|  - [flowEvent/]
+[/for]
+[/template]
+
+[template public generateExceptions(useCase : UseCase)]
+[for(exception : String | useCase.listExceptions)]
+|  - [exception/]
+[/for]
+[/template]
+
+[template public generateExtensionPoints(useCase : UseCase, anuc_diagram : uc_diagram)]
+[for(extRel : extendsRelationship | anuc_diagram.listExtRels)]
+[if (extRel.target.name.equalsIgnoreCase(useCase.name))]
+|  - Caso de uso "[extRel.source.name/]"
+[/if]
+[/for]
+[/template]
+
+[template public generateIncludePoints(useCase : UseCase, anuc_diagram : uc_diagram)]
+[for(incRel : includeRelationship | anuc_diagram.listIncRels)]
+[if (incRel.source.name.equalsIgnoreCase(useCase.name))]
+|  - Caso de uso "[incRel.target.name/]"
+[/if]
+[/for]
+[/template]

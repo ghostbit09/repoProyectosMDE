@@ -1,0 +1,75 @@
+@namespace(uri="http://ucdiagram", prefix="ucdiagram")
+@gmf
+package ucdiagram;
+
+class ModelFactory {
+	 val uc_diagram[*] listDiagrams;
+}
+
+@gmf.diagram
+class uc_diagram {	
+
+	attr String name;
+	attr String description;
+	
+    val Actor[*] listActors;
+    val LimitBox[*] listBoxes;
+    val comRelationship[*] listComRels;
+    val includeRelationship[*] listIncRels;
+    val extendsRelationship[*] listExtRels;
+    
+}
+
+@gmf.node(label = "name", figure="svg", svg.uri="platform:/plugin/ucdiagrama/svg/actor.svg",label.layout= "center")
+class Actor {
+
+	attr String name;
+}
+
+@gmf.node(label = "name", figure="svg", svg.uri="platform:/plugin/ucdiagrama/svg/useCase.svg", label.layout= "center")
+class UseCase {
+	
+	attr String name;
+	attr String useCaseId;
+	attr String date;
+	attr String description;
+	attr String objective;
+	attr String[*] listPreconditions;
+	attr String[*] listPostconditions;
+	attr String[*] listFlowEvents;
+	attr String[*] listExceptions;
+	attr String annotations;
+}
+
+@gmf.node(label = "name", label.layout= "center")
+class LimitBox {
+
+	attr String name;
+	
+	@gmf.compartment
+	val UseCase[*] useCases;
+}
+
+@gmf.link(source="source", target="target", style="solid", width="2")
+class comRelationship {
+
+	ref Actor source;
+	ref UseCase target;
+		
+}
+
+@gmf.link(label="labelName", source="source", target="target", target.decoration="arrow", style="dot", width="2")
+class includeRelationship {
+	
+	attr String labelName = "<include>";
+	ref UseCase source;
+    ref UseCase target;
+}
+
+@gmf.link(label="labelName", source="source", target="target", target.decoration="arrow", style="dot", width="2")
+class extendsRelationship {
+	
+	attr String labelName = "<extends>";
+	ref UseCase source;
+    ref UseCase target;
+}

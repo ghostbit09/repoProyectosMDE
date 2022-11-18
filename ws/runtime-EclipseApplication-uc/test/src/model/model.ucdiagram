@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ucdiagram:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ucdiagram="http://ucdiagram">
+  <listDiagrams name="Solicitud ServicioCasosDeUso" description="Diagrama de casos de uso para la solicitud de un servicio academico">
+    <listActors name="Estudiante"/>
+    <listActors name="Jefe de oficina"/>
+    <listActors name="Asistente social"/>
+    <listActors name="Secretaria"/>
+    <listBoxes name="Caso de uso servicio academico">
+      <useCases name="Solicitud de servicio" useCaseId="N001" date="13/11/2022" description="El estudiante diligencia la solicitud del servicio para ser recibida por la secretaria y evaluada por la asistente social" objective="Diligenciar y recibir la solicitud del servicio del estudiante" annotations="Ninguna anotacion">
+        <listPreconditions>El estudiante ingreso sus datos personales al sistema</listPreconditions>
+        <listPostconditions>El sistema debe almacenar la solicitud una vez diligenciada y enviada</listPostconditions>
+        <listFlowEvents>El estudiante diligencia la solicitud del servicio y la envia</listFlowEvents>
+        <listFlowEvents>El sistema carga la solicitud para ser recibida por la secretaria</listFlowEvents>
+        <listFlowEvents>La secretaria recibe la solicitud del estudiante por medio del sistema</listFlowEvents>
+        <listFlowEvents>La secretaria pasa la solicitud al asistente social para empezar la evaluacion</listFlowEvents>
+        <listExceptions>El estudiante no especifica el servicio que necesita</listExceptions>
+      </useCases>
+      <useCases name="Evaluacion de solicitud de servicio" useCaseId="N002" date="13/11/2022" description="La asistente social y el jefe de oficina analizan la solicitud del servicio para aprobarlo o rechazarlo" objective="Evaluar la solicitud diligenciada y enviada por el estudiante para determinar la importancia del servicio" annotations="El numero de dias para analizar el servicio no debe superar los 5 dias a partir del envio de la solicitud">
+        <listPreconditions>La solicitud debe estar cargada en el sistema</listPreconditions>
+        <listPreconditions>La solicitud debe tener el area al que va dirigida</listPreconditions>
+        <listPostconditions>Ninguna postcondicion</listPostconditions>
+        <listFlowEvents>La asistente social lee y analiza la solicitud del servicio</listFlowEvents>
+        <listFlowEvents>La asistente social verifica los datos del estudiante</listFlowEvents>
+        <listFlowEvents>La asistente social manda la solicitud al jefe de oficina por medio del sistema</listFlowEvents>
+        <listFlowEvents>El sistema manda la solicitud al jefe de oficina por medio de correo</listFlowEvents>
+        <listFlowEvents>El jefe de oficina analiza la solicitud para asignar un estado</listFlowEvents>
+        <listFlowEvents>El jefe de oficina y la asistente social marcan la solicitud del servicio como aprobada o no aprobada</listFlowEvents>
+        <listExceptions>El estudiante no cumple con las reglas establecidas para la solicitud de servicios</listExceptions>
+        <listExceptions>El numero de dias para analizar el servicio fue excedido</listExceptions>
+      </useCases>
+      <useCases name="Registrar la solicitud de servicio" useCaseId="N003" date="13/11/2022" description="La asistente social registra la solicitud del servicio en el sistema para ser enviado al area encargada en caso de ser aprobado" objective="Registrar la solicitud del servicio para ser enviada al area que presta el servicio al estudiante" annotations="El estado del servicio debe de ser aprobado para ser almacenado en el sistema">
+        <listPreconditions>El estudiante ya envio previamente la solicitud del servicio</listPreconditions>
+        <listPostconditions>La solicitud del estudiante ya se encuentra registrada en el sistema</listPostconditions>
+        <listPostconditions>La solicitud ya se encuentra analizada por la asistente social y el jefe de oficina</listPostconditions>
+        <listFlowEvents>La asistente social habilita la funcion para registrar la solicitud del servicio</listFlowEvents>
+        <listFlowEvents>El sistema muestra los requisitos para registrar el servicio</listFlowEvents>
+        <listFlowEvents>La asistente social verifica errores en el caso de no haberlo hecho en la evaluacion</listFlowEvents>
+        <listFlowEvents>La asistente social almacena los datos llenados en el formulario que contiene la solicitud del servicio</listFlowEvents>
+        <listFlowEvents>El sistema confirma el amacenamieto de la solicitud del servicio para ser enviada al area especificada por el estudiante</listFlowEvents>
+        <listExceptions>El servicio analizado fue rechazado, por lo tanto el sistema no permite su registro</listExceptions>
+      </useCases>
+    </listBoxes>
+    <listComRels source="//@listDiagrams.0/@listActors.0" target="//@listDiagrams.0/@listBoxes.0/@useCases.0"/>
+    <listComRels source="//@listDiagrams.0/@listActors.1" target="//@listDiagrams.0/@listBoxes.0/@useCases.1"/>
+    <listComRels source="//@listDiagrams.0/@listActors.2" target="//@listDiagrams.0/@listBoxes.0/@useCases.0"/>
+    <listComRels source="//@listDiagrams.0/@listActors.2" target="//@listDiagrams.0/@listBoxes.0/@useCases.1"/>
+    <listComRels source="//@listDiagrams.0/@listActors.2" target="//@listDiagrams.0/@listBoxes.0/@useCases.2"/>
+    <listComRels source="//@listDiagrams.0/@listActors.3" target="//@listDiagrams.0/@listBoxes.0/@useCases.0"/>
+    <listIncRels source="//@listDiagrams.0/@listBoxes.0/@useCases.1" target="//@listDiagrams.0/@listBoxes.0/@useCases.2"/>
+    <listExtRels source="//@listDiagrams.0/@listBoxes.0/@useCases.0" target="//@listDiagrams.0/@listBoxes.0/@useCases.1"/>
+  </listDiagrams>
+</ucdiagram:ModelFactory>

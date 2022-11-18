@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="ucdiagram">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="includeRelationshipFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="extendsRelationshipFigureTargetDecoration"/>
+    <descriptors name="ActorFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="ActorFigure" documentURI="platform:/plugin/ucdiagrama/svg/actor.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ActorLabelFigure" text="Actor"/>
+      </actualFigure>
+      <accessors accessor="getFigureActorLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="UseCaseFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="UseCaseFigure" documentURI="platform:/plugin/ucdiagrama/svg/useCase.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="UseCaseLabelFigure" text="UseCase"/>
+      </actualFigure>
+      <accessors accessor="getFigureUseCaseLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LimitBoxFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="LimitBoxFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="LimitBoxLabelFigure" text="LimitBox">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="LimitBoxUseCasesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureLimitBoxLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getLimitBoxUseCasesCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="comRelationshipFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="comRelationshipFigure" lineWidth="2"/>
+    </descriptors>
+    <descriptors name="includeRelationshipFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="includeRelationshipFigure" lineWidth="2" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="includeRelationshipLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="includeRelationshipLabelLabel" text="includeRelationship"/>
+    </descriptors>
+    <descriptors name="extendsRelationshipFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="extendsRelationshipFigure" lineWidth="2" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="extendsRelationshipLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="extendsRelationshipLabelLabel" text="extendsRelationship"/>
+    </descriptors>
+  </figures>
+  <nodes name="Actor" figure="ActorFigure"/>
+  <nodes name="UseCase" figure="UseCaseFigure"/>
+  <nodes name="LimitBox" figure="LimitBoxFigure"/>
+  <connections name="comRelationship" figure="comRelationshipFigure"/>
+  <connections name="includeRelationship" figure="includeRelationshipFigure"/>
+  <connections name="extendsRelationship" figure="extendsRelationshipFigure"/>
+  <compartments name="LimitBoxUseCasesCompartment" figure="LimitBoxFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="ActorLabel" figure="ActorFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="UseCaseLabel" figure="UseCaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="LimitBoxLabel" figure="LimitBoxFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="includeRelationshipLabel" figure="includeRelationshipLabelFigure" elementIcon="false"/>
+  <labels name="extendsRelationshipLabel" figure="extendsRelationshipLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>
