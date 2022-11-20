@@ -6,17 +6,17 @@
       <children xmi:type="notation:Shape" xmi:id="_7PgeoGOpEe2yqI1vIXyuXg" type="3001" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_7PhFsGOpEe2yqI1vIXyuXg" type="5012"/>
         <element xmi:type="ucdiagram:UseCase" href="model.ucdiagram#//@listDiagrams.0/@listBoxes.0/@useCases.0"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7PgeoWOpEe2yqI1vIXyuXg" x="75" y="33" width="165" height="96"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7PgeoWOpEe2yqI1vIXyuXg" x="70" y="8" width="185" height="116"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_-Bxx8GOpEe2yqI1vIXyuXg" type="3001" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_-ByZAGOpEe2yqI1vIXyuXg" type="5012"/>
         <element xmi:type="ucdiagram:UseCase" href="model.ucdiagram#//@listDiagrams.0/@listBoxes.0/@useCases.1"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Bxx8WOpEe2yqI1vIXyuXg" x="40" y="198" width="226" height="101"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Bxx8WOpEe2yqI1vIXyuXg" x="35" y="218" width="231" height="116"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_BltywGOqEe2yqI1vIXyuXg" type="3001" fontName="Segoe UI">
         <children xmi:type="notation:DecorationNode" xmi:id="_BltywmOqEe2yqI1vIXyuXg" type="5012"/>
         <element xmi:type="ucdiagram:UseCase" href="model.ucdiagram#//@listDiagrams.0/@listBoxes.0/@useCases.2"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BltywWOqEe2yqI1vIXyuXg" x="60" y="416" width="216" height="98"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BltywWOqEe2yqI1vIXyuXg" x="45" y="438" width="231" height="108"/>
       </children>
     </children>
     <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_28Jd8WOnEe2yqI1vIXyuXg"/>
